@@ -23,7 +23,7 @@
     <!--  String shown when cannot load the original image. We will edit selected image [CHAR LIMIT=NONE] -->
     <string name="cannot_edit_original">Cannot edit original</string>
     <!--  String displayed when showing the original image [CHAR LIMIT=NONE] -->
-    <string name="original_picture_text">@string/original</string>
+    <string name="original_picture_text">Original</string>
     <!--  String displayed when setting the homepage wallpaper in the background [CHAR LIMIT=NONE] -->
     <string name="setting_wallpaper">Setting wallpaper</string>
 
@@ -90,7 +90,7 @@
     <!--  Text for the history panel reset button [CHAR LIMIT=20]-->
     <string name="reset">Reset</string>
     <!--  Text for the original image[CHAR LIMIT=20]-->
-    <string name="history_original">@string/original</string>
+    <string name="history_original">Original</string>
 
     <!--  Image state panel -->
 
@@ -124,7 +124,7 @@
     <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
     <string name="aspectNone_effect">None</string>
     <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
-    <string name="aspectOriginal_effect">@string/original</string>
+    <string name="aspectOriginal_effect">Original</string>
     <!-- Label for when the aspect ratio is fixed to a value [CHAR LIMIT=15] -->
     <string name="Fixed">Fixed</string>
     <!--  Label for the tuny planet effect [CHAR LIMIT=10] -->
