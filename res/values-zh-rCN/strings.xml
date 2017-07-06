@@ -40,7 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">继续播放</string>
   <!-- Displayed in the title of those albums that are being loaded -->
-  <string name="loading">正在加载...</string>
+  <string name="loading">加载\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">无法加载</string>
@@ -86,7 +86,6 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">将照片设置为</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
-  <string name="set_wallpaper">设置壁纸</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">正在设置壁纸...</string>
   <string name="camera_setas_wallpaper">壁纸</string>
@@ -108,7 +107,6 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">全选</string>
   <string name="deselect_all">取消全选</string>
-  <string name="slideshow">播放幻灯片</string>
   <string name="details">详细信息</string>
   <string name="details_title">第 %1$d 项（共 %2$d 项）：</string>
   <string name="close">关闭</string>
@@ -122,12 +120,12 @@
   <!-- String indicating how many media album(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
   <plurals name="number_of_albums_selected">
-    <item quantity="other">选中了 %1$d 本相册</item>
+    <item quantity="other">选中了 %1$d 项</item>
   </plurals>
   <!-- String indicating how many media group(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
   <plurals name="number_of_groups_selected">
-    <item quantity="other">选中了 %1$d 组</item>
+    <item quantity="other">选中了 %1$d 项</item>
   </plurals>
   <!-- String indicating timestamp of photo or video -->
   <string name="show_on_map">显示在地图上</string>
@@ -226,15 +224,15 @@
   <string name="done">完成</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
-  <string name="sequence_in_set">第 %1$d 个项（共 %2$d 个）：</string>
+  <string name="sequence_in_set">第 %1$d 项（共 %2$d 项）：</string>
   <!-- Text indicating the title of a media item in details window [CHAR LIMIT=14] -->
-  <string name="title">标题</string>
+  <string name="title">位置</string>
   <!-- Text indicating the description of a media item in details window [CHAR LIMIT=14] -->
   <string name="description">描述</string>
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">时间</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
-  <string name="location">地点</string>
+  <string name="location">位置</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">路径</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -252,9 +250,9 @@
   <!-- Text indicating the maker of a media item in details window [CHAR LIMIT=14] -->
   <string name="maker">制造商</string>
   <!-- Text indicating the model of a media item in details window [CHAR LIMIT=14] -->
-  <string name="model">模型</string>
+  <string name="model">型号</string>
   <!-- Text indicating flash info of a media item in details window [CHAR LIMIT=14] -->
-  <string name="flash">闪光灯</string>
+  <string name="flash">闪电</string>
   <!-- Text indicating aperture of a media item in details window [CHAR LIMIT=14] -->
   <string name="aperture">光圈</string>
   <!-- Text indicating the focal length of a media item in details window [CHAR LIMIT=14] -->
@@ -279,7 +277,7 @@
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
   <string name="unknown">未知</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
-  <string name="ffx_original">原照片</string>
+  <string name="ffx_original">原图</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
   <string name="ffx_vintage">复古</string>
   <!-- String for filter that brightens colors like instant cameras(filtershow_fx_0001_instant) [CHAR LIMIT=10] -->
@@ -366,7 +364,6 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">选择图片</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
-  <string name="slideshow_dream_name">幻灯片</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">相册</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -401,9 +398,7 @@
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">没有可用的外部存储设备</string>
   <!-- Label for album filmstrip button -->
-  <string name="switch_photo_filmstrip">幻灯片视图</string>
   <!-- Label for album grid button -->
-  <string name="switch_photo_grid">网格视图</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">全屏视图</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -479,7 +474,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">选择摄像头</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
-  <string name="pref_camera_id_entry_back">背面相机</string>
+  <string name="pref_camera_id_entry_back">返回</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">正面相机</string>
   <!-- Settings screen, setting title text -->
@@ -495,9 +490,9 @@
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
   <string name="pref_camera_timer_sound_title">倒计时过程中发出提示音</string>
   <!-- Entry of a on/off setting. The setting is turned off. [CHAR LIMIT=15] -->
-  <string name="setting_off">关闭</string>
+  <string name="setting_off">关</string>
   <!-- Entry of a on/off setting. The setting is turned on. [CHAR LIMIT=15] -->
-  <string name="setting_on">开启</string>
+  <string name="setting_on">开</string>
   <!-- The value of a camera preference indicating the setting is off. -->
   <!-- The value of a camera preference indicating the setting is on. -->
   <!-- The Video quality settings in preference [CHAR LIMIT=21] -->
@@ -507,9 +502,9 @@
   <!-- Video quality setting entry. Videos will be recorded in 720p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in 480p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
-  <string name="pref_video_quality_entry_high">高画质</string>
+  <string name="pref_video_quality_entry_high">高</string>
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
-  <string name="pref_video_quality_entry_low">低画质</string>
+  <string name="pref_video_quality_entry_low">低</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
     time lapse recording. Appears at top of the dialog. [CHAR LIMIT=30] -->
   <string name="pref_video_time_lapse_frame_interval_title">延时</string>
@@ -559,8 +554,8 @@
   <string name="pref_camera_flashmode_label">闪光灯模式</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
   <string name="pref_camera_flashmode_entry_auto">自动</string>
-  <string name="pref_camera_flashmode_entry_on">开启</string>
-  <string name="pref_camera_flashmode_entry_off">关闭</string>
+  <string name="pref_camera_flashmode_entry_on">开</string>
+  <string name="pref_camera_flashmode_entry_off">关</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">自动闪光灯</string>
   <string name="pref_camera_flashmode_label_on">打开闪光灯</string>
@@ -704,7 +699,7 @@
   <!-- The shutter button. [CHAR LIMIT = NONE] -->
   <string name="accessibility_shutter_button">“快门”按钮</string>
   <!-- The menu button. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_menu_button">菜单按钮</string>
+  <string name="accessibility_menu_button">菜单键</string>
   <!-- The button to review the thumbnail. [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_thumbnail">最新照片</string>
   <!-- The front/back camera switch. [CHAR LIMIT = NONE] -->
@@ -754,7 +749,7 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_off">关闭</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_off">关闭</string>
+  <string name="pref_video_time_lapse_frame_interval_off">关</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_500">0.5 秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -766,7 +761,7 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_2500">2.5 秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_3000">3 秒</string>
+  <string name="pref_video_time_lapse_frame_interval_3000">3秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_4000">4 秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -778,7 +773,7 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_12000">12 秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_15000">15 秒</string>
+  <string name="pref_video_time_lapse_frame_interval_15000">15秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_24000">24 秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -788,7 +783,7 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_90000">1.5 分钟</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_120000">2 分钟</string>
+  <string name="pref_video_time_lapse_frame_interval_120000">2分钟</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_150000">2.5 分钟</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -858,7 +853,6 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">不用了</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
-  <string name="remember_location_yes">好</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">没有地图应用显示地理位置信息</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
@@ -885,7 +879,7 @@ CHAR LIMIT = NONE] -->
   <!-- The label for the audio effects menu. -->
   <string name="audio_effects">音效</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
-  <string name="headset_plug">“插入耳机体验音效”</string>
+  <string name="headset_plug">插上耳机感受环绕声</string>
   <!-- The title of the audio effects dialog. -->
   <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->

@@ -86,12 +86,12 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">Definir imagem como</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
-  <string name="set_wallpaper">Definir plano de fundo</string>
+  <string name="set_wallpaper">Selecionar papel de parede</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">Definindo papel de parede\u2026</string>
   <string name="camera_setas_wallpaper">Plano de fundo</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
-  <string name="delete">Excluir</string>
+  <string name="delete">Apagar</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="one">Excluir o item selecionado?</item>
@@ -109,7 +109,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">Selecionar tudo</string>
   <string name="deselect_all">Desmarcar tudo</string>
-  <string name="slideshow">Apresentação de slides</string>
+  <string name="slideshow">Apresentação de fotos</string>
   <string name="details">Detalhes</string>
   <string name="details_title">%1$d de %2$d itens:</string>
   <string name="close">Fechar</string>
@@ -156,7 +156,7 @@
          offline. [CHAR LIMIT=15] -->
   <string name="caching_label">Buscando\2026</string>
   <!-- The title of the menu item to let user crop the image. [CHAR LIMIT=15] -->
-  <string name="crop_action">Recortar</string>
+  <string name="crop_action">Cortar</string>
   <!-- The title of the menu item to let user trim the video. [CHAR LIMIT=15] -->
   <string name="trim_action">Aparar</string>
   <!-- The title of the menu item to let user mute the video. [CHAR LIMIT=15] -->
@@ -228,7 +228,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <string name="sync_picasa_albums">Atualizar</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
-  <string name="done">Pronto</string>
+  <string name="done">Concluído</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d de %2$d itens:</string>
@@ -257,13 +257,13 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Text indicating the maker of a media item in details window [CHAR LIMIT=14] -->
   <string name="maker">Maker</string>
   <!-- Text indicating the model of a media item in details window [CHAR LIMIT=14] -->
-  <string name="model">Model</string>
+  <string name="model">Modelo</string>
   <!-- Text indicating flash info of a media item in details window [CHAR LIMIT=14] -->
   <string name="flash">Flash</string>
   <!-- Text indicating aperture of a media item in details window [CHAR LIMIT=14] -->
-  <string name="aperture">Aperture</string>
+  <string name="aperture">Abertura</string>
   <!-- Text indicating the focal length of a media item in details window [CHAR LIMIT=14] -->
-  <string name="focal_length">Distância Focal</string>
+  <string name="focal_length">Distância focal</string>
   <!-- Text indicating the white balance of a media item in details window [CHAR LIMIT=14] -->
   <string name="white_balance">Balanço de branco</string>
   <!-- Text indicating the exposure time of a media item in details window [CHAR LIMIT=14] -->
@@ -276,13 +276,13 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- String indicating how camera shooting feature is used. [CHAR LIMIT=8] -->
   <string name="manual">Manual</string>
   <!-- String indicating how camera shooting feature is used. [CHAR LIMIT=8] -->
-  <string name="auto">Auto</string>
+  <string name="auto">Automático</string>
   <!-- String indicating camera flash is fired. [CHAR LIMIT=14] -->
   <string name="flash_on">Flash fired</string>
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">No flash</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
-  <string name="unknown">Unknown</string>
+  <string name="unknown">Desconhecido</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Original</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -292,7 +292,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- String for filter that washes out colors (filtershow_fx_0002_bleach) [CHAR LIMIT=10] -->
   <string name="ffx_bleach">Bleach</string>
   <!-- String for filter that makes colors a bluish (filtershow_fx_0003_blue_crush) [CHAR LIMIT=10] -->
-  <string name="ffx_blue_crush">Blue</string>
+  <string name="ffx_blue_crush">Azul</string>
   <!-- String for filter that makes image black & white (filtershow_fx_0004_bw_contrast) [CHAR LIMIT=10] -->
   <string name="ffx_bw_contrast">B/W</string>
   <!-- String for filter that makes colors a yellowish (filtershow_fx_0005_punch) [CHAR LIMIT=10] -->
@@ -373,7 +373,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">Choose images</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
-  <string name="slideshow_dream_name">Slideshow</string>
+  <string name="slideshow_dream_name">Apresentação de fotos</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">Albums</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -387,30 +387,30 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">Group by</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
-  <string name="settings">Settings</string>
+  <string name="settings">Configurações</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">Add account</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
-  <string name="folder_camera">Camera</string>
+  <string name="folder_camera">Câmera</string>
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
-  <string name="folder_download">Download</string>
+  <string name="folder_download">Baixar</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">Edited Online Photos</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Imported</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
-  <string name="folder_screenshot">Screenshot</string>
+  <string name="folder_screenshot">Captura de tela</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
-  <string name="help">Help</string>
+  <string name="help">Ajuda</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">No Storage</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">No external storage available</string>
   <!-- Label for album filmstrip button -->
-  <string name="switch_photo_filmstrip">Filmstrip view</string>
+  <string name="switch_photo_filmstrip">Exibição de película</string>
   <!-- Label for album grid button -->
-  <string name="switch_photo_grid">Grid view</string>
+  <string name="switch_photo_grid">Exibição de grade</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">Fullscreen view</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -428,7 +428,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Rendering panorama</string>
   <!-- The label on the button that will save an edited image -->
-  <string name="save" msgid="8140440041190264400">Save</string>
+  <string name="save" msgid="8140440041190264400">Salvar</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
@@ -464,7 +464,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- message for the dialog showing the camera is disabled because of security policies. Camera cannot be used. -->
   <string name="camera_disabled">Camera has been disabled because of security policies.</string>
   <!-- label for the icon meaning 'show me all the images that were taken with the camera' -->
-  <string name="camera_label">Camera</string>
+  <string name="camera_label">Câmera</string>
   <!-- alert to the user to wait for some operation to complete -->
   <string name="wait">Please wait\u2026</string>
   <!-- alert to the user that USB storage must be available before using the camera [CHAR LIMIT=NONE] -->
@@ -488,7 +488,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">Choose camera</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
-  <string name="pref_camera_id_entry_back">Back</string>
+  <string name="pref_camera_id_entry_back">Voltar</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">Front</string>
   <!-- Settings screen, setting title text -->
@@ -505,9 +505,9 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
   <string name="pref_camera_timer_sound_title">Beep during countdown</string>
   <!-- Entry of a on/off setting. The setting is turned off. [CHAR LIMIT=15] -->
-  <string name="setting_off">Off</string>
+  <string name="setting_off">Desligado</string>
   <!-- Entry of a on/off setting. The setting is turned on. [CHAR LIMIT=15] -->
-  <string name="setting_on">On</string>
+  <string name="setting_on">Ligado</string>
   <!-- The value of a camera preference indicating the setting is off. -->
   <!-- The value of a camera preference indicating the setting is on. -->
   <!-- The Video quality settings in preference [CHAR LIMIT=21] -->
@@ -517,9 +517,9 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Video quality setting entry. Videos will be recorded in 720p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in 480p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
-  <string name="pref_video_quality_entry_high">High</string>
+  <string name="pref_video_quality_entry_high">Alta</string>
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
-  <string name="pref_video_quality_entry_low">Low</string>
+  <string name="pref_video_quality_entry_low">Baixo</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
     time lapse recording. Appears at top of the dialog. [CHAR LIMIT=30] -->
   <string name="pref_video_time_lapse_frame_interval_title">Time lapse</string>
@@ -554,7 +554,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Settings screen, Focus mode title -->
   <string name="pref_camera_focusmode_title">Focus mode</string>
   <!-- Settings screen, Focus mode dialog radio button choices -->
-  <string name="pref_camera_focusmode_entry_auto">Auto</string>
+  <string name="pref_camera_focusmode_entry_auto">Automático</string>
   <string name="pref_camera_focusmode_entry_infinity">Infinity</string>
   <string name="pref_camera_focusmode_entry_macro">Macro</string>
   <!-- Menu, focus mode labels [CHAR LIMIT=50] -->
@@ -568,9 +568,9 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- flash label [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label">FLASH MODE</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
-  <string name="pref_camera_flashmode_entry_auto">Auto</string>
-  <string name="pref_camera_flashmode_entry_on">On</string>
-  <string name="pref_camera_flashmode_entry_off">Off</string>
+  <string name="pref_camera_flashmode_entry_auto">Automático</string>
+  <string name="pref_camera_flashmode_entry_on">Ligado</string>
+  <string name="pref_camera_flashmode_entry_off">Desligado</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">FLASH AUTO</string>
   <string name="pref_camera_flashmode_label_on">FLASH ON</string>
@@ -578,11 +578,11 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Default videocamera flash mode setting.-->
   <!-- Default white balance setting. -->
   <!-- Settings screen, white balance title -->
-  <string name="pref_camera_whitebalance_title">White balance</string>
+  <string name="pref_camera_whitebalance_title">Balanço de branco</string>
   <!-- Menu, white balance label -->
   <string name="pref_camera_whitebalance_label">WHITE BALANCE</string>
   <!-- Settings screen, White balance dialog radio button choices -->
-  <string name="pref_camera_whitebalance_entry_auto">Auto</string>
+  <string name="pref_camera_whitebalance_entry_auto">Automático</string>
   <string name="pref_camera_whitebalance_entry_incandescent">Incandescent</string>
   <string name="pref_camera_whitebalance_entry_daylight">Daylight</string>
   <string name="pref_camera_whitebalance_entry_fluorescent">Fluorescent</string>
@@ -597,7 +597,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Settings screen, Select Scene mode -->
   <string name="pref_camera_scenemode_title">Scene mode</string>
   <!-- Settings menu, scene mode choices [CHAR LIMIT=16] -->
-  <string name="pref_camera_scenemode_entry_auto">Auto</string>
+  <string name="pref_camera_scenemode_entry_auto">Automático</string>
   <!-- Scene mode that uses HDR (high dynamic range) [CHAR LIMIT=16] -->
   <string name="pref_camera_scenemode_entry_hdr">HDR</string>
   <!-- Scene mode that takes an image quickly with little motion blur. [CHAR LIMIT=16] -->
@@ -633,7 +633,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Toast after trying to select a setting that is not allowed to change in scene mode [CHAR LIMIT=NONE] -->
   <string name="not_selectable_in_scene_mode">Not selectable in scene mode.</string>
   <!-- Exposure settings in preference -->
-  <string name="pref_exposure_title">Exposure</string>
+  <string name="pref_exposure_title">Exposição</string>
   <!--  menu label exposure compensation [CHAR LIMIT=50] -->
   <string name="pref_exposure_label">EXPOSURE</string>
   <!-- Default HDR entry value -->
@@ -644,7 +644,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- switch camera label front [CHAR LIMIT=60] -->
   <string name="pref_camera_id_label_front">BACK CAMERA</string>
   <!-- Dialog "OK" button. Dismisses dialog. -->
-  <string name="dialog_ok">OK</string>
+  <string name="dialog_ok">Ok</string>
   <!-- Low-memory dialog message [CHAR LIMT=NONE] -->
   <string name="spaceIsLow_content" product="nosdcard">Your USB storage is running out of space. Change the quality setting or delete some images or other files.</string>
   <!-- Low-memory dialog message [CHAR LIMIT=NONE] -->
@@ -676,7 +676,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Title of video effect setting popup window -->
   <string name="pref_video_effect_title">Effects</string>
   <!-- Effect setting item that clear the effect. [CHAR LIMIT=14] -->
-  <string name="effect_none">None</string>
+  <string name="effect_none">Vazio</string>
   <!-- Effect setting item that squeezes the face. [CHAR LIMIT=14] -->
   <string name="effect_goofy_face_squeeze">Squeeze</string>
   <!-- Effect setting item that makes eyes big. [CHAR LIMIT=14] -->
@@ -714,7 +714,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- The shutter button. [CHAR LIMIT = NONE] -->
   <string name="accessibility_shutter_button">Shutter button</string>
   <!-- The menu button. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_menu_button">Menu button</string>
+  <string name="accessibility_menu_button">Botão de menu</string>
   <!-- The button to review the thumbnail. [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_thumbnail">Most recent photo</string>
   <!-- The front/back camera switch. [CHAR LIMIT = NONE] -->
@@ -764,7 +764,7 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_off">OFF</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_off">Off</string>
+  <string name="pref_video_time_lapse_frame_interval_off">Desligado</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_500">0.5 seconds</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -772,73 +772,73 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_1500">1.5 seconds</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_2000">2 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_2000">2 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_2500">2.5 seconds</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_3000">3 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_3000">3 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_4000">4 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_4000">4 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_5000">5 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_5000">5 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_6000">6 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_6000">6 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_10000">10 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_10000">10 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_12000">12 seconds</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_15000">15 seconds</string>
+  <string name="pref_video_time_lapse_frame_interval_15000">15 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_24000">24 seconds</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_30000">0.5 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_60000">1 minute</string>
+  <string name="pref_video_time_lapse_frame_interval_60000">1 minuto</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_90000">1.5 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_120000">2 minutes</string>
+  <string name="pref_video_time_lapse_frame_interval_120000">2 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_150000">2.5 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_180000">3 minutes</string>
+  <string name="pref_video_time_lapse_frame_interval_180000">3 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_240000">4 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_300000">5 minutes</string>
+  <string name="pref_video_time_lapse_frame_interval_300000">5 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_360000">6 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_600000">10 minutes</string>
+  <string name="pref_video_time_lapse_frame_interval_600000">10 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_720000">12 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_900000">15 minutes</string>
+  <string name="pref_video_time_lapse_frame_interval_900000">15 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_1440000">24 minutes</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_1800000">0.5 hours</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_3600000">1 hour</string>
+  <string name="pref_video_time_lapse_frame_interval_3600000">1 hora</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_5400000">1.5 hour</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_7200000">2 hours</string>
+  <string name="pref_video_time_lapse_frame_interval_7200000">2 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_9000000">2.5 hours</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_10800000">3 hours</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_14400000">4 hours</string>
+  <string name="pref_video_time_lapse_frame_interval_14400000">4 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_18000000">5 hours</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_21600000">6 hours</string>
+  <string name="pref_video_time_lapse_frame_interval_21600000">6 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_36000000">10 hours</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_43200000">12 hours</string>
+  <string name="pref_video_time_lapse_frame_interval_43200000">12 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_54000000">15 hours</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -850,7 +850,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">hours</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
-  <string name="time_lapse_interval_set">Done</string>
+  <string name="time_lapse_interval_set">Concluído</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Set Time Interval</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -868,13 +868,13 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">No thanks</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
-  <string name="remember_location_yes">Yes</string>
+  <string name="remember_location_yes">Sim</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">There is no map app for show location.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
-  <string name="menu_camera">Camera</string>
+  <string name="menu_camera">Câmera</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
-  <string name="menu_search">Search</string>
+  <string name="menu_search">Pesquisa</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Photos</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
@@ -890,13 +890,13 @@ CHAR LIMIT = NONE] -->
     <item quantity="other">%1$d photos</item>
   </plurals>
   <!-- The label for the bass boost knob of the audio effects dialog. -->
-  <string name="bass_boost_strength">Bass boost</string>
+  <string name="bass_boost_strength">Ganho de graves</string>
   <!-- The label for the 3d effect knob of the audio effects dialog. -->
   <string name="virtualizer_strength">3D effect</string>
   <!-- The label for the audio effects menu. -->
-  <string name="audio_effects">Audio effects</string>
+  <string name="audio_effects">Efeitos de áudio</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
-  <string name="headset_plug">Plug in headphones for these effects.</string>
+  <string name="headset_plug">Conecte os fones de ouvido para esses efeitos.</string>
   <!-- The title of the audio effects dialog. -->
   <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
