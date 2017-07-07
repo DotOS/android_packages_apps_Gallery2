@@ -89,6 +89,7 @@
   <string name="wallpaper">Ustawianie tapety…</string>
   <string name="camera_setas_wallpaper">Tapeta</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
+  <string name="delete">Usuń</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="one">Usunąć wybrany element?</item>
@@ -96,6 +97,7 @@
     <item quantity="other">Usunąć wybrane elementy?</item>
   </plurals>
   <string name="confirm">Potwierdź</string>
+  <string name="cancel">Anuluj</string>
   <string name="share">Udostępnij</string>
   <string name="share_panorama">Udostępnij panoramę</string>
   <string name="share_as_photo">Udostępnij zdjęcie</string>
@@ -226,6 +228,7 @@
   <string name="sync_picasa_albums">Odśwież</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">Gotowe</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d z %2$d elementów:</string>
@@ -381,18 +384,22 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">Grupuj według</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">Ustawienia</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">Dodaj konto</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <string name="folder_camera">Aparat</string>
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
+  <string name="folder_download">Pobieranie</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">Edytowane zdjęcia online</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Zaimportowane</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">Zrzut ekranu</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
+  <string name="help">Pomoc</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">Brak pamięci</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -477,6 +484,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">Wybierz aparat</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
+  <string name="pref_camera_id_entry_back">Wstecz</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">Przód</string>
   <!-- Settings screen, setting title text -->
@@ -839,6 +847,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">godz.</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">Gotowe</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Ustaw odstęp czasu</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -861,6 +870,7 @@ CHAR LIMIT = NONE] -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Aparat</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">Szukaj</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Zdjęcia</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

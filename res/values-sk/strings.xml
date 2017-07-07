@@ -86,12 +86,18 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">Nastaviť fotku ako</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
+  <string name="set_wallpaper">Nastaviť tapetu</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">Prebieha nastavenie tapety...</string>
   <string name="camera_setas_wallpaper">Tapeta</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
   <string name="delete">Vymazať</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
+  <plurals name="delete_selection">
+    <item quantity="one">Odstrániť vybratú položku?</item>
+    <item quantity="few">Odstrániť vybraté položky?</item>
+    <item quantity="other">Odstrániť vybraté položky?</item>
+  </plurals>
   <string name="confirm">Potvrdiť</string>
   <string name="cancel">Zrušiť</string>
   <string name="share">Zdieľať</string>
@@ -104,6 +110,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">Vybrať všetko</string>
   <string name="deselect_all">Zrušiť výber všetkých položiek</string>
+  <string name="slideshow">Prezentácia</string>
   <string name="details">Podrobnosti</string>
   <string name="details_title">%1$d z %2$d položiek:</string>
   <string name="close">Zavrieť</string>
@@ -111,10 +118,25 @@
   <string name="switch_to_camera">Prepnúť do režimu fotoaparát</string>
   <!-- String indicating how many media item(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
+  <plurals name="number_of_items_selected">
+    <item quantity="one">Počet vybratých položiek: %1$d</item>
+    <item quantity="few">Počet vybratých položiek: %1$d</item>
+    <item quantity="other">Počet vybratých položiek: %1$d</item>
+  </plurals>
   <!-- String indicating how many media album(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
+  <plurals name="number_of_albums_selected">
+    <item quantity="one">Počet vybratých položiek: %1$d</item>
+    <item quantity="few">Počet vybratých položiek: %1$d</item>
+    <item quantity="other">Počet vybratých položiek: %1$d</item>
+  </plurals>
   <!-- String indicating how many media group(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
+  <plurals name="number_of_groups_selected">
+    <item quantity="one">Počet vybratých položiek: %1$d</item>
+    <item quantity="few">Počet vybratých položiek: %1$d</item>
+    <item quantity="other">Počet vybratých položiek: %1$d</item>
+  </plurals>
   <!-- String indicating timestamp of photo or video -->
   <string name="show_on_map">Zobraziť na mape</string>
   <string name="rotate_left">Otočiť doľava</string>
@@ -204,6 +226,7 @@
          some albums to be viewable offline [CHAR LIMIT=30] -->
   <string name="make_available_offline">Sprístupniť offline</string>
   <!-- A label describing to link website [CHAR LIMIT=30] -->
+  <string name="more_image">Ďalšie obrázky</string>
   <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
   <string name="sync_picasa_albums">Obnoviť</string>
   <!-- A label on a button. The user clicks this button after he has
@@ -213,11 +236,13 @@
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d z %2$d položiek:</string>
   <!-- Text indicating the title of a media item in details window [CHAR LIMIT=14] -->
+  <string name="title">Názov</string>
   <!-- Text indicating the description of a media item in details window [CHAR LIMIT=14] -->
   <string name="description">Popis</string>
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">Čas</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
+  <string name="location">Poloha</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">Cesta</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -260,6 +285,7 @@
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">Bez blesku</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">Neznáma</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Pôvodné</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -283,6 +309,11 @@
          (filtershow_fx_0008_washout_color) [CHAR LIMIT=10] -->
   <string name="ffx_washout_color">Litografia</string>
   <!-- Toast message shown after we make some album(s) available offline [CHAR LIMIT=50] -->
+  <plurals name="make_albums_available_offline">
+    <item quantity="one">Sprístupňovanie albumu v režime offline.</item>
+    <item quantity="few">Sprístupňovanie albumov v režime offline.</item>
+    <item quantity="other">Sprístupňovanie albumov v režime offline.</item>
+  </plurals>
   <!-- Toast message shown after we try to make a local album available offline
          [CHAR LIMIT=150] -->
   <string name="try_to_set_local_album_available_offline">Táto položka je uložená miestne a je k dispozícii v režime offline.</string>
@@ -345,6 +376,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">Vybrať obrázky</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
+  <string name="slideshow_dream_name">Prezentácia</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">Albumy</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -379,7 +411,9 @@
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">K dispozícii nie je žiadny externý ukladací priestor</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">Zobrazenie filmového pásu</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">Zobrazenie v mriežke</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">Na celú obrazovku</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -393,6 +427,7 @@
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
   <string name="trim_too_short">Nie je možné orezať: výsledné video je príliš krátke</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
+  <string name="mute_nosupport">Nedá sa stlmiť: nepodporované video</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Vykresľovanie panorámy</string>
   <!-- The label on the button that will save an edited image -->
@@ -402,7 +437,17 @@
   <!--  Text of notification message which is shown when user attaches camera -->
   <string name="ingest_scanning" msgid="2048262851775139720">Prebieha vyhľadávanie obsahu...</string>
   <!-- String indicating how many media items from the camera have been scanned -->
+  <plurals name="ingest_number_of_items_scanned">
+    <item quantity="one">%1$d vyhľadaná položka</item>
+    <item quantity="few">počet vyhľadaných položiek: %1$d</item>
+    <item quantity="other">počet vyhľadaných položiek: %1$d</item>
+  </plurals>
   <!-- String indicating how many media items from the camera have been selected -->
+  <plurals name="ingest_number_of_items_selected">
+    <item quantity="one">%1$d položka vybraná</item>
+    <item quantity="few">%1$d položiek vybraných</item>
+    <item quantity="other">%1$d položiek vybraných</item>
+  </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
   <string name="ingest_sorting" msgid="624687230903648118">Prebieha zoradenie...</string>
   <!--  Status message shown when scanning the content from the camera has completed -->
@@ -458,10 +503,17 @@
   <!-- Title for countdown timer on camera settings screen [CHAR LIMIT=30]-->
   <string name="pref_camera_timer_title">Časovač odpočítavania</string>
   <!-- Entry for countdown timer setting. e.g. 1 second, 10 seconds, etc. [CHAR LIMIT=30]-->
+  <plurals name="pref_camera_timer_entry">
+    <item quantity="one">1 s</item>
+    <item quantity="few">%d s</item>
+    <item quantity="other">%d s</item>
+  </plurals>
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
   <string name="pref_camera_timer_sound_title">Zvuk pri odpočítavaní</string>
   <!-- Entry of a on/off setting. The setting is turned off. [CHAR LIMIT=15] -->
+  <string name="setting_off">Vypnuté</string>
   <!-- Entry of a on/off setting. The setting is turned on. [CHAR LIMIT=15] -->
+  <string name="setting_on">Zapnuté</string>
   <!-- The value of a camera preference indicating the setting is off. -->
   <!-- The value of a camera preference indicating the setting is on. -->
   <!-- The Video quality settings in preference [CHAR LIMIT=21] -->
@@ -471,6 +523,7 @@
   <!-- Video quality setting entry. Videos will be recorded in 720p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in 480p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
+  <string name="pref_video_quality_entry_high">Vysoké</string>
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
   <string name="pref_video_quality_entry_low">Nízka</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
@@ -522,6 +575,8 @@
   <string name="pref_camera_flashmode_label">REŽIM BLESKU</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
   <string name="pref_camera_flashmode_entry_auto">Automaticky</string>
+  <string name="pref_camera_flashmode_entry_on">Zapnuté</string>
+  <string name="pref_camera_flashmode_entry_off">Vypnuté</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">AUTOMATICKÝ BLESK</string>
   <string name="pref_camera_flashmode_label_on">BLESK ZAPNUTÝ</string>
@@ -715,6 +770,7 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_off">VYPNUTÉ</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_off">Vypnuté</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_500">0,5 sekundy</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -818,7 +874,9 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">Nie, ďakujem</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
+  <string name="remember_location_yes">Áno</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
+  <string name="map_activity_not_found_err">Neexistuje žiadna mapová aplikácia pre zobrazenie polohy.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Fotoaparát</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
@@ -833,12 +891,21 @@ CHAR LIMIT = NONE] -->
   <!-- settings label [CHAR LIMIT=50] -->
   <string name="camera_menu_settings_label">NASTAVENIA</string>
   <!-- String indicating how many photos are in an album [CHAR LIMIT=15] -->
+  <plurals name="number_of_photos">
+    <item quantity="one">%1$d fotografia</item>
+    <item quantity="few">Fotografie: %1$d</item>
+    <item quantity="other">Fotografie: %1$d</item>
+  </plurals>
   <!-- The label for the bass boost knob of the audio effects dialog. -->
   <string name="bass_boost_strength">Zosilnenie basov</string>
   <!-- The label for the 3d effect knob of the audio effects dialog. -->
+  <string name="virtualizer_strength">3D efekt</string>
   <!-- The label for the audio effects menu. -->
+  <string name="audio_effects">Zvukové efekty</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
   <string name="headset_plug">Ak chcete počuť tieto efekty, pripojte slúchadlá</string>
   <!-- The title of the audio effects dialog. -->
+  <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
+  <string name="fail_trim">Toto video nie je možné orezať</string>
 </resources>

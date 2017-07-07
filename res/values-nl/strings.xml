@@ -390,6 +390,7 @@
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Geïmporteerd</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">Schermafdruk</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <string name="help">Help</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
@@ -853,6 +854,7 @@ CHAR LIMIT = NONE] -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Camera</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">Zoeken</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Foto\'s</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

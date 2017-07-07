@@ -118,19 +118,19 @@
   <!-- String indicating how many media item(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
   <plurals name="number_of_items_selected">
-    <item quantity="one">Επιλέχθηκαν %1$d</item>
+    <item quantity="one">Επιλέχθηκε %1$d</item>
     <item quantity="other">Επιλέχθηκαν %1$d</item>
   </plurals>
   <!-- String indicating how many media album(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
   <plurals name="number_of_albums_selected">
-    <item quantity="one">Επιλέχθηκαν %1$d</item>
+    <item quantity="one">Επιλέχθηκε %1$d</item>
     <item quantity="other">Επιλέχθηκαν %1$d</item>
   </plurals>
   <!-- String indicating how many media group(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
   <plurals name="number_of_groups_selected">
-    <item quantity="one">Επιλέχθηκαν %1$d</item>
+    <item quantity="one">Επιλέχθηκε %1$d</item>
     <item quantity="other">Επιλέχθηκαν %1$d</item>
   </plurals>
   <!-- String indicating timestamp of photo or video -->
@@ -138,7 +138,7 @@
   <string name="rotate_left">Αριστερή περιστροφή</string>
   <string name="rotate_right">Δεξιά περιστροφή</string>
   <!-- Toast message prompted when the specified item is not found [CHAR LIMIT=40]-->
-  <string name="no_such_item">Δεν ήταν δυνατή η εύρεση.</string>
+  <string name="no_such_item">Δεν βρέθηκε.</string>
   <!-- String used as a menu label. The user can choose to edit the image
          [CHAR_LIMIT=20]-->
   <string name="edit">Επεξεργασία</string>
@@ -154,7 +154,7 @@
          It means the pictures of the Picasa album is currently being
          transferred to local storage, so the pictures can later be viewed
          offline. [CHAR LIMIT=15] -->
-  <string name="caching_label">Προσωρ. αποθ...</string>
+  <string name="caching_label">Προσωρινή αποθήκευση...</string>
   <!-- The title of the menu item to let user crop the image. [CHAR LIMIT=15] -->
   <string name="crop_action">Περικοπή</string>
   <!-- The title of the menu item to let user trim the video. [CHAR LIMIT=15] -->
@@ -164,9 +164,9 @@
   <!-- The title of the menu item to let user set the image as background etc. [CHAR LIMIT=15] -->
   <string name="set_as">Ορισμός ως</string>
   <!-- String indicating an error when muting the video. [CHAR LIMIT=30] -->
-  <string name="video_mute_err">Αδύνατη η σίγαση του βίντεο.</string>
+  <string name="video_mute_err">Δεν είναι δυνατή η σίγαση του βίντεο.</string>
   <!-- String indicating an error when playing the video. [CHAR LIMIT=30] -->
-  <string name="video_err">Δεν είναι δυνατή η αναπαραγωγή βίντεο.</string>
+  <string name="video_err">Δεν είναι δυνατή η αναπαραγωγή του βίντεο.</string>
   <!-- Strings for grouping operations in the menu. The photos can be grouped
          by their location, taken time, or tags. -->
   <!-- The title of the menu item to let user choose the grouping rule, when
@@ -181,7 +181,7 @@
   <!-- Title of a menu item to group photo by faces [CHAR LIMIT=30]-->
   <string name="group_by_faces">Κατά άτομα</string>
   <!-- Title of a menu item to group photo by albums [CHAR LIMIT=30]-->
-  <string name="group_by_album">Κατά λεύκωμα</string>
+  <string name="group_by_album">Κατά άλμπουμ</string>
   <!-- Title of a menu item to group photo by size [CHAR LIMIT=30]-->
   <string name="group_by_size">Κατά μέγεθος</string>
   <!-- When grouping photos by tags, the label used for photos without tags
@@ -189,11 +189,11 @@
   <string name="untagged">Χωρίς ετικέτα</string>
   <!-- When grouping photos by locations, the label used for photos that don't
          have location information in them [CHAR LIMIT=20]-->
-  <string name="no_location">Καμία τοποθεσία</string>
+  <string name="no_location">Χωρίς τοποθεσία</string>
   <!-- This toast message is shown when network connection is lost while doing clustering -->
   <string name="no_connectivity">Δεν ήταν δυνατός ο προσδιορισμός ορισμένων τοποθεσιών λόγω προβλημάτων δικτύου.</string>
   <!-- This toast message is shown when failed to load the album data. [CHAR LIMIT=NONE] -->
-  <string name="sync_album_error">Δεν ήταν δυνατή η λήψη των φωτογραφιών σε αυτό το λεύκωμα. Δοκιμάστε ξανά αργότερα.</string>
+  <string name="sync_album_error">Δεν ήταν δυνατή η λήψη των φωτογραφιών σε αυτό το άλμπουμ. Δοκιμάστε ξανά αργότερα.</string>
   <!-- The title of the menu item to let user choose the which portion of
          the media items the user wants to see. When pressed, a submenu will
          appear and user can choose one of "show images only",
@@ -203,7 +203,7 @@
   <!-- Title of a menu item to show videos only [CHAR LIMIT=30]-->
   <string name="show_videos_only">Μόνο βίντεο</string>
   <!-- Title of a menu item to show all (both images and videos) [CHAR LIMIT=30]-->
-  <string name="show_all">Εικόνες και βίντεο</string>
+  <string name="show_all">Εικόνες &amp; βίντεο</string>
   <!-- Title of the StackView AppWidget -->
   <string name="appwidget_title">Συλλογή φωτογραφιών</string>
   <!-- Text for the empty state of the StackView AppWidget [CHAR LIMIT=30] -->
@@ -212,7 +212,7 @@
          %s folder (string: folder_download) [CHAR LIMIT=50]-->
   <string name="crop_saved">Η αποκομμένη εικόνα αποθηκεύτηκε στον φάκελο <xliff:g id="FOLDER_NAME">%s</xliff:g>.</string>
   <!-- Toast message shown when there is no albums available [CHAR LIMIT=50]-->
-  <string name="no_albums_alert">Δεν υπάρχουν διαθέσιμα λευκώματα.</string>
+  <string name="no_albums_alert">Δεν υπάρχουν διαθέσιμα άλμπουμ.</string>
   <!-- Toast message shown when we close the AlbumPage because it is empty
             [CHAR LIMIT=50] -->
   <string name="empty_album">Δεν υπάρχουν διαθέσιμες εικόνες/βίντεο.</string>
@@ -222,7 +222,7 @@
          some albums to be viewable offline [CHAR LIMIT=30] -->
   <string name="make_available_offline">Διαθέσιμα εκτός σύνδεσης</string>
   <!-- A label describing to link website [CHAR LIMIT=30] -->
-  <string name="more_image">More Images</string>
+  <string name="more_image">Περισσότερες εικόνες</string>
   <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
   <string name="sync_picasa_albums">Ανανέωση</string>
   <!-- A label on a button. The user clicks this button after he has
@@ -264,7 +264,7 @@
   <!-- Text indicating the focal length of a media item in details window [CHAR LIMIT=14] -->
   <string name="focal_length">Μήκος εστίασης</string>
   <!-- Text indicating the white balance of a media item in details window [CHAR LIMIT=14] -->
-  <string name="white_balance">Ισορρ. λευκού</string>
+  <string name="white_balance">Ισορροπία λευκού</string>
   <!-- Text indicating the exposure time of a media item in details window [CHAR LIMIT=14] -->
   <string name="exposure_time">Χρόνος έκθεσης</string>
   <!-- Text indicating the ISO speed rating of a media item in details window [CHAR LIMIT=14] -->
@@ -273,7 +273,7 @@
   <!-- String indicating the length units in milli-meters. [CHAR LIMIT=8] -->
   <string name="unit_mm">χιλιοστά</string>
   <!-- String indicating how camera shooting feature is used. [CHAR LIMIT=8] -->
-  <string name="manual">Μη αυτόματο</string>
+  <string name="manual">Χειροκίνητο</string>
   <!-- String indicating how camera shooting feature is used. [CHAR LIMIT=8] -->
   <string name="auto">Αυτόματο</string>
   <!-- String indicating camera flash is fired. [CHAR LIMIT=14] -->
@@ -285,20 +285,20 @@
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Πρωτότυπη</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
-  <string name="ffx_vintage">Εποχής</string>
+  <string name="ffx_vintage">Vintage</string>
   <!-- String for filter that brightens colors like instant cameras(filtershow_fx_0001_instant) [CHAR LIMIT=10] -->
-  <string name="ffx_instant">Άμεσα</string>
+  <string name="ffx_instant">Instant</string>
   <!-- String for filter that washes out colors (filtershow_fx_0002_bleach) [CHAR LIMIT=10] -->
-  <string name="ffx_bleach">Λεύκανση</string>
+  <string name="ffx_bleach">Bleach</string>
   <!-- String for filter that makes colors a bluish (filtershow_fx_0003_blue_crush) [CHAR LIMIT=10] -->
   <string name="ffx_blue_crush">Μπλε</string>
   <!-- String for filter that makes image black & white (filtershow_fx_0004_bw_contrast) [CHAR LIMIT=10] -->
-  <string name="ffx_bw_contrast">Α/Μ</string>
+  <string name="ffx_bw_contrast">B/W</string>
   <!-- String for filter that makes colors a yellowish (filtershow_fx_0005_punch) [CHAR LIMIT=10] -->
-  <string name="ffx_punch">Γροθιά</string>
+  <string name="ffx_punch">Punch</string>
   <!-- String for filter that mimics the cross-process technique in
          photography (makes colors bluish) (filtershow_fx_0006_x_process) [CHAR LIMIT=10] -->
-  <string name="ffx_x_process">Επεξεργασία X</string>
+  <string name="ffx_x_process">X Process</string>
   <!-- String for filter that makes image coffee-colored (filtershow_fx_0007_washout) [CHAR LIMIT=10] -->
   <string name="ffx_washout">Latte</string>
   <!-- String for filter that makes colors washed out and brownish
@@ -306,25 +306,25 @@
   <string name="ffx_washout_color">Litho</string>
   <!-- Toast message shown after we make some album(s) available offline [CHAR LIMIT=50] -->
   <plurals name="make_albums_available_offline">
-    <item quantity="one">Διάθεση λευκώματος εκτός σύνδεσης.</item>
-    <item quantity="other">Διάθεση λευκωμάτων εκτός σύνδεσης.</item>
+    <item quantity="one">Διάθεση άλμπουμ εκτός σύνδεσης.</item>
+    <item quantity="other">Διάθεση άλμπουμ εκτός σύνδεσης.</item>
   </plurals>
   <!-- Toast message shown after we try to make a local album available offline
          [CHAR LIMIT=150] -->
   <string name="try_to_set_local_album_available_offline">Αυτό το αντικείμενο είναι αποθηκευμένο τοπικά και διαθέσιμο εκτός σύνδεσης.</string>
   <!-- A label shown on the action bar. It indicates that the user is
          viewing all available albums [CHAR LIMIT=20] -->
-  <string name="set_label_all_albums">Όλα τα λευκώματα</string>
+  <string name="set_label_all_albums">Όλα τα άλμπουμ</string>
   <!-- A label shown on the action bar. It indicates that the user is
          viewing albums stored locally on the device [CHAR LIMIT=20] -->
-  <string name="set_label_local_albums">Τοπικά λευκώματα</string>
+  <string name="set_label_local_albums">Τοπικά άλμπουμ</string>
   <!-- A label shown on the action bar. It indicates that the user is
          viewing MTP devices connected (like other digital cameras).
          [CHAR LIMIT=20] -->
   <string name="set_label_mtp_devices">Συσκευές MTP</string>
   <!-- A label shown on the action bar. It indicates that the user is
          viewing Picasa albums [CHAR LIMIT=20] -->
-  <string name="set_label_picasa_albums">Λευκώματα Picasa</string>
+  <string name="set_label_picasa_albums">Άλμπουμ Picasa</string>
   <!-- Label indicating the amount on free space on the device. The parameter
          is a string representation of the amount of free space, eg. "20MB".
          [CHAR LIMIT=20]
@@ -353,19 +353,19 @@
   <string name="Import">Εισαγωγή</string>
   <!-- A label shown on the action bar. It indicates whether the import
          operation succeeds or fails. [CHAR LIMIT=20] -->
-  <string name="import_complete">Η εισαγωγή ολοκληρ.</string>
-  <string name="import_fail">Μη επιτυχημένη εισαγωγή</string>
+  <string name="import_complete">Η εισαγωγή ολοκληρώθηκε</string>
+  <string name="import_fail">Μη επιτυχής εισαγωγή</string>
   <!-- A toast indicating a camera is connected to the device [CHAR LIMIT=30]-->
   <string name="camera_connected">Φωτογραφική μηχανή συνδεδεμένη.</string>
   <!-- A toast indicating a camera is disconnected [CHAR LIMIT=30] -->
-  <string name="camera_disconnected">Φωτογρ. μηχανή αποσυνδεδεμένη</string>
+  <string name="camera_disconnected">Φωτογραφική μηχανή αποσυνδεδεμένη.</string>
   <!-- A label shown on MTP albums thumbnail to instruct users to import
         [CHAR LIMIT=40] -->
-  <string name="click_import">Αγγίξτε εδώ για να κάνετε εισαγωγή</string>
+  <string name="click_import">Αγγίξτε εδώ για εισαγωγή</string>
   <!-- The label on the radio button for the widget type that shows the images randomly. [CHAR LIMIT=30]-->
-  <string name="widget_type_album">Επιλογή λευκώματος</string>
+  <string name="widget_type_album">Επιλέξτε ένα άλμπουμ</string>
   <!-- The label on the radio button for the widget type that shows the images in an album. [CHAR LIMIT=30]-->
-  <string name="widget_type_shuffle">Τυχαία αναπ. όλων των εικόνων</string>
+  <string name="widget_type_shuffle">Τυχαία σειρά προβολής εικόνων</string>
   <!-- The label on the radio button for the widget type that shows only one image. [CHAR LIMIT=30]-->
   <string name="widget_type_photo">Επιλέξτε μια εικόνα</string>
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
@@ -373,9 +373,9 @@
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
   <string name="slideshow_dream_name">Παρουσίαση</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
-  <string name="albums">Λευκώματα</string>
+  <string name="albums">Άλμπουμ</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
-  <string name="times">Φορές</string>
+  <string name="times">Ώρες</string>
   <!-- Group by Locations tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="locations">Τοποθεσίες</string>
   <!-- Group by People tab on Action Bar. [CHAR LIMIT=12] -->
@@ -396,15 +396,15 @@
   <string name="folder_edited_online_photos">Φωτογραφίες επεξεργασμένες στο διαδίκτυο</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
-  <string name="folder_imported">Έγινε εισαγωγή</string>
+  <string name="folder_imported">Εισαγόμενες</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
   <string name="folder_screenshot">Στιγμιότυπο οθόνης</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <string name="help">Βοήθεια</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
-  <string name="no_external_storage_title">Δεν υπάρχ.αποθ.χώρ.</string>
+  <string name="no_external_storage_title">Δεν εντοπίστηκε εξωτερικός αποθηκευτικός χώρος</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
-  <string name="no_external_storage">Δεν υπάρχει διαθέσιμος εξωτερικός χώρος αποθήκευσης</string>
+  <string name="no_external_storage">Δεν υπάρχει διαθέσιμος εξωτερικός αποθηκευτικός χώρος</string>
   <!-- Label for album filmstrip button -->
   <string name="switch_photo_filmstrip">Προβολή σε φιλμ</string>
   <!-- Label for album grid button -->
@@ -420,9 +420,9 @@
   <!-- Toast after the trimming / muting is done. [CHAR LIMIT=50] -->
   <string name="save_into">Αποθήκευση βίντεο στο άλμπουμ <xliff:g id="ALBUM_NAME">%1$s</xliff:g> …</string>
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
-  <string name="trim_too_short">Δεν είναι δυνατή η περικοπή : το βίντεο-στόχος είναι πολύ σύντομο</string>
+  <string name="trim_too_short">Δεν είναι δυνατή η περικοπή : το κομμένο βίντεο είναι πολύ σύντομο</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
-  <string name="mute_nosupport">Can not mute : not supported video</string>
+  <string name="mute_nosupport">Δεν είναι δυνατή η σίγαση: μη υποστηριζόμενο βίντεο</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Απόδοση πανοράματος</string>
   <!-- The label on the button that will save an edited image -->
@@ -430,25 +430,25 @@
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
-  <string name="ingest_scanning" msgid="2048262851775139720">Scanning content\u2026</string>
+  <string name="ingest_scanning" msgid="2048262851775139720">Σάρωση περιεχομένου…</string>
   <!-- String indicating how many media items from the camera have been scanned -->
   <plurals name="ingest_number_of_items_scanned">
-    <item quantity="one">%1$d στοιχείο έχει σαρωθεί</item>
-    <item quantity="other">%1$d στοιχεία έχουν σαρωθεί</item>
+    <item quantity="one">%1$d αντικείμενο έχει σαρωθεί</item>
+    <item quantity="other">%1$d αντικείμενα έχουν σαρωθεί</item>
   </plurals>
   <!-- String indicating how many media items from the camera have been selected -->
   <plurals name="ingest_number_of_items_selected">
-    <item quantity="one">%1$d item selected</item>
-    <item quantity="other">%1$d items selected</item>
+    <item quantity="one">%1$d αντικείμενο έχει επιλεχθεί</item>
+    <item quantity="other">%1$d αντικείμενα έχουν επιλεχθεί</item>
   </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
-  <string name="ingest_sorting" msgid="624687230903648118">Sorting\u2026</string>
+  <string name="ingest_sorting" msgid="624687230903648118">Ταξινόμηση…</string>
   <!--  Status message shown when scanning the content from the camera has completed -->
-  <string name="ingest_scanning_done">Η σάρωση έχει ολοκληρωθεί</string>
+  <string name="ingest_scanning_done">Η σάρωση ολοκληρώθηκε</string>
   <!--  Status message shown when content from an external camera is being imported -->
-  <string name="ingest_importing">Importing\u2026</string>
+  <string name="ingest_importing">Εισαγωγή…</string>
   <!--  Status message shown when there is no content available to be imported -->
-  <string name="ingest_empty_device">Δεν υπάρχει διαθέσιμο περιεχόμενο για εισαγωγή σε αυτή τη συσκευή.</string>
+  <string name="ingest_empty_device">Δεν υπάρχει διαθέσιμο περιεχόμενο για εισαγωγή στη συσκευή.</string>
   <!--  Status message shown when there is no MTP device connected  -->
   <string name="ingest_no_device">Δεν υπάρχει συνδεδεμένη συσκευή MTP</string>
   <!-- Label for album grid button -->
@@ -470,25 +470,25 @@
   <!-- alert to the user that an SD card must be installed before using the camera -->
   <string name="no_storage" product="default">Εισαγάγετε κάρτα SD πριν χρησιμοποιήσετε τη φωτογραφική μηχανή.</string>
   <!-- alert to the user that the USB storage is being disk-checked [CHAR LIMIT=30] -->
-  <string name="preparing_sd" product="nosdcard">Προετοιμασία χώρου αποθ. USB…</string>
+  <string name="preparing_sd" product="nosdcard">Προετοιμασία αποθηκευτικού χώρου USB...</string>
   <!-- alert to the user that the SD card is being disk-checked -->
   <string name="preparing_sd" product="default">Προετοιμασία κάρτας SD…</string>
   <!-- alert to the user that the camera fails to read or write the USB storage. [CHAR LIMIT=NONE] -->
-  <string name="access_sd_fail" product="nosdcard">Δεν ήταν δυνατή η πρόσβαση στο χώρο αποθήκευσης USB.</string>
+  <string name="access_sd_fail" product="nosdcard">Δεν ήταν δυνατή η πρόσβαση στον αποθηκευτικό χώρο USB.</string>
   <!-- alert to the user that the camera fails to read or write the SD card. -->
   <string name="access_sd_fail" product="default">Δεν ήταν δυνατή η πρόσβαση στην κάρτα SD.</string>
   <!-- button in review mode indicating that the photo taking, video recording, and panorama saving session should be canceled [CHAR LIMIT=10] -->
   <string name="review_cancel">ΑΚΥΡΩΣΗ</string>
   <!-- button in review mode indicating that the taken photo/video is OK to be attached/uploaded [CHAR LIMIT=10] -->
-  <string name="review_ok">ΤΕΛΟΣ</string>
+  <string name="review_ok">ΕΤΟΙΜΟ</string>
   <!-- A label that overlays on top of the preview frame to indicate the camcorder is in time lapse mode [CHAR LIMIT=35] -->
-  <string name="time_lapse_title">Εγγραφή παρέλευσης χρόνου</string>
+  <string name="time_lapse_title">Καταγραφή χρόνου</string>
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
-  <string name="pref_camera_id_title">Επιλογή φωτ. μηχανής</string>
+  <string name="pref_camera_id_title">Επιλογή φωτογραφικής μηχανής</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_back">Επιστροφή</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
-  <string name="pref_camera_id_entry_front">Μπροστά</string>
+  <string name="pref_camera_id_entry_front">Μπροστινή</string>
   <!-- Settings screen, setting title text -->
   <string name="pref_camera_recordlocation_title">Τοποθεσία αποθήκευσης</string>
   <!--  Label for record location preference [CHAR LIMIT=50] -->
@@ -528,23 +528,23 @@
   <!-- Settings screen, Picture size title -->
   <string name="pref_camera_picturesize_title">Μέγεθος εικόνας</string>
   <!-- Settings screen, dialog choice for 13 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_13mp">13M εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_13mp">13M pixels</string>
   <!-- Settings screen, dialog choice for 8 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_8mp">8M εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_8mp">8M pixels</string>
   <!-- Settings screen, dialog choice for 5 megapixels picture size [CHAR LIMIT=15] -->
   <string name="pref_camera_picturesize_entry_5mp">5 M εικονοστ.</string>
   <!-- Settings screen, dialog choice for 4 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_4mp">4M εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_4mp">4M pixels</string>
   <!-- Settings screen, dialog choice for 3 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_3mp">3M εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_3mp">3M pixels</string>
   <!-- Settings screen, dialog choice for 2 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_2mp">2M  εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_2mp">2M pixels</string>
   <!-- Settings screen, dialog choice for 2 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_2mp_wide">2M εικον.(16:9)</string>
+  <string name="pref_camera_picturesize_entry_2mp_wide">2M pixels (16:9)</string>
   <!-- Settings screen, dialog choice for 1.3 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_1_3mp">1.3M εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_1_3mp">1.3M pixels</string>
   <!-- Settings screen, dialog choice for 1 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_1mp">1M εικονοστ.</string>
+  <string name="pref_camera_picturesize_entry_1mp">1M pixels</string>
   <!-- Settings screen, dialog choice for VGA picture size [CHAR LIMIT=15] -->
   <string name="pref_camera_picturesize_entry_vga">VGA</string>
   <!-- Settings screen, dialog choice for QVGA picture size [CHAR LIMIT=15] -->
@@ -554,11 +554,11 @@
   <!-- Settings screen, Focus mode dialog radio button choices -->
   <string name="pref_camera_focusmode_entry_auto">Αυτόματο</string>
   <string name="pref_camera_focusmode_entry_infinity">Άπειρο</string>
-  <string name="pref_camera_focusmode_entry_macro">Απόσταση</string>
+  <string name="pref_camera_focusmode_entry_macro">Μακροσκόπηση</string>
   <!-- Menu, focus mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_focusmode_label_auto">ΑΥΤΟΜΑΤΟ</string>
   <string name="pref_camera_focusmode_label_infinity">ΑΠΕΙΡΟ</string>
-  <string name="pref_camera_focusmode_label_macro">ΜΑΚΡΟΦΩΤΟΓΡΑΦΙΑ</string>
+  <string name="pref_camera_focusmode_label_macro">ΜΑΚΡΟΣΚΟΠΗΣΗ</string>
   <!-- Default flash mode setting.-->
   <!-- Value for flash off setting-->
   <!-- Settings screen, Flash mode title -->
@@ -571,25 +571,25 @@
   <string name="pref_camera_flashmode_entry_off">Ανενεργό</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">ΑΥΤΟΜΑΤΟ ΦΛΑΣ</string>
-  <string name="pref_camera_flashmode_label_on">ΕΝΕΡΓΟΠΟΙΗΣΗ ΦΛΑΣ</string>
-  <string name="pref_camera_flashmode_label_off">ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ ΦΛΑΣ</string>
+  <string name="pref_camera_flashmode_label_on">ΦΛΑΣ ΕΝΕΡΓΟ</string>
+  <string name="pref_camera_flashmode_label_off">ΦΛΑΣ ΑΝΕΝΕΡΓΟ</string>
   <!-- Default videocamera flash mode setting.-->
   <!-- Default white balance setting. -->
   <!-- Settings screen, white balance title -->
-  <string name="pref_camera_whitebalance_title">Ισορρ. λευκού</string>
+  <string name="pref_camera_whitebalance_title">Ισορροπία λευκού</string>
   <!-- Menu, white balance label -->
   <string name="pref_camera_whitebalance_label">ΙΣΟΡΡΟΠΙΑ ΛΕΥΚΟΥ</string>
   <!-- Settings screen, White balance dialog radio button choices -->
   <string name="pref_camera_whitebalance_entry_auto">Αυτόματο</string>
-  <string name="pref_camera_whitebalance_entry_incandescent">Λαμπτήρας πυρακτώσεως</string>
+  <string name="pref_camera_whitebalance_entry_incandescent">Λευκοπυρώμενο</string>
   <string name="pref_camera_whitebalance_entry_daylight">Φως ημέρας</string>
-  <string name="pref_camera_whitebalance_entry_fluorescent">Λαμπτήρας φθορισμού</string>
+  <string name="pref_camera_whitebalance_entry_fluorescent">Φθορίζον</string>
   <string name="pref_camera_whitebalance_entry_cloudy">Συννεφιά</string>
   <!-- Menu, White balance labels [CHAR LIMIT=50] -->
   <string name="pref_camera_whitebalance_label_auto">ΑΥΤΟΜΑΤΟ</string>
-  <string name="pref_camera_whitebalance_label_incandescent">ΛΑΜΠΤΗΡΑΣ ΠΥΡΑΚΤΩΣΕΩΣ</string>
+  <string name="pref_camera_whitebalance_label_incandescent">ΛΕΥΚΟΠΥΡΩΜΕΝΟ</string>
   <string name="pref_camera_whitebalance_label_daylight">ΦΩΣ ΗΜΕΡΑΣ</string>
-  <string name="pref_camera_whitebalance_label_fluorescent">ΛΑΜΠΤΗΡΑΣ ΦΘΟΡΙΣΜΟΥ</string>
+  <string name="pref_camera_whitebalance_label_fluorescent">ΦΘΟΡΙΖΟΝ</string>
   <string name="pref_camera_whitebalance_label_cloudy">ΣΥΝΝΕΦΙΑ</string>
   <!-- Default scene mode setting. -->
   <!-- Settings screen, Select Scene mode -->
@@ -609,7 +609,7 @@
   <!-- Settings menu, scene mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_scenemode_label_auto">ΚΑΜΙΑ</string>
   <!-- Scene mode that takes an image quickly with little motion blur. [CHAR LIMIT=50] -->
-  <string name="pref_camera_scenemode_label_action">ΔΡΑΣΗ</string>
+  <string name="pref_camera_scenemode_label_action">ΕΝΕΡΓΕΙΑ</string>
   <!-- Scene mode that takes long exposures to capture night scenes without flash. [CHAR LIMIT=50] -->
   <string name="pref_camera_scenemode_label_night">ΝΥΧΤΑ</string>
   <!-- Scene mode optimized for taking images in the sunset. [CHAR LIMIT=50] -->
@@ -619,7 +619,7 @@
   <!-- Settings menu countdown timer labels [CHAR LIMIT=50] -->
   <string name="pref_camera_countdown_label">ΧΡΟΝΟΜΕΤΡΟ ΑΝΤΙΣΤΡΟΦΗΣ ΜΕΤΡΗΣΗΣ</string>
   <!-- Settings menu countdown timer off [CHAR LIMIT=50] -->
-  <string name="pref_camera_countdown_label_off">ΑΝΕΝΕΡΓΟ ΧΡΟΝΟΜΕΤΡΟ</string>
+  <string name="pref_camera_countdown_label_off">ΧΡΟΝΟΜΕΤΡΟ ΑΝΕΝΕΡΓΟ</string>
   <!-- Settings menu countdown timer 1 second [CHAR LIMIT=50] -->
   <string name="pref_camera_countdown_label_one">1 ΔΕΥΤΕΡΟΛΕΠΤΟ</string>
   <!-- Settings menu countdown timer 3 seconds [CHAR LIMIT=50] -->
@@ -638,15 +638,15 @@
   <!-- HDR label ON [CHAR LIMIT=60] -->
   <string name="pref_camera_hdr_label">HDR</string>
   <!-- switch camera label back [CHAR LIMIT=60] -->
-  <string name="pref_camera_id_label_back">ΜΠΡΟΣΤΑ</string>
+  <string name="pref_camera_id_label_back">ΜΠΡΟΣΤΙΝΗ ΚΑΜΕΡΑ</string>
   <!-- switch camera label front [CHAR LIMIT=60] -->
   <string name="pref_camera_id_label_front">ΠΙΣΩ ΚΑΜΕΡΑ</string>
   <!-- Dialog "OK" button. Dismisses dialog. -->
   <string name="dialog_ok">ΟΚ</string>
   <!-- Low-memory dialog message [CHAR LIMT=NONE] -->
-  <string name="spaceIsLow_content" product="nosdcard">Ο διαθέσιμος χώρος USB είναι ελάχιστος. Αλλάξτε τη ρύθμιση της ποιότητας ή διαγράψτε κάποιες εικόνες ή άλλα αρχεία.</string>
+  <string name="spaceIsLow_content" product="nosdcard">Ο διαθέσιμος χώρος USB είναι ελάχιστος. Αλλάξτε την ποιότητα ή διαγράψτε κάποιες εικόνες ή άλλα αρχεία.</string>
   <!-- Low-memory dialog message [CHAR LIMIT=NONE] -->
-  <string name="spaceIsLow_content" product="default">Ο διαθέσιμος χώρος στην κάρτα SD είναι ελάχιστος. Αλλάξτε τη ρύθμιση ποιότητας ή διαγράψτε κάποιες εικόνες ή άλλα αρχεία.</string>
+  <string name="spaceIsLow_content" product="default">Ο διαθέσιμος χώρος στην κάρτα SD είναι ελάχιστος. Αλλάξτε την ποιότητα ή διαγράψτε κάποιες εικόνες ή άλλα αρχεία.</string>
   <!-- Camera format string for new image files. Passed to java.text.SimpleDateFormat. -->
   <!-- Video Camera format string for new video files. Passed to java.text.SimpleDateFormat. -->
   <!-- Filename prefix for panorama output. -->
@@ -655,7 +655,7 @@
   <!-- The text shown when the panorama panning speed is to fast [CHAR LIMIT=12] -->
   <string name="pano_too_fast_prompt">Πολύ γρήγορα</string>
   <!-- The text shown in the progress dialog when panorama preview is generating in the background [CHAR LIMIT=30] -->
-  <string name="pano_dialog_prepare_preview">Προετοιμασία πανοραμικής εικ.</string>
+  <string name="pano_dialog_prepare_preview">Προετοιμασία πανοραμικής εικόνας</string>
   <!-- The text shown in the dialog when panorama saving failed [CHAR LIMIT=40] -->
   <string name="pano_dialog_panorama_failed">Δεν ήταν δυνατή η αποθήκευση του πανοράματος.</string>
   <!-- The text shown on the dialog title in the dialogs for Panorama [CHAR LIMIT=12] -->
@@ -663,7 +663,7 @@
   <!-- The text shown on the top-left corner of the screen to indicate the capturing is on going [CHAR LIMIT=27] -->
   <string name="pano_capture_indication">Λήψη πανοράματος</string>
   <!-- The text shown in the progress dialog when waiting for previous panorama finishing [CHAR LIMIT=40] -->
-  <string name="pano_dialog_waiting_previous">Αναμονή για προηγ. πανοραμική εικόνα</string>
+  <string name="pano_dialog_waiting_previous">Αναμονή για προηγούμενη πανοραμική εικόνα</string>
   <!-- The text shown on the bottom-left corner of the screen to indicate that the saving is in process [CHAR LIMIT=13] -->
   <string name="pano_review_saving_indication_str">Aποθήκευση...</string>
   <!-- The text shown on the screen to indicate that the panorama is rendering [CHAR LIMIT=27] -->
@@ -676,7 +676,7 @@
   <!-- Effect setting item that clear the effect. [CHAR LIMIT=14] -->
   <string name="effect_none">Καμιά</string>
   <!-- Effect setting item that squeezes the face. [CHAR LIMIT=14] -->
-  <string name="effect_goofy_face_squeeze">Πιέστε</string>
+  <string name="effect_goofy_face_squeeze">Πιεσμένο</string>
   <!-- Effect setting item that makes eyes big. [CHAR LIMIT=14] -->
   <string name="effect_goofy_face_big_eyes">Μεγάλα μάτια</string>
   <!-- Effect setting item that makes mouth big. [CHAR LIMIT=14] -->
@@ -704,7 +704,7 @@
   <!-- Toast telling users video snapshot is disabled when the effects are on and a user tries to tap on the viewfinder [CHAR LIMIT=65] -->
   <string name="disable_video_snapshot_hint">Το στιγμιότυπο οθόνης βίντεο απενεργοποιείται με ενεργά τα εφέ.</string>
   <!-- A button in effect setting popup to clear the effect. [CHAR LIMIT=26] -->
-  <string name="clear_effects">Διαγραφή εφέ</string>
+  <string name="clear_effects">Εκκαθάριση εφέ</string>
   <!-- Title of category for silly face effects. [CHAR LIMIT=26] -->
   <string name="effect_silly_faces">ΑΣΤΕΙΑ ΠΡΟΣΩΠΑ</string>
   <!-- Title of category for background replacement effects. [CHAR LIMIT=26] -->
@@ -716,7 +716,7 @@
   <!-- The button to review the thumbnail. [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_thumbnail">Πιο πρόσφατη φωτογραφία</string>
   <!-- The front/back camera switch. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_camera_picker">Διακόπτης εμπρός και πίσω φωτογραφικής μηχανής</string>
+  <string name="accessibility_camera_picker">Εναλλαγή εμπρός και πίσω φωτογραφικής μηχανής</string>
   <!-- The mode picker to switch between camera, video and panorama. [CHAR LIMIT = NONE] -->
   <string name="accessibility_mode_picker">Επιλογέας φωτογραφικής μηχανής, βίντεο ή πανοράματος</string>
   <!-- The button to switch to the second-level indicators of the camera settings. [CHAR LIMIT = NONE] -->
@@ -732,35 +732,35 @@
   <!-- The check box in camera settings, such as store location. [CHAR LIMIT = NONE] -->
   <string name="accessibility_check_box">%1$s πλαίσιο επιλογής</string>
   <!-- The button to switch to Camera mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_camera">Μετάβαση σε φωτογραφία</string>
+  <string name="accessibility_switch_to_camera">Εναλλαγή σε λειτουργία φωτογραφίας</string>
   <!-- The button to switch to Video mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_video">Μετάβαση σε λειτουργία βίντεο</string>
+  <string name="accessibility_switch_to_video">Εναλλαγή σε λειτουργία βίντεο</string>
   <!-- The button to switch to Panorama mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_panorama">Μετάβαση σε πανόραμα</string>
+  <string name="accessibility_switch_to_panorama">Εναλλαγή σε λειτουργία πανοράματος</string>
   <!-- The button to switch to new Panorama mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_new_panorama">Μετάβαση σε νέο πανόραμα</string>
+  <string name="accessibility_switch_to_new_panorama">Εναλλαγή σε λειτουργία νέου πανοράματος</string>
   <!-- The button to switch to the Re-Focus mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_refocus">Εναλλαγή στην επανεστίαση</string>
+  <string name="accessibility_switch_to_refocus">Εναλλαγή σε λειτουργία επανεστίασης</string>
   <!-- The button in review mode indicating that the photo taking, video recording, and panorama saving session should be canceled [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_cancel">Ακύρωση αναθεώρησης</string>
   <!-- The button in review mode indicating that the taken photo/video is OK to be attached/uploaded [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_ok">Ολοκλήρωση αναθεώρησης</string>
   <!-- button in review mode indicate the user want to retake another photo/video for attachment [
 CHAR LIMIT = NONE] -->
-  <string name="accessibility_review_retake">Έλεγχος νέας λήψης</string>
+  <string name="accessibility_review_retake">Αναθεώρηση νέας λήψης</string>
   <!-- The button to play the video. [CHAR LIMIT = NONE] -->
   <string name="accessibility_play_video">Αναπαραγωγή βίντεο</string>
   <!-- The button to pause the video. [CHAR LIMIT = NONE] -->
   <string name="accessibility_pause_video">Παύση βίντεο</string>
   <!-- The button to reload the video. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_reload_video">Επανάληψη φόρτωσης βίντεο</string>
+  <string name="accessibility_reload_video">Ανανέωση βίντεο</string>
   <!-- The time bar of the media player. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_time_bar">Γραμμή χρόνου προγράμματος αναπαραγωγής βίντεο</string>
+  <string name="accessibility_time_bar">Μπάρα χρόνου προγράμματος αναπαραγωγής βίντεο</string>
   <!-- TODO: remove the string as it is a work-around solution to bypass the default speak of the element type. -->
   <!-- Default text for a button that can be toggled on and off. -->
-  <string name="capital_on">ΕΝΕΡΓΟΠΟΙΗΣΗ</string>
+  <string name="capital_on">ΕΝΕΡΓΟ</string>
   <!-- Default text for a button that can be toggled on and off. -->
-  <string name="capital_off">ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ</string>
+  <string name="capital_off">ΑΝΕΝΕΡΓΟ</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_off">Ανενεργό</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -862,13 +862,13 @@ CHAR LIMIT = NONE] -->
   <!-- Title for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 50] -->
   <string name="remember_location_title">Απομνημόνευση τοποθεσίας φωτογραφιών;</string>
   <!-- Message for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = None] -->
-  <string name="remember_location_prompt">Προσθέστε ετικέτες στις φωτογραφίες και τα βίντεό σας με την τοποθεσία στην οποία έχουν τραβηχτεί.\n\nΟι άλλες εφαρμογές μπορούν να αποκτήσουν πρόσβαση σε αυτές τις πληροφορίες μαζί με τις αποθηκευμένες σας εικόνες.</string>
+  <string name="remember_location_prompt">Προσθέστε ετικέτες στις φωτογραφίες και τα βίντεό σας με την τοποθεσία στην οποία έχουν τραβηχτεί.\n\nΟι άλλες εφαρμογές μπορούν να αποκτήσουν πρόσβαση σε αυτές τις πληροφορίες μαζί με τις αποθηκευμένες εικόνες σας.</string>
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">Όχι ευχαριστώ</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_yes">Ναι</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
-  <string name="map_activity_not_found_err">There is no map app for show location.</string>
+  <string name="map_activity_not_found_err">Δεν υπάρχει εφαρμογή χάρτη για εμφάνιση της τοποθεσίας.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Κάμερα</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
@@ -876,7 +876,7 @@ CHAR LIMIT = NONE] -->
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Φωτογραφίες</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
-  <string name="tab_albums">Λευκώματα</string>
+  <string name="tab_albums">Άλμπουμ</string>
   <!-- Camera menu labels -->
   <!-- more options label [CHAR LIMIT=50] -->
   <string name="camera_menu_more_label">ΠΕΡΙΣΣΟΤΕΡΕΣ ΕΠΙΛΟΓΕΣ</string>
@@ -885,12 +885,12 @@ CHAR LIMIT = NONE] -->
   <!-- String indicating how many photos are in an album [CHAR LIMIT=15] -->
   <plurals name="number_of_photos">
     <item quantity="one">%1$d φωτογραφία</item>
-    <item quantity="other">%1$d φωτογραφ.</item>
+    <item quantity="other">%1$d φωτογραφίες</item>
   </plurals>
   <!-- The label for the bass boost knob of the audio effects dialog. -->
   <string name="bass_boost_strength">Ενίσχυση μπάσων</string>
   <!-- The label for the 3d effect knob of the audio effects dialog. -->
-  <string name="virtualizer_strength">3D effect</string>
+  <string name="virtualizer_strength">Εφέ 3D</string>
   <!-- The label for the audio effects menu. -->
   <string name="audio_effects">Ηχητικά εφέ</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
@@ -898,5 +898,5 @@ CHAR LIMIT = NONE] -->
   <!-- The title of the audio effects dialog. -->
   <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
-  <string name="fail_trim">Sorry, this video file can not be trimmed</string>
+  <string name="fail_trim">Συγγνώμη, αυτό το βίντεο δεν μπορεί να περικοπεί</string>
 </resources>

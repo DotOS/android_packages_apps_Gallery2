@@ -31,7 +31,7 @@
   <!--  Text to label an image as "original" [CHAR LIMIT=20] -->
   <string name="original">Asli</string>
   <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
-  <string name="borders" msgid="4461692156695893616">Batas</string>
+  <string name="borders" msgid="4461692156695893616">Bingkai</string>
   <!-- Text for the custom border filter [CHAR LIMIT=20] -->
   <string name="custom_border">Kustom</string>
   <!--  actionbar menu -->
@@ -62,7 +62,7 @@
   <string name="menu_settings">Pengaturan</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
-  <string name="unsaved">Ada perubahan yang belum tersimpan pada gambar ini.</string>
+  <string name="unsaved">Ada perubahan yang belum disimpan pada gambar ini.</string>
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">Ingin menyimpan sebelum keluar?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
@@ -124,7 +124,7 @@
   <!--  Label for the image saturation (brightens colors) filter button [CHAR LIMIT=10] -->
   <string name="saturation">Saturasi</string>
   <!--  Label for the image BW filter (makes black & white) button [CHAR LIMIT=10] -->
-  <string name="bwfilter">Filter HP</string>
+  <string name="bwfilter">Filter Hitam putih</string>
   <!--  Label for the image Autocolor filter (makes off-white colors whiter) button [CHAR LIMIT=10] -->
   <string name="wbalance">Warna Otomatis</string>
   <!--  Label for the image Hue filter (color, shade, tinge, tone) button [CHAR LIMIT=10] -->
@@ -187,7 +187,7 @@
   <!--  Label for the green control for per channel saturation effect [CHAR LIMIT=20] -->
   <string name="editor_chan_sat_green">Hijau</string>
   <!--  Label for the cyan control for per channel saturation effect [CHAR LIMIT=20] -->
-  <string name="editor_chan_sat_cyan">Sian</string>
+  <string name="editor_chan_sat_cyan">Biru kehijauan</string>
   <!--  Label for the blue control for per channel saturation effect [CHAR LIMIT=20] -->
   <string name="editor_chan_sat_blue">Biru</string>
   <!--  Label for the Magenta control for per channel saturation effect [CHAR LIMIT=20] -->

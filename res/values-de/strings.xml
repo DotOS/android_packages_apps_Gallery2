@@ -381,7 +381,7 @@
   <!-- Group by People tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="people">Personen</string>
   <!-- Group by Tags tab on Action Bar. [CHAR LIMIT=12] -->
-  <string name="tags">Tags</string>
+  <string name="tags">Schlagwörter</string>
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">Gruppieren nach</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
@@ -422,7 +422,7 @@
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
   <string name="trim_too_short">Zuschneiden nicht möglich: Ziel-Video zu kurz</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
-  <string name="mute_nosupport">Stummschalten nicht möglich : kein unterstützes Video</string>
+  <string name="mute_nosupport">Ton aus nicht möglich; das Videoformat wird nicht unterstützt</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Panorama wird gerendert...</string>
   <!-- The label on the button that will save an edited image -->
@@ -494,7 +494,7 @@
   <!--  Label for record location preference [CHAR LIMIT=50] -->
   <string name="pref_camera_location_label">Standort</string>
   <!-- Title for countdown timer on camera settings screen [CHAR LIMIT=30]-->
-  <string name="pref_camera_timer_title">Countdown-Timer</string>
+  <string name="pref_camera_timer_title">Countdown-Zähler</string>
   <!-- Entry for countdown timer setting. e.g. 1 second, 10 seconds, etc. [CHAR LIMIT=30]-->
   <plurals name="pref_camera_timer_entry">
     <item quantity="one">1 Sekunde</item>
@@ -528,7 +528,7 @@
   <!-- Settings screen, Picture size title -->
   <string name="pref_camera_picturesize_title">Bildgröße</string>
   <!-- Settings screen, dialog choice for 13 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_13mp">13 Megapixel</string>
+  <string name="pref_camera_picturesize_entry_13mp">13 MP</string>
   <!-- Settings screen, dialog choice for 8 megapixels picture size [CHAR LIMIT=15] -->
   <string name="pref_camera_picturesize_entry_8mp">8 MP</string>
   <!-- Settings screen, dialog choice for 5 megapixels picture size [CHAR LIMIT=15] -->
@@ -617,9 +617,9 @@
   <!-- Scene mode optimized for taking indoor low-lights pictures. [CHAR LIMIT=50] -->
   <string name="pref_camera_scenemode_label_party">Party</string>
   <!-- Settings menu countdown timer labels [CHAR LIMIT=50] -->
-  <string name="pref_camera_countdown_label">Countdown-Timer</string>
+  <string name="pref_camera_countdown_label">Countdown-Zähler</string>
   <!-- Settings menu countdown timer off [CHAR LIMIT=50] -->
-  <string name="pref_camera_countdown_label_off">Timer deaktiviert</string>
+  <string name="pref_camera_countdown_label_off">Zähler deaktiviert</string>
   <!-- Settings menu countdown timer 1 second [CHAR LIMIT=50] -->
   <string name="pref_camera_countdown_label_one">1 Sekunde</string>
   <!-- Settings menu countdown timer 3 seconds [CHAR LIMIT=50] -->
@@ -854,7 +854,7 @@ CHAR LIMIT = NONE] -->
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
   <string name="set_time_interval_help">Die Zeitraffer-Funktion ist ausgeschaltet. Schalten Sie sie ein, um das Zeitintervall festzulegen.</string>
   <!-- Help text that is shown when the countdown timer is turned off. [CHAR LIMIT = 180]-->
-  <string name="set_timer_help">Der Countdown-Timer ist deaktiviert. Aktivieren Sie ihn, damit vor der Aufnahme eines Bildes ein Countdown erfolgt.</string>
+  <string name="set_timer_help">Der Countdown-Zähler ist deaktiviert. Aktivieren Sie ihn, damit vor der Aufnahme eines Bildes ein Countdown erfolgt.</string>
   <!-- Title in timer setting for setting the duration for the countdown timer. [CHAR LIMIT = 50]-->
   <string name="set_duration">Dauer in Sekunden festlegen</string>
   <!-- On-screen hint during timer countdown for taking a photo. [CHAR LIMIT = 60]-->

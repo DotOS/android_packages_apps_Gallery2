@@ -51,7 +51,7 @@
          [CHAR LIMIT=50]-->
   <string name="no_thumbnail">Tidak ada gambar mini</string>
   <!-- Movie View Start Playing button "Beginning" -->
-  <string name="resume_playing_restart">Memulai</string>
+  <string name="resume_playing_restart">Mulai dari semula</string>
   <!-- Title of a menu item to indicate performing the image crop operation
          [CHAR LIMIT=20] -->
   <string name="crop_save_text">Oke</string>
@@ -86,6 +86,7 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">Setel gambar sebagai</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
+  <string name="set_wallpaper">Atur wallpaper</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">Menyetel wallpaper...</string>
   <string name="camera_setas_wallpaper">Wallpaper</string>
@@ -107,6 +108,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">Pilih semua</string>
   <string name="deselect_all">Batalkan semua pilihan</string>
+  <string name="slideshow">Slideshow</string>
   <string name="details">Detail</string>
   <string name="details_title">%1$d dari %2$d item:</string>
   <string name="close">Tutup</string>
@@ -167,9 +169,9 @@
          pressed, a submenu will shown and user can choose one grouping rule
          from the submenu. -->
   <!-- Title of a menu item to group photo by location [CHAR LIMIT=30] -->
-  <string name="group_by_location">Menurut lokasi</string>
+  <string name="group_by_location">Berdasarkan lokasi</string>
   <!-- Title of a menu tiem to group photo by taken date [CHAR LIMIT=30]-->
-  <string name="group_by_time">Menurut waktu</string>
+  <string name="group_by_time">Berdasarkan Waktu</string>
   <!-- Title of a menu item to group photo by tags [CHAR LIMIT=30]-->
   <string name="group_by_tags">Menurut tag</string>
   <!-- Title of a menu item to group photo by faces [CHAR LIMIT=30]-->
@@ -216,6 +218,7 @@
          some albums to be viewable offline [CHAR LIMIT=30] -->
   <string name="make_available_offline">Jadikan agar tersedia offline</string>
   <!-- A label describing to link website [CHAR LIMIT=30] -->
+  <string name="more_image">Lebih banyak gambar</string>
   <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
   <string name="sync_picasa_albums">Segarkan</string>
   <!-- A label on a button. The user clicks this button after he has
@@ -225,11 +228,13 @@
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d dari %2$d item:</string>
   <!-- Text indicating the title of a media item in details window [CHAR LIMIT=14] -->
+  <string name="title">Judul</string>
   <!-- Text indicating the description of a media item in details window [CHAR LIMIT=14] -->
   <string name="description">Deskripsi</string>
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">Waktu</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
+  <string name="location">Lokasi</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">Jalur</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -272,6 +277,7 @@
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">Tanpa lampu kilat</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">Tidak diketahui</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Asli</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -360,6 +366,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">Pilih gambar</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
+  <string name="slideshow_dream_name">Slideshow</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">Album</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -394,7 +401,9 @@
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">Tidak ada penyimpanan eksternal yang tersedia</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">Tampilan flimstrip</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">Tampilan grid</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">Tampilan layar penuh</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -408,6 +417,7 @@
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
   <string name="trim_too_short">Tidak dapat memangkas : video target terlalu pendek</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
+  <string name="mute_nosupport">Tidak dapat bisu : video tidak didukung</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Merender panorama</string>
   <!-- The label on the button that will save an edited image -->
@@ -421,6 +431,9 @@
     <item quantity="other">%1$d item dipindai</item>
   </plurals>
   <!-- String indicating how many media items from the camera have been selected -->
+  <plurals name="ingest_number_of_items_selected">
+    <item quantity="other">%1$d item dipilih</item>
+  </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
   <string name="ingest_sorting" msgid="624687230903648118">Menyortir…</string>
   <!--  Status message shown when scanning the content from the camera has completed -->
@@ -845,7 +858,9 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">Tidak, terima kasih</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
+  <string name="remember_location_yes">Ya</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
+  <string name="map_activity_not_found_err">Tidak ada aplikasi maps untuk menampilkan lokasi.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Kamera</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
@@ -866,10 +881,13 @@ CHAR LIMIT = NONE] -->
   <!-- The label for the bass boost knob of the audio effects dialog. -->
   <string name="bass_boost_strength">Peningkatan bass</string>
   <!-- The label for the 3d effect knob of the audio effects dialog. -->
+  <string name="virtualizer_strength">Efek 3D</string>
   <!-- The label for the audio effects menu. -->
   <string name="audio_effects">Efek audio</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
   <string name="headset_plug">Pasang headphone untuk efek ini.</string>
   <!-- The title of the audio effects dialog. -->
+  <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
+  <string name="fail_trim">Maaf, berkas video ini tidak dapat dipotong</string>
 </resources>
