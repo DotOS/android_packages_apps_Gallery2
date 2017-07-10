@@ -40,6 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">Fortsätt spela upp</string>
   <!-- Displayed in the title of those albums that are being loaded -->
+  <string name="loading">Laddar\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">Kunde inte läsas in</string>
@@ -85,16 +86,19 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">Använd bild som</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
+  <string name="set_wallpaper">Ange bakgrundsbild</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">Bakgrund ställs in ...</string>
   <string name="camera_setas_wallpaper">Bakgrund</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
+  <string name="delete">Ta bort</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="one">Ta bort markerat objekt?</item>
     <item quantity="other">Radera markerade objekt?</item>
   </plurals>
   <string name="confirm">Bekräfta</string>
+  <string name="cancel">Avbryt</string>
   <string name="share">Dela</string>
   <string name="share_panorama">Dela panoramabild</string>
   <string name="share_as_photo">Dela som foto</string>
@@ -105,6 +109,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">Markera alla</string>
   <string name="deselect_all">Avmarkera alla</string>
+  <string name="slideshow">Bildspel</string>
   <string name="details">Information</string>
   <string name="details_title">%1$d av %2$d objekt:</string>
   <string name="close">Stäng</string>
@@ -222,6 +227,7 @@
   <string name="sync_picasa_albums">Uppdatera</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">Klar</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d av %2$d objekt:</string>
@@ -232,6 +238,7 @@
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">Tid</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
+  <string name="location">Plats</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">Sökväg</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -274,6 +281,7 @@
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">Ingen blixt</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">Okänd</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Original</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -363,6 +371,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">Välj bilder</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
+  <string name="slideshow_dream_name">Bildspel</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">Album</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -376,24 +385,30 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">Ordna efter</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">Inställningar</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">Lägg till konto</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <string name="folder_camera">Kamera</string>
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
+  <string name="folder_download">Ladda ner</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">Redigerade onlinefoton</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Importerat</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">Skärmbild</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
+  <string name="help">Hjälp</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">Ingen lagringsenhet</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">Inget externt lagringsutrymme är tillgängligt</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">Filmremsevy</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">Rutnätsvy</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">Helskärmsvy</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -411,6 +426,7 @@
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Panoramabild hämtas</string>
   <!-- The label on the button that will save an edited image -->
+  <string name="save" msgid="8140440041190264400">Spara</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
@@ -470,6 +486,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">Välj kamera</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
+  <string name="pref_camera_id_entry_back">Tillbaka</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">Främre</string>
   <!-- Settings screen, setting title text -->
@@ -486,6 +503,7 @@
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
   <string name="pref_camera_timer_sound_title">Ljudsignal</string>
   <!-- Entry of a on/off setting. The setting is turned off. [CHAR LIMIT=15] -->
+  <string name="setting_off">Av</string>
   <!-- Entry of a on/off setting. The setting is turned on. [CHAR LIMIT=15] -->
   <!-- The value of a camera preference indicating the setting is off. -->
   <!-- The value of a camera preference indicating the setting is on. -->
@@ -496,6 +514,7 @@
   <!-- Video quality setting entry. Videos will be recorded in 720p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in 480p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
+  <string name="pref_video_quality_entry_high">Hög</string>
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
   <string name="pref_video_quality_entry_low">Låg </string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
@@ -547,6 +566,7 @@
   <string name="pref_camera_flashmode_label">BLIXTLÄGE</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
   <string name="pref_camera_flashmode_entry_auto">Auto</string>
+  <string name="pref_camera_flashmode_entry_off">Av</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">AUTOMATISK BLIXT</string>
   <string name="pref_camera_flashmode_label_on">BLIXT PÅ</string>
@@ -740,6 +760,7 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_off">AV</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_off">Av</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_500">0,5 sekunder</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -825,6 +846,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">timmar</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">Klar</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Ange tidssintervall</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -842,11 +864,13 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">Nej tack</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
+  <string name="remember_location_yes">Ja</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">There is no map app for show location.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Kamera</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">Sök</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Foton</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
@@ -866,6 +890,7 @@ CHAR LIMIT = NONE] -->
   <!-- The label for the 3d effect knob of the audio effects dialog. -->
   <string name="virtualizer_strength">3D effect</string>
   <!-- The label for the audio effects menu. -->
+  <string name="audio_effects">Ljudeffekter</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
   <string name="headset_plug">Du måste ansluta hörlurar för att kunna höra effekterna.</string>
   <!-- The title of the audio effects dialog. -->

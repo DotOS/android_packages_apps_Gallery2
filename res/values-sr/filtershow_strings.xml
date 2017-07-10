@@ -58,6 +58,7 @@
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
+  <string name="menu_settings">Подешавања</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="unsaved">Постоје несачуване измене ове слике.</string>
@@ -254,6 +255,7 @@
   <!-- Label for preset name [CHAR LIMIT=30] -->
   <string name="filtershow_preset_name">Назив унапред одр. подешавања</string>
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
+  <string name="filtershow_show_info_panel">Информација</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <string name="filtershow_show_info_panel_name">Назив слике</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
@@ -269,6 +271,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">Оригинална</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">Тренутно</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">Модел</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

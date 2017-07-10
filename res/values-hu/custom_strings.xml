@@ -15,4 +15,22 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="slideshow_settings">Diavetítés</string>
+  <string name="slideshow_random_title">Véletlen sorrendű megjelenítés</string>
+  <string name="slideshow_repeat_title">Ismétlés</string>
+  <string name="unit_sec">mp</string>
+  <string name="slideshow_duration_title">Késleltetési idő</string>
+  <string name="video_settings">Videó</string>
+  <string name="video_one_title">Video1</string>
+  <string name="video_two_title">Video2</string>
+  <string name="group_by_type">Típus szerint</string>
+  <string name="types">Típusok</string>
+  <string name="type">Típus</string>
+  <string name="type_videos">Videók</string>
+  <string name="type_images">Képek</string>
+  <string name="wallpaper_type_dialog_title">Háttérkép beállítása</string>
+  <string name="scrolling_wall_dialog_title">Háttérkép körülvágása</string>
+  <string name="scrolling_wall_yes">Nem</string>
+  <string name="scrolling_wall_no">Igen</string>
+</resources>

@@ -20,7 +20,7 @@
   <string name="layout_filmstrip">Лента</string>
   <string name="slideshow_settings">Слайд-шоу</string>
   <string name="slideshow_random_title">Показать в случайном порядке</string>
-  <string name="slideshow_repeat_title">Повторять</string>
+  <string name="slideshow_repeat_title">Повтор</string>
   <string name="unit_sec">сек</string>
   <string name="slideshow_duration_title">Время задержки</string>
   <string name="video_settings">Видео</string>
@@ -35,7 +35,7 @@
   <string name="wallpaper_type_both">Домашний экран и экран блокировки</string>
   <string name="wallpaper_type_system">Домашний экран</string>
   <string name="wallpaper_type_lock">Экран блокировки</string>
-  <string name="scrolling_wall_dialog_text">Вы хотите обрезать обои по размеру экрана size\u003f</string>
+  <string name="scrolling_wall_dialog_text">Вы хотите обрезать обои по размеру экрана\u003f</string>
   <string name="scrolling_wall_dialog_title">Обрезка изображения</string>
   <string name="scrolling_wall_yes">Нет</string>
   <string name="scrolling_wall_no">Да</string>

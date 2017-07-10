@@ -40,6 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">Wznów odtwarzanie</string>
   <!-- Displayed in the title of those albums that are being loaded -->
+  <string name="loading">Ładowanie\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">Nie można wczytać</string>
@@ -85,6 +86,7 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">Ustaw zdjęcie jako</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
+  <string name="set_wallpaper">Ustaw tapetę</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">Ustawianie tapety…</string>
   <string name="camera_setas_wallpaper">Tapeta</string>
@@ -108,6 +110,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">Zaznacz wszystkie</string>
   <string name="deselect_all">Usuń zaznaczenie wszystkich</string>
+  <string name="slideshow">Pokaz slajdów</string>
   <string name="details">Szczegóły</string>
   <string name="details_title">%1$d z %2$d elementów:</string>
   <string name="close">Zamknij</string>
@@ -239,6 +242,7 @@
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">Data/godzina</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
+  <string name="location">Lokalizacja</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">Ścieżka</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -281,6 +285,7 @@
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">Bez lampy</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">Nieznany</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Oryginalny</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -371,6 +376,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">Wybierz obrazy</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
+  <string name="slideshow_dream_name">Pokaz slajdów</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">Albumy</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -405,7 +411,9 @@
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">Brak pamięci zewnętrznej</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">Widok taśmy filmowej</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">Widok siatki</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">Widok pełnoekranowy</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -865,6 +873,7 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">Nie, dziękuję</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
+  <string name="remember_location_yes">Tak</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">Nie ma aplikacji mapy zainstalowanej, aby zobaczyć lokalizację.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->

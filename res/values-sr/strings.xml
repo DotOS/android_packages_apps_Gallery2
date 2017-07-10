@@ -89,6 +89,7 @@
   <string name="wallpaper">Подешавање позадине...</string>
   <string name="camera_setas_wallpaper">Позадина</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
+  <string name="delete">Избриши</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="one">Бришете изабрану ставку?</item>
@@ -96,6 +97,7 @@
     <item quantity="other">Delete selected items?</item>
   </plurals>
   <string name="confirm">Потврди</string>
+  <string name="cancel">Откажи</string>
   <string name="share">Дели</string>
   <string name="share_panorama">Дели панораму</string>
   <string name="share_as_photo">Дели као слику</string>
@@ -226,6 +228,7 @@
   <string name="sync_picasa_albums">Освежи</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">Готово</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d од %2$d ставке(и):</string>
@@ -381,18 +384,22 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">Групиши према</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">Подешавања</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">Додавање налога</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <string name="folder_camera">Камера</string>
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
+  <string name="folder_download">Преузми</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">Измењене слике на мрежи</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Увезено</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">Снимак екрана</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
+  <string name="help">Помоћ</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">Нема меморије</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -477,6 +484,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">Избор камере</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
+  <string name="pref_camera_id_entry_back">Назад</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">Напред</string>
   <!-- Settings screen, setting title text -->
@@ -815,6 +823,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">сати</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">Готово</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Подеси временски интервал</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -837,6 +846,7 @@ CHAR LIMIT = NONE] -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Камера</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">Претражи</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Слике</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

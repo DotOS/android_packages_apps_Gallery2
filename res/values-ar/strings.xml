@@ -40,7 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">استئناف التشغيل</string>
   <!-- Displayed in the title of those albums that are being loaded -->
-  <string name="loading">جارٍ التحميل\u2026</string>
+  <string name="loading">Loading\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">تعذر التحميل</string>

@@ -33,7 +33,7 @@
   <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
   <string name="borders" msgid="4461692156695893616">Okraje</string>
   <!-- Text for the custom border filter [CHAR LIMIT=20] -->
-  <string name="custom_border">Vlastné</string>
+  <string name="custom_border">Vlastné nastavenie</string>
   <!--  actionbar menu -->
   <!--  Text for the undo menu item [CHAR LIMIT=20] -->
   <string name="filtershow_undo">Späť</string>
@@ -53,7 +53,7 @@
   <!--  Text for selecting export image quality [CHAR LIMIT=100] -->
   <string name="select_output_settings">Exportovaný obrázok bude kópia bez histórie.</string>
   <!--  Text for quality value tag [CHAR LIMIT=30] -->
-  <string name="quality">Kvalitné</string>
+  <string name="quality">Kvalita</string>
   <!--  Text for size value tag [CHAR LIMIT=30] -->
   <string name="size">Veľkosť</string>
   <!--  Text for size x [CHAR LIMIT=1] -->
@@ -105,7 +105,7 @@
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->
   <string name="aspect9to16_effect">16:9</string>
   <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
-  <string name="aspectNone_effect">Žiadne</string>
+  <string name="aspectNone_effect">Nič</string>
   <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
   <string name="aspectOriginal_effect">Pôvodné</string>
   <!-- Label for when the aspect ratio is fixed to a value [CHAR LIMIT=15] -->
@@ -162,14 +162,14 @@
   <!-- Name for the photo effect that inverts photo to negative images. [CHAR LIMIT=10] -->
   <string name="negative">Negatív</string>
   <!--  Label for having no filters applied to the image [CHAR LIMIT=10] -->
-  <string name="none" msgid="3601545724573307541">Žiadne</string>
+  <string name="none" msgid="3601545724573307541">Nič</string>
   <!--  Label for the image edges effect (highlights edges in image) [CHAR LIMIT=10] -->
   <string name="edge">Hrany</string>
   <!--  Label for an image effect that replicates the "pop art" style of segmenting
           images into solid colors, as popularized by Andy Warhol [CHAR LIMIT=15] -->
   <string name="kmeans">Posterizácia</string>
   <!--  Label for the image downsampling effect (makes image smaller) [CHAR LIMIT=15] -->
-  <string name="downsample">Zmen.vzor.</string>
+  <string name="downsample">Prevzorkovať dole</string>
   <!--  Label for the "neutral density graduated filter" filter effect  [CHAR LIMIT=15] -->
   <string name="grad">Stupňovanie</string>
   <!--  Label for the Brightness effect  [CHAR LIMIT=20] -->
@@ -260,9 +260,9 @@
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
   <string name="filtershow_show_info_panel">Informácie</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
-  <string name="filtershow_show_info_panel_name">Názov</string>
+  <string name="filtershow_show_info_panel_name">Názov fotky</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
-  <string name="filtershow_show_info_panel_size">Veľkosť</string>
+  <string name="filtershow_show_info_panel_size">Veľkosť fotky</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <string name="filtershow_show_info_panel_histogram">Histogram</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->

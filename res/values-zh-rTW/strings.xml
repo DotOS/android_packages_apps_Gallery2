@@ -86,6 +86,7 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">將相片設為</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
+  <string name="set_wallpaper">設定桌布</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">正在設定桌布…</string>
   <string name="camera_setas_wallpaper">桌布</string>
@@ -107,6 +108,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">全選</string>
   <string name="deselect_all">取消全選</string>
+  <string name="slideshow">投影播放</string>
   <string name="details">詳細資料</string>
   <string name="details_title">第 %1$d 個項目 (共 %2$d 個項目)：</string>
   <string name="close">關閉</string>
@@ -364,6 +366,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">選擇圖片</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
+  <string name="slideshow_dream_name">投影播放</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">相簿</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -390,6 +393,7 @@
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">匯入</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">螢幕截圖</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <string name="help">幫助</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
@@ -397,7 +401,9 @@
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">沒有可用的外部儲存裝置</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">幻燈片檢視</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">格狀檢視</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">全螢幕檢視</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -489,7 +495,9 @@
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
   <string name="pref_camera_timer_sound_title">倒數時發出提示音</string>
   <!-- Entry of a on/off setting. The setting is turned off. [CHAR LIMIT=15] -->
+  <string name="setting_off">關閉</string>
   <!-- Entry of a on/off setting. The setting is turned on. [CHAR LIMIT=15] -->
+  <string name="setting_on">開啟</string>
   <!-- The value of a camera preference indicating the setting is off. -->
   <!-- The value of a camera preference indicating the setting is on. -->
   <!-- The Video quality settings in preference [CHAR LIMIT=21] -->
@@ -499,6 +507,7 @@
   <!-- Video quality setting entry. Videos will be recorded in 720p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in 480p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
+  <string name="pref_video_quality_entry_high">高</string>
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
   <string name="pref_video_quality_entry_low">慢</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
@@ -550,6 +559,8 @@
   <string name="pref_camera_flashmode_label">閃光燈模式</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
   <string name="pref_camera_flashmode_entry_auto">自動</string>
+  <string name="pref_camera_flashmode_entry_on">開啟</string>
+  <string name="pref_camera_flashmode_entry_off">關閉</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">自動閃光燈</string>
   <string name="pref_camera_flashmode_label_on">開啟閃光燈</string>
@@ -743,6 +754,7 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_off">關閉</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_off">關閉</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_500">0.5 秒</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -846,11 +858,13 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">不用了，謝謝</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
+  <string name="remember_location_yes">是</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">There is no map app for show location.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">相機</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">搜尋</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">相片</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

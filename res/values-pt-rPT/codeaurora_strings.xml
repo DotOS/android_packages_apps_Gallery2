@@ -71,6 +71,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <string name="bookmark_add_success">"Add bookmark success"</string>
   <string name="bookmark_list">"Bookmarks"</string>
   <string name="bookmark_title">"Title"</string>
+  <string name="bookmark_location">"Localização"</string>
   <string name="delete_all">"Delete all"</string>
   <string name="default_title">"Default title"</string>
 </resources>

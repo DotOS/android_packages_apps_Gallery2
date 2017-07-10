@@ -391,7 +391,7 @@
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <string name="folder_camera">Fotocamera</string>
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
-  <string name="folder_download">Scarica</string>
+  <string name="folder_download">Download</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">Foto online modificate</string>
   <!-- The label for the folder contains pictures that was imported from an
@@ -503,9 +503,9 @@
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
   <string name="pref_camera_timer_sound_title">Bip conto alla rov.</string>
   <!-- Entry of a on/off setting. The setting is turned off. [CHAR LIMIT=15] -->
-  <string name="setting_off">Off</string>
+  <string name="setting_off">Spento</string>
   <!-- Entry of a on/off setting. The setting is turned on. [CHAR LIMIT=15] -->
-  <string name="setting_on">On</string>
+  <string name="setting_on">Acceso</string>
   <!-- The value of a camera preference indicating the setting is off. -->
   <!-- The value of a camera preference indicating the setting is on. -->
   <!-- The Video quality settings in preference [CHAR LIMIT=21] -->
@@ -567,8 +567,8 @@
   <string name="pref_camera_flashmode_label">MODALITÀ FLASH</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
   <string name="pref_camera_flashmode_entry_auto">Automatico</string>
-  <string name="pref_camera_flashmode_entry_on">On</string>
-  <string name="pref_camera_flashmode_entry_off">Off</string>
+  <string name="pref_camera_flashmode_entry_on">Acceso</string>
+  <string name="pref_camera_flashmode_entry_off">Spento</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_flashmode_label_auto">FLASH AUTOMATICO</string>
   <string name="pref_camera_flashmode_label_on">FLASH ATTIVO</string>
@@ -762,7 +762,7 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_off">OFF</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <string name="pref_video_time_lapse_frame_interval_off">Off</string>
+  <string name="pref_video_time_lapse_frame_interval_off">Spento</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_500">0,5 secondi</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->

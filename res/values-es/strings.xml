@@ -238,7 +238,7 @@
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">Hora</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
-  <string name="location">Ubinación</string>
+  <string name="location">Ubicación</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">Ruta</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->

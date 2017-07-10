@@ -40,6 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">Tiếp tục phát</string>
   <!-- Displayed in the title of those albums that are being loaded -->
+  <string name="loading">Đang tải\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">Không thể tải</string>
@@ -382,6 +383,7 @@
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Đã nhập</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">Chụp ảnh màn hình</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">Không có bộ nhớ nào</string>
@@ -834,6 +836,7 @@ CHAR LIMIT = NONE] -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Máy ảnh</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">Tìm kiếm</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Ảnh</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
