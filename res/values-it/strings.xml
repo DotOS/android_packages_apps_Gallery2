@@ -26,7 +26,7 @@
   <!-- Used to format video duration in Details dialog. hours:minutes:seconds e.g. 0:21:30 -->
   <string name="details_hms">%1$d:%2$02d:%3$02d</string>
   <!-- Activity label. This might show up in the activity-picker -->
-  <string name="movie_view_label">Player Video</string>
+  <string name="movie_view_label">Riproduttore video</string>
   <!-- shown in the video player view while the video is being loaded, before it starts playing -->
   <string name="loading_video">Caricamento video...</string>
   <string name="loading_image">Caricamento immagine...</string>
@@ -94,8 +94,8 @@
   <string name="delete">Elimina</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
-    <item quantity="one">Eliminare elemento selezionato?</item>
-    <item quantity="other">Eliminare elementi selezionati?</item>
+    <item quantity="one">Eliminare l\'elemento selezionato?</item>
+    <item quantity="other">Eliminare l\'elemento selezionato?</item>
   </plurals>
   <string name="confirm">Conferma</string>
   <string name="cancel">Annulla</string>
@@ -109,7 +109,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">Seleziona tutti</string>
   <string name="deselect_all">Deseleziona tutto</string>
-  <string name="slideshow">Slideshow</string>
+  <string name="slideshow">Presentazione</string>
   <string name="details">Dettagli</string>
   <string name="details_title">%1$d elementi su %2$d:</string>
   <string name="close">Chiudi</string>
@@ -371,7 +371,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">Scegli immagini</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
-  <string name="slideshow_dream_name">Slideshow</string>
+  <string name="slideshow_dream_name">Presentazione</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">Album</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -866,7 +866,7 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">No, grazie</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
-  <string name="remember_location_yes">Sì</string>
+  <string name="remember_location_yes">Si</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">Non c\'è nessuna app per mostrare la posizione.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->

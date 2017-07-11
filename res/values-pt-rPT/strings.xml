@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Galeria</string>
   <!-- Title for picture frame gadget to show in list of all available gadgets -->
-  <string name="gadget_title">Moldura de uma imagem</string>
+  <string name="gadget_title">Moldura da imagem</string>
   <!-- Used to format short video duration in Details dialog. minutes:seconds e.g. 00:30 -->
   <string name="details_ms">%1$02d:%2$02d</string>
   <!-- Used to format video duration in Details dialog. hours:minutes:seconds e.g. 0:21:30 -->
@@ -28,17 +28,17 @@
   <!-- Activity label. This might show up in the activity-picker -->
   <string name="movie_view_label">Reprodutor de vídeo</string>
   <!-- shown in the video player view while the video is being loaded, before it starts playing -->
-  <string name="loading_video">Carregando vídeo\u2026</string>
-  <string name="loading_image">Carregando imagem\u2026</string>
+  <string name="loading_video">A carregar vídeo\u2026</string>
+  <string name="loading_image">A carregar imagem\u2026</string>
   <!-- Message shown on the progress dialog to indicate we're loading the
             account info [CHAR LIMIT=30] -->
-  <string name="loading_account">Carregando conta\u2026</string>
+  <string name="loading_account">A carregar conta\u2026</string>
   <!-- Movie View Resume Playing dialog title -->
-  <string name="resume_playing_title">Retomar vídeo</string>
+  <string name="resume_playing_title">Resumir vídeo</string>
   <!-- Movie View Start Playing dialog title -->
   <string name="resume_playing_message">Continuar a reprodução a partir de %s ?</string>
   <!-- Movie View Start Playing button "Resume from bookmark" -->
-  <string name="resume_playing_resume">Retomar reprodução</string>
+  <string name="resume_playing_resume">Resumir reprodução</string>
   <!-- Displayed in the title of those albums that are being loaded -->
   <string name="loading">A carregar\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
@@ -51,7 +51,7 @@
          [CHAR LIMIT=50]-->
   <string name="no_thumbnail">Sem miniatura</string>
   <!-- Movie View Start Playing button "Beginning" -->
-  <string name="resume_playing_restart">Reiniciar</string>
+  <string name="resume_playing_restart">Começar do inicio</string>
   <!-- Title of a menu item to indicate performing the image crop operation
          [CHAR LIMIT=20] -->
   <string name="crop_save_text">OK</string>
@@ -60,17 +60,17 @@
   <string name="ok">OK</string>
   <!-- Button indicating that the cropped image should be reverted back to the original -->
   <!-- Hint that appears when cropping an image with more than one face -->
-  <string name="multiface_crop_help">Toque em um rosto para começar.</string>
+  <string name="multiface_crop_help">Toque num rosto para começar.</string>
   <!-- Toast/alert that the image is being saved to the SD card -->
-  <string name="saving_image">Salvando foto\u2026</string>
+  <string name="saving_image">A gravar foto\u2026</string>
   <!-- Toast/alert that the image is being saved after editing in filtershow [CHAR LIMIT=40]-->
-  <string name="filtershow_saving_image">Salvando foto em <xliff:g id="album_name">%1$s</xliff:g>\u2026</string>
+  <string name="filtershow_saving_image">Foto gravada em <xliff:g id="album_name">%1$s</xliff:g>\u2026</string>
   <!-- Eorror toast message that the image cannot be saved [CHAR LIMIT=40]-->
-  <string name="save_error">Não foi possível salvar a imagem cortada.</string>
+  <string name="save_error">Não foi possível gravar a imagem recortada.</string>
   <!-- menu pick: crop the currently selected image [CHAR LIMIT=30]-->
-  <string name="crop_label">Cortar imagem</string>
+  <string name="crop_label">Recortar imagem</string>
   <!-- menu pick: trim the currently selected video [CHAR LIMIT=30]-->
-  <string name="trim_label">Cortar o vídeo</string>
+  <string name="trim_label">Recortar o vídeo</string>
   <!-- Toast/alert that the face detection is being run -->
   <!-- Title prompted for user to choose a photo item [CHAR LIMIT=20] -->
   <string name="select_image">Selecionar foto</string>
@@ -88,33 +88,33 @@
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
   <string name="set_wallpaper">Definir imagem fundo</string>
   <!-- Toast/alert after saving wallpaper -->
-  <string name="wallpaper">Definindo papel de parede\u2026</string>
-  <string name="camera_setas_wallpaper">Plano de fundo</string>
+  <string name="wallpaper">A definir imagem de fundo\u2026</string>
+  <string name="camera_setas_wallpaper">Imagem de fundo</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
   <string name="delete">Eliminar</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
-    <item quantity="one">Excluir o item selecionado?</item>
-    <item quantity="other">Excluir os itens selecionados?</item>
+    <item quantity="one">Eliminar o item selecionado?</item>
+    <item quantity="other">Eliminar os itens selecionados?</item>
   </plurals>
   <string name="confirm">Confirmar</string>
   <string name="cancel">Cancelar</string>
-  <string name="share">Compartilhar</string>
-  <string name="share_panorama">Compartilhar panorama</string>
-  <string name="share_as_photo">Compart. como foto</string>
+  <string name="share">Partilhar</string>
+  <string name="share_panorama">Partilhar panorama</string>
+  <string name="share_as_photo">Partilhar como fotografia</string>
   <!-- The label shown after an image is deleted [CHAR LIMIT=16] -->
   <string name="deleted">Eliminado</string>
   <!-- The label on the button which when clicked will undo a deletion of image [CHAR LIMIT=16]-->
-  <string name="undo">DESFAZER</string>
+  <string name="undo">ANULAR</string>
   <!-- String indicating more actions are available -->
   <string name="select_all">Selecionar tudo</string>
-  <string name="deselect_all">Desmarcar tudo</string>
+  <string name="deselect_all">Desmarcar todos</string>
   <string name="slideshow">Apresent. de slides</string>
   <string name="details">Detalhes</string>
   <string name="details_title">%1$d de %2$d itens:</string>
   <string name="close">Fechar</string>
   <!-- Title of a menu item to switch from Gallery to Camera app [CHAR LIMIT=30] -->
-  <string name="switch_to_camera">Mudar para a câmera</string>
+  <string name="switch_to_camera">Mudar para a câmara</string>
   <!-- String indicating how many media item(s) is(are) selected
             eg. 1 selected [CHAR LIMIT=30] -->
   <plurals name="number_of_items_selected">
@@ -135,8 +135,8 @@
   </plurals>
   <!-- String indicating timestamp of photo or video -->
   <string name="show_on_map">Mostrar no mapa</string>
-  <string name="rotate_left">Girar para a esquerda</string>
-  <string name="rotate_right">Girar para a direita</string>
+  <string name="rotate_left">Rodar para a Esquerda</string>
+  <string name="rotate_right">Rodar para a direita</string>
   <!-- Toast message prompted when the specified item is not found [CHAR LIMIT=40]-->
   <string name="no_such_item">Não foi possível encontrar o item.</string>
   <!-- String used as a menu label. The user can choose to edit the image
@@ -144,21 +144,21 @@
   <string name="edit">Editar</string>
   <!-- String used as a menu label. The user can choose to edit the image
          [CHAR_LIMIT=20]-->
-  <string name="simple_edit">Edição simples</string>
+  <string name="simple_edit">Edição Simples</string>
   <!-- String used as a title of a progress dialog. The user can
          choose to cache some Picasa picture albums on device, so it can
          be viewed offline. This string is shown when the request is being
          processed. [CHAR LIMIT=50] -->
-  <string name="process_caching_requests">Processando pedidos de cache</string>
+  <string name="process_caching_requests">A processar pedidos de colocação em cache</string>
   <!-- String used as a small notification label above a Picasa album.
          It means the pictures of the Picasa album is currently being
          transferred to local storage, so the pictures can later be viewed
          offline. [CHAR LIMIT=15] -->
-  <string name="caching_label">Buscando\2026</string>
+  <string name="caching_label">A procurar\u2026</string>
   <!-- The title of the menu item to let user crop the image. [CHAR LIMIT=15] -->
   <string name="crop_action">Cortar</string>
   <!-- The title of the menu item to let user trim the video. [CHAR LIMIT=15] -->
-  <string name="trim_action">Cortar</string>
+  <string name="trim_action">Recortar</string>
   <!-- The title of the menu item to let user mute the video. [CHAR LIMIT=15] -->
   <string name="mute_action">Desativar som</string>
   <!-- The title of the menu item to let user set the image as background etc. [CHAR LIMIT=15] -->
@@ -177,7 +177,7 @@
   <!-- Title of a menu tiem to group photo by taken date [CHAR LIMIT=30]-->
   <string name="group_by_time">Por tempo</string>
   <!-- Title of a menu item to group photo by tags [CHAR LIMIT=30]-->
-  <string name="group_by_tags">Por tags</string>
+  <string name="group_by_tags">Por etiquetas</string>
   <!-- Title of a menu item to group photo by faces [CHAR LIMIT=30]-->
   <string name="group_by_faces">Por pessoas</string>
   <!-- Title of a menu item to group photo by albums [CHAR LIMIT=30]-->
@@ -186,14 +186,14 @@
   <string name="group_by_size">Por tamanho</string>
   <!-- When grouping photos by tags, the label used for photos without tags
          [CHAR LIMIT=20]-->
-  <string name="untagged">Sem tags</string>
+  <string name="untagged">Sem etiqueta</string>
   <!-- When grouping photos by locations, the label used for photos that don't
          have location information in them [CHAR LIMIT=20]-->
-  <string name="no_location">Nenhum local</string>
+  <string name="no_location">Sem localização</string>
   <!-- This toast message is shown when network connection is lost while doing clustering -->
-  <string name="no_connectivity">Alguns locais não foram identificados por problemas na rede.</string>
+  <string name="no_connectivity">Não foi possível identificar algumas localizações devido a problemas de rede.</string>
   <!-- This toast message is shown when failed to load the album data. [CHAR LIMIT=NONE] -->
-  <string name="sync_album_error">Não foi possível fazer download das fotos neste álbum. Tente novamente mais tarde.</string>
+  <string name="sync_album_error">Não foi possível transferir as fotografias deste álbum. Tente novamente mais tarde.</string>
   <!-- The title of the menu item to let user choose the which portion of
          the media items the user wants to see. When pressed, a submenu will
          appear and user can choose one of "show images only",
@@ -201,9 +201,9 @@
   <!-- Title of a menu item to show images only [CHAR LIMIT=30]-->
   <string name="show_images_only">Apenas imagens</string>
   <!-- Title of a menu item to show videos only [CHAR LIMIT=30]-->
-  <string name="show_videos_only">Somente vídeos</string>
+  <string name="show_videos_only">Apenas vídeos</string>
   <!-- Title of a menu item to show all (both images and videos) [CHAR LIMIT=30]-->
-  <string name="show_all">Imagens &amp; vídeos</string>
+  <string name="show_all">Imagens e vídeos</string>
   <!-- Title of the StackView AppWidget -->
   <string name="appwidget_title">Galeria de fotos</string>
   <!-- Text for the empty state of the StackView AppWidget [CHAR LIMIT=30] -->
@@ -211,17 +211,17 @@
   <!-- Toast message shown when the cropped image has been saved in the
          %s folder (string: folder_download) [CHAR LIMIT=50]-->
   <string name="crop_saved">
-Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
+Imagem recortada guardada em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Toast message shown when there is no albums available [CHAR LIMIT=50]-->
-  <string name="no_albums_alert">Sem álbuns disponíveis.</string>
+  <string name="no_albums_alert">Nenhum álbum disponível.</string>
   <!-- Toast message shown when we close the AlbumPage because it is empty
             [CHAR LIMIT=50] -->
   <string name="empty_album">Sem imagens ou vídeos disponíveis.</string>
   <!-- Album label used to indicate the collection of PWA Buzz/Post photos -->
-  <string name="picasa_posts">Postagens</string>
+  <string name="picasa_posts">Publicações</string>
   <!-- A label describing that the current screen is for the user to pick
          some albums to be viewable offline [CHAR LIMIT=30] -->
-  <string name="make_available_offline">Tornar disponível off-line</string>
+  <string name="make_available_offline">Disponibilizar offline</string>
   <!-- A label describing to link website [CHAR LIMIT=30] -->
   <string name="more_image">Mais imagens</string>
   <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
@@ -233,7 +233,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d de %2$d itens:</string>
   <!-- Text indicating the title of a media item in details window [CHAR LIMIT=14] -->
-  <string name="title">Title</string>
+  <string name="title">Título</string>
   <!-- Text indicating the description of a media item in details window [CHAR LIMIT=14] -->
   <string name="description">Descrição</string>
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
@@ -253,9 +253,9 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Text indicating the mime type of a media item in details window [CHAR LIMIT=14] -->
   <string name="mimetype">Tipo MIME</string>
   <!-- Text indicating the file size of a media item in details window [CHAR LIMIT=14] -->
-  <string name="file_size">Tam. Arquivo</string>
+  <string name="file_size">Tamanho do ficheiro</string>
   <!-- Text indicating the maker of a media item in details window [CHAR LIMIT=14] -->
-  <string name="maker">Criador</string>
+  <string name="maker">Fabricante</string>
   <!-- Text indicating the model of a media item in details window [CHAR LIMIT=14] -->
   <string name="model">Modelo</string>
   <!-- Text indicating flash info of a media item in details window [CHAR LIMIT=14] -->
@@ -265,7 +265,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Text indicating the focal length of a media item in details window [CHAR LIMIT=14] -->
   <string name="focal_length">Distância focal</string>
   <!-- Text indicating the white balance of a media item in details window [CHAR LIMIT=14] -->
-  <string name="white_balance">Balanço de brancos</string>
+  <string name="white_balance">Equilíbrio de brancos</string>
   <!-- Text indicating the exposure time of a media item in details window [CHAR LIMIT=14] -->
   <string name="exposure_time">Tempo de exposição</string>
   <!-- Text indicating the ISO speed rating of a media item in details window [CHAR LIMIT=14] -->
@@ -307,13 +307,13 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <string name="ffx_washout_color">Litografia</string>
   <!-- Toast message shown after we make some album(s) available offline [CHAR LIMIT=50] -->
   <plurals name="make_albums_available_offline">
-    <item quantity="one">Disponibilizando álbum off-line.</item>
-    <item quantity="other">Disponibilizando álbuns off-line.</item>
+    <item quantity="one">Disponibilizar álbum offline.</item>
+    <item quantity="other">Disponibilizar álbuns offline.</item>
   </plurals>
   <!-- Toast message shown after we try to make a local album available offline
          [CHAR LIMIT=150] -->
   <string name="try_to_set_local_album_available_offline">
-        Este item está armazenado localmente e está disponível off-line.</string>
+        Este item está armazenado localmente e está disponível offline.</string>
   <!-- A label shown on the action bar. It indicates that the user is
          viewing all available albums [CHAR LIMIT=20] -->
   <string name="set_label_all_albums">Todos os álbuns</string>
@@ -337,13 +337,13 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
          of that amount, eg. "10MB".
          [CHAR LIMIT=20]
     -->
-  <string name="size_below"><xliff:g id="size">%1$s</xliff:g> ou abaixo</string>
+  <string name="size_below"><xliff:g id="size">%1$s</xliff:g> ou menos</string>
   <!-- Label of a group of pictures. The size of each picture in this group is
          more than a certain amount. The parameter is a string representation
          of that amount, eg. "10MB".
          [CHAR LIMIT=20]
     -->
-  <string name="size_above"><xliff:g id="size">%1$s</xliff:g> ou acima</string>
+  <string name="size_above"><xliff:g id="size">%1$s</xliff:g> ou mais</string>
   <!-- Label of a group of pictures. The size of each picture in this group is
          between two amounts. The parameters are string representations of the two
          amounts, eg. "10MB", "100MB".
@@ -358,9 +358,9 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <string name="import_complete">Importação concluída</string>
   <string name="import_fail">Erro ao importar</string>
   <!-- A toast indicating a camera is connected to the device [CHAR LIMIT=30]-->
-  <string name="camera_connected">Câmera conectada.</string>
+  <string name="camera_connected">Câmara ligada.</string>
   <!-- A toast indicating a camera is disconnected [CHAR LIMIT=30] -->
-  <string name="camera_disconnected">Câmera desconectada.</string>
+  <string name="camera_disconnected">Câmara desligada.</string>
   <!-- A label shown on MTP albums thumbnail to instruct users to import
         [CHAR LIMIT=40] -->
   <string name="click_import">Toque aqui para importar</string>
@@ -395,7 +395,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
   <string name="folder_download">Transferências</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
-  <string name="folder_edited_online_photos">Fotos editadas online</string>
+  <string name="folder_edited_online_photos">Fotos Editadas Online</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Importado</string>
@@ -404,7 +404,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <string name="help">Ajuda</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
-  <string name="no_external_storage_title">Sem armazenamento</string>
+  <string name="no_external_storage_title">Sem Armazenamento</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">Nenhum armazenamento externo disponível</string>
   <!-- Label for album filmstrip button -->
@@ -412,31 +412,31 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Label for album grid button -->
   <string name="switch_photo_grid">Vista de grelha</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
-  <string name="switch_photo_fullscreen">Visualizar em tela cheia</string>
+  <string name="switch_photo_fullscreen">Ver em ecrã completo</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
-  <string name="trimming">Cortando</string>
+  <string name="trimming">A recortar</string>
   <!-- The tilte of a dialog showing muting in progress. [CHAR LIMIT=20] -->
-  <string name="muting">Desativando som</string>
+  <string name="muting">A desativar o som</string>
   <!-- The content of a dialog showing trimming in progress. [CHAR LIMIT=30] -->
   <string name="please_wait">Por favor aguarde</string>
   <!-- Toast after the trimming / muting is done. [CHAR LIMIT=50] -->
-  <string name="save_into">Salvando vídeo em <xliff:g id="album_name">%1$s</xliff:g>\u2026</string>
+  <string name="save_into">A gravar vídeo em <xliff:g id="album_name">%1$s</xliff:g>\u2026</string>
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
-  <string name="trim_too_short">Não foi possível cortar: o vídeo selecionado é muito curto</string>
+  <string name="trim_too_short">Não é possível recortar: o vídeo de destino é demasiado pequeno</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
-  <string name="mute_nosupport">Não foi possível silenciar: vídeo não suportado</string>
+  <string name="mute_nosupport">Não foi possível desativar o som: vídeo não suportado</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
-  <string name="pano_progress_text">Renderizando panorama</string>
+  <string name="pano_progress_text">A compor panorama</string>
   <!-- The label on the button that will save an edited image -->
   <string name="save" msgid="8140440041190264400">Guardar</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
-  <string name="ingest_scanning" msgid="2048262851775139720">Analisando conteúdo\u2026</string>
+  <string name="ingest_scanning" msgid="2048262851775139720">A verificar conteúdo\u2026</string>
   <!-- String indicating how many media items from the camera have been scanned -->
   <plurals name="ingest_number_of_items_scanned">
-    <item quantity="one">%1$d item escaneado</item>
-    <item quantity="other">%1$d itens escaneados</item>
+    <item quantity="one">%1$d item digitalizado</item>
+    <item quantity="other">%1$d itens digitalizados</item>
   </plurals>
   <!-- String indicating how many media items from the camera have been selected -->
   <plurals name="ingest_number_of_items_selected">
@@ -444,62 +444,62 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
     <item quantity="other">%1$d itens selecionado</item>
   </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
-  <string name="ingest_sorting" msgid="624687230903648118">Classificando\u2026</string>
+  <string name="ingest_sorting" msgid="624687230903648118">A ordenar\u2026</string>
   <!--  Status message shown when scanning the content from the camera has completed -->
-  <string name="ingest_scanning_done">Escaneamento concluído</string>
+  <string name="ingest_scanning_done">Digitalização concluída</string>
   <!--  Status message shown when content from an external camera is being imported -->
-  <string name="ingest_importing">Importando\u2026</string>
+  <string name="ingest_importing">A importar\u2026</string>
   <!--  Status message shown when there is no content available to be imported -->
   <string name="ingest_empty_device">Não há nenhum conteúdo disponível para importar neste dispositivo.</string>
   <!--  Status message shown when there is no MTP device connected  -->
-  <string name="ingest_no_device">Não há nenhum dispositivo MTP conectado</string>
+  <string name="ingest_no_device">Não estão ligados dispositivos MTP</string>
   <!-- Label for album grid button -->
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <!-- Camera resources below -->
   <!-- General strings -->
   <!-- title for the dialog showing the error of camera hardware -->
-  <string name="camera_error_title">Erro na câmera</string>
+  <string name="camera_error_title">Erro da câmara</string>
   <!-- message for the dialog showing the error of camera hardware -->
-  <string name="cannot_connect_camera">Não foi possível conectar-se a câmera.</string>
+  <string name="cannot_connect_camera">Não é possível ligar à câmara.</string>
   <!-- message for the dialog showing the camera is disabled because of security policies. Camera cannot be used. -->
-  <string name="camera_disabled">A câmera foi desativada pelas políticas de segurança.</string>
+  <string name="camera_disabled">Devido às políticas de segurança, a câmara foi desativada.</string>
   <!-- label for the icon meaning 'show me all the images that were taken with the camera' -->
   <string name="camera_label">Câmara</string>
   <!-- alert to the user to wait for some operation to complete -->
   <string name="wait">Por favor, aguarde\u2026</string>
   <!-- alert to the user that USB storage must be available before using the camera [CHAR LIMIT=NONE] -->
-  <string name="no_storage" product="nosdcard">Monte o armazenamento USB antes de usar a câmera.</string>
+  <string name="no_storage" product="nosdcard">Monte o armazenamento USB antes de usar a câmara.</string>
   <!-- alert to the user that an SD card must be installed before using the camera -->
-  <string name="no_storage" product="default">Insira um cartão SD antes de utilizar a câmera.</string>
+  <string name="no_storage" product="default">Insira um cartão SD antes de utilizar a câmara.</string>
   <!-- alert to the user that the USB storage is being disk-checked [CHAR LIMIT=30] -->
-  <string name="preparing_sd" product="nosdcard">Preparando armazenamento USB\u2026</string>
+  <string name="preparing_sd" product="nosdcard">A preparar armazenamento USB\u2026</string>
   <!-- alert to the user that the SD card is being disk-checked -->
-  <string name="preparing_sd" product="default">Preparando cartão SD\u2026</string>
+  <string name="preparing_sd" product="default">A preparar cartão SD\u2026</string>
   <!-- alert to the user that the camera fails to read or write the USB storage. [CHAR LIMIT=NONE] -->
-  <string name="access_sd_fail" product="nosdcard">Não foi possível acessar o armazenamento USB.</string>
+  <string name="access_sd_fail" product="nosdcard">Não é possível acessar o armazenamento USB.</string>
   <!-- alert to the user that the camera fails to read or write the SD card. -->
-  <string name="access_sd_fail" product="default">Não foi possível acessar o cartão SD.</string>
+  <string name="access_sd_fail" product="default">Não foi possível aceder ao cartão SD.</string>
   <!-- button in review mode indicating that the photo taking, video recording, and panorama saving session should be canceled [CHAR LIMIT=10] -->
   <string name="review_cancel">CANCELAR</string>
   <!-- button in review mode indicating that the taken photo/video is OK to be attached/uploaded [CHAR LIMIT=10] -->
-  <string name="review_ok">PRONTO</string>
+  <string name="review_ok">CONCLUÍDO</string>
   <!-- A label that overlays on top of the preview frame to indicate the camcorder is in time lapse mode [CHAR LIMIT=35] -->
   <string name="time_lapse_title">Gravação de lapso de tempo</string>
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
-  <string name="pref_camera_id_title">Escolher câmera</string>
+  <string name="pref_camera_id_title">Escolher câmara</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_back">Recuar</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
-  <string name="pref_camera_id_entry_front">Visão frontal</string>
+  <string name="pref_camera_id_entry_front">Frente</string>
   <!-- Settings screen, setting title text -->
   <string name="pref_camera_recordlocation_title">Local de armazenamento</string>
   <!--  Label for record location preference [CHAR LIMIT=50] -->
-  <string name="pref_camera_location_label">LOCAL</string>
+  <string name="pref_camera_location_label">LOCALIZAÇÃO</string>
   <!-- Title for countdown timer on camera settings screen [CHAR LIMIT=30]-->
   <string name="pref_camera_timer_title">Temporizador</string>
   <!-- Entry for countdown timer setting. e.g. 1 second, 10 seconds, etc. [CHAR LIMIT=30]-->
   <plurals name="pref_camera_timer_entry">
-    <item quantity="one">Um segundo</item>
+    <item quantity="one">1 segundo</item>
     <item quantity="other">%d segundos</item>
   </plurals>
   <!-- Text followed by a checkbox to turn on/off sound effects during the countdown. [CHAR LIMIT = 16]-->
@@ -522,11 +522,11 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <string name="pref_video_quality_entry_low">Lenta</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
     time lapse recording. Appears at top of the dialog. [CHAR LIMIT=30] -->
-  <string name="pref_video_time_lapse_frame_interval_title">Passagem de tempo</string>
+  <string name="pref_video_time_lapse_frame_interval_title">Lapso de tempo</string>
   <!-- Settings screen, Camera setting category title -->
-  <string name="pref_camera_settings_category">Configurações da câmera</string>
+  <string name="pref_camera_settings_category">Definições da câmara</string>
   <!-- Settings screen, Camcorder setting category title -->
-  <string name="pref_camcorder_settings_category">Configurações da filmadora</string>
+  <string name="pref_camcorder_settings_category">Definições da câmara de vídeo</string>
   <!-- Settings screen, Picture size title -->
   <string name="pref_camera_picturesize_title">Tamanho da imagem</string>
   <!-- Settings screen, dialog choice for 13 megapixels picture size [CHAR LIMIT=15] -->
@@ -564,23 +564,23 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Default flash mode setting.-->
   <!-- Value for flash off setting-->
   <!-- Settings screen, Flash mode title -->
-  <string name="pref_camera_flashmode_title">Modo do flash</string>
+  <string name="pref_camera_flashmode_title">Modo flash</string>
   <!-- flash label [CHAR LIMIT=50] -->
-  <string name="pref_camera_flashmode_label">MODO DO FLASH</string>
+  <string name="pref_camera_flashmode_label">MODO FLASH</string>
   <!-- Settings screen, Flash mode dialog radio button choices -->
   <string name="pref_camera_flashmode_entry_auto">Automaticamente</string>
   <string name="pref_camera_flashmode_entry_on">Ligado</string>
   <string name="pref_camera_flashmode_entry_off">Desligado</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
-  <string name="pref_camera_flashmode_label_auto">FLASH AUTO</string>
+  <string name="pref_camera_flashmode_label_auto">FLASH AUTOMÁTICO</string>
   <string name="pref_camera_flashmode_label_on">FLASH LIGADO</string>
   <string name="pref_camera_flashmode_label_off">FLASH DESLIGADO</string>
   <!-- Default videocamera flash mode setting.-->
   <!-- Default white balance setting. -->
   <!-- Settings screen, white balance title -->
-  <string name="pref_camera_whitebalance_title">Balanço de brancos</string>
+  <string name="pref_camera_whitebalance_title">Equilíbrio de brancos</string>
   <!-- Menu, white balance label -->
-  <string name="pref_camera_whitebalance_label">BALANÇO DE BRANCO</string>
+  <string name="pref_camera_whitebalance_label">EQUILÍBRIO DOS BRANCOS</string>
   <!-- Settings screen, White balance dialog radio button choices -->
   <string name="pref_camera_whitebalance_entry_auto">Automaticamente</string>
   <string name="pref_camera_whitebalance_entry_incandescent">Incandescente</string>
@@ -595,7 +595,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <string name="pref_camera_whitebalance_label_cloudy">NUBLADO</string>
   <!-- Default scene mode setting. -->
   <!-- Settings screen, Select Scene mode -->
-  <string name="pref_camera_scenemode_title">Modo de cena</string>
+  <string name="pref_camera_scenemode_title">Modo cenário</string>
   <!-- Settings menu, scene mode choices [CHAR LIMIT=16] -->
   <string name="pref_camera_scenemode_entry_auto">Automaticamente</string>
   <!-- Scene mode that uses HDR (high dynamic range) [CHAR LIMIT=16] -->
@@ -605,7 +605,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Scene mode that takes long exposures to capture night scenes without flash. [CHAR LIMIT=16] -->
   <string name="pref_camera_scenemode_entry_night">Noite</string>
   <!-- Scene mode optimized for taking images in the sunset. [CHAR LIMIT=16] -->
-  <string name="pref_camera_scenemode_entry_sunset">Ensolarado</string>
+  <string name="pref_camera_scenemode_entry_sunset">Pôr-do-sol</string>
   <!-- Scene mode optimized for taking indoor low-lights pictures. [CHAR LIMIT=16] -->
   <string name="pref_camera_scenemode_entry_party">Festa</string>
   <!-- Settings menu, scene mode labels [CHAR LIMIT=50] -->
@@ -615,7 +615,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Scene mode that takes long exposures to capture night scenes without flash. [CHAR LIMIT=50] -->
   <string name="pref_camera_scenemode_label_night">NOITE</string>
   <!-- Scene mode optimized for taking images in the sunset. [CHAR LIMIT=50] -->
-  <string name="pref_camera_scenemode_label_sunset">ENSOLARADO</string>
+  <string name="pref_camera_scenemode_label_sunset">PÔR-DO-SOL</string>
   <!-- Scene mode optimized for taking indoor low-lights pictures. [CHAR LIMIT=50] -->
   <string name="pref_camera_scenemode_label_party">FESTA</string>
   <!-- Settings menu countdown timer labels [CHAR LIMIT=50] -->
@@ -631,7 +631,7 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Settings menu countdown timer 15 seconds [CHAR LIMIT=50] -->
   <string name="pref_camera_countdown_label_fifteen">15 SEGUNDOS</string>
   <!-- Toast after trying to select a setting that is not allowed to change in scene mode [CHAR LIMIT=NONE] -->
-  <string name="not_selectable_in_scene_mode">Não pode ser selecionado no modo de cena.</string>
+  <string name="not_selectable_in_scene_mode">Não selecionável no modo de cenário.</string>
   <!-- Exposure settings in preference -->
   <string name="pref_exposure_title">Exposição</string>
   <!--  menu label exposure compensation [CHAR LIMIT=50] -->
@@ -640,15 +640,15 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- HDR label ON [CHAR LIMIT=60] -->
   <string name="pref_camera_hdr_label">HDR</string>
   <!-- switch camera label back [CHAR LIMIT=60] -->
-  <string name="pref_camera_id_label_back">CÂMERA FRONTAL</string>
+  <string name="pref_camera_id_label_back">CÂMARA FRONTAL</string>
   <!-- switch camera label front [CHAR LIMIT=60] -->
-  <string name="pref_camera_id_label_front">CÂMERA TRASEIRA</string>
+  <string name="pref_camera_id_label_front">CÂMARA TRASEIRA</string>
   <!-- Dialog "OK" button. Dismisses dialog. -->
   <string name="dialog_ok">OK</string>
   <!-- Low-memory dialog message [CHAR LIMT=NONE] -->
-  <string name="spaceIsLow_content" product="nosdcard">Seu armazenamento USB está ficando sem espaço. Altere a qualidade ou apague alguns arquivos.</string>
+  <string name="spaceIsLow_content" product="nosdcard">O seu armazenamento USB está a ficar sem espaço. Altere a definição de qualidade ou elimine algumas imagens ou outros ficheiros para libertar espaço.</string>
   <!-- Low-memory dialog message [CHAR LIMIT=NONE] -->
-  <string name="spaceIsLow_content" product="default">Seu cartão SD está ficando sem espaço. Altere as configurações de qualidade ou exclua algumas imagens ou outros arquivos.</string>
+  <string name="spaceIsLow_content" product="default">O seu cartão SD está a ficar sem espaço. Altere a definição de qualidade ou elimine algumas imagens ou outros ficheiros para libertar espaço.</string>
   <!-- Camera format string for new image files. Passed to java.text.SimpleDateFormat. -->
   <!-- Video Camera format string for new video files. Passed to java.text.SimpleDateFormat. -->
   <!-- Filename prefix for panorama output. -->
@@ -657,19 +657,19 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- The text shown when the panorama panning speed is to fast [CHAR LIMIT=12] -->
   <string name="pano_too_fast_prompt">Muito rápido</string>
   <!-- The text shown in the progress dialog when panorama preview is generating in the background [CHAR LIMIT=30] -->
-  <string name="pano_dialog_prepare_preview">Preparando panorama</string>
+  <string name="pano_dialog_prepare_preview">A preparar panorama</string>
   <!-- The text shown in the dialog when panorama saving failed [CHAR LIMIT=40] -->
-  <string name="pano_dialog_panorama_failed">Não foi possível salvar o panorama.</string>
+  <string name="pano_dialog_panorama_failed">Não foi possível guardar panorama.</string>
   <!-- The text shown on the dialog title in the dialogs for Panorama [CHAR LIMIT=12] -->
   <string name="pano_dialog_title">Panorama</string>
   <!-- The text shown on the top-left corner of the screen to indicate the capturing is on going [CHAR LIMIT=27] -->
-  <string name="pano_capture_indication">Capturando panorama</string>
+  <string name="pano_capture_indication">A capturar panorama</string>
   <!-- The text shown in the progress dialog when waiting for previous panorama finishing [CHAR LIMIT=40] -->
-  <string name="pano_dialog_waiting_previous">Aguardando panorama anterior</string>
+  <string name="pano_dialog_waiting_previous">A aguardar panorama anterior</string>
   <!-- The text shown on the bottom-left corner of the screen to indicate that the saving is in process [CHAR LIMIT=13] -->
-  <string name="pano_review_saving_indication_str">Salvando\u2026</string>
+  <string name="pano_review_saving_indication_str">A guardar\u2026</string>
   <!-- The text shown on the screen to indicate that the panorama is rendering [CHAR LIMIT=27] -->
-  <string name="pano_review_rendering">Renderizando panorama</string>
+  <string name="pano_review_rendering">A compor panorama</string>
   <!-- Toast telling users tapping on the viewfinder will trigger autofocus [CHAR LIMIT=28] -->
   <string name="tap_to_focus">Toque para ajustar o foco.</string>
   <!-- Default effect setting that clears the effect. -->
@@ -692,11 +692,11 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Effect setting item that replaces background with Android in Space. [CHAR LIMIT=14] -->
   <string name="effect_backdropper_space">No espaço</string>
   <!-- Effect setting item that replaces background with a sunset. [CHAR LIMIT=14] -->
-  <string name="effect_backdropper_sunset">Ensolarado</string>
+  <string name="effect_backdropper_sunset">Pôr-do-sol</string>
   <!-- Effect setting item that replaces background with video from gallery. [CHAR LIMIT=14] -->
-  <string name="effect_backdropper_gallery">Seu vídeo</string>
+  <string name="effect_backdropper_gallery">O seu vídeo</string>
   <!-- Message displayed in overlay during background replacement training [CHAR LIMIT=180]-->
-  <string name="bg_replacement_message">Abaixe seu dispositivo.\nSaia de vista por um momento.</string>
+  <string name="bg_replacement_message">Vire o seu aparelho para baixo.\nSaia da vista por alguns momentos.</string>
   <!-- Toast telling users tapping on the viewfinder will take a picture [CHAR LIMIT=54] -->
   <string name="video_snapshot_hint">Toque para tirar foto durante a gravação.</string>
   <!-- Announcement telling users video recording has just started [CHAR LIMIT=NONE] -->
@@ -706,27 +706,27 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- Toast telling users video snapshot is disabled when the effects are on and a user tries to tap on the viewfinder [CHAR LIMIT=65] -->
   <string name="disable_video_snapshot_hint">O vídeo instantâneo é desativado quando efeitos especiais estão ativos.</string>
   <!-- A button in effect setting popup to clear the effect. [CHAR LIMIT=26] -->
-  <string name="clear_effects">Clarear efeitos</string>
+  <string name="clear_effects">Remover efeitos</string>
   <!-- Title of category for silly face effects. [CHAR LIMIT=26] -->
   <string name="effect_silly_faces">CARETAS</string>
   <!-- Title of category for background replacement effects. [CHAR LIMIT=26] -->
   <string name="effect_background">PLANO DE FUNDO</string>
   <!-- The shutter button. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_shutter_button">Botão do obturador</string>
+  <string name="accessibility_shutter_button">Botão \"Tirar foto\"</string>
   <!-- The menu button. [CHAR LIMIT = NONE] -->
   <string name="accessibility_menu_button">Botão Menu</string>
   <!-- The button to review the thumbnail. [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_thumbnail">Foto mais recente</string>
   <!-- The front/back camera switch. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_camera_picker">Alternador de câmera frontal e traseira</string>
+  <string name="accessibility_camera_picker">Trocar câmara frontal e traseira</string>
   <!-- The mode picker to switch between camera, video and panorama. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_mode_picker">Seletor de câmera, vídeo ou panorama</string>
+  <string name="accessibility_mode_picker">Seletor de câmara, vídeo ou panorama</string>
   <!-- The button to switch to the second-level indicators of the camera settings. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_second_level_indicators">Mais controles de configuração</string>
+  <string name="accessibility_second_level_indicators">Mais controlos de definições</string>
   <!-- The button to back to the first-level indicators of the camera settings. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_back_to_first_level">Fechar controles de configuração</string>
+  <string name="accessibility_back_to_first_level">Fechar controlos de definições</string>
   <!-- The zoom control button. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_zoom_control">Controle de zoom</string>
+  <string name="accessibility_zoom_control">Controlo de zoom</string>
   <!-- The decrement button in camera preference such as exposure, picture size. [CHAR LIMIT = NONE] -->
   <string name="accessibility_decrement">Diminuir %1$s</string>
   <!-- The increment button in camera preference such as exposure, picture size. [CHAR LIMIT = NONE] -->
@@ -736,28 +736,28 @@ Imagem recortada salva em <xliff:g id="folder_name">%s</xliff:g>.</string>
   <!-- The button to switch to Camera mode. [CHAR LIMIT = NONE] -->
   <string name="accessibility_switch_to_camera">Mudar para foto</string>
   <!-- The button to switch to Video mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_video">Alternar para vídeo</string>
+  <string name="accessibility_switch_to_video">Mudar para vídeo</string>
   <!-- The button to switch to Panorama mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_panorama">Alterar para panorama</string>
+  <string name="accessibility_switch_to_panorama">Mudar para panorama</string>
   <!-- The button to switch to new Panorama mode. [CHAR LIMIT = NONE] -->
   <string name="accessibility_switch_to_new_panorama">Mudar para novo panorama</string>
   <!-- The button to switch to the Re-Focus mode. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_switch_to_refocus">Troque para focar novamente</string>
+  <string name="accessibility_switch_to_refocus">Mudar para focar novamente</string>
   <!-- The button in review mode indicating that the photo taking, video recording, and panorama saving session should be canceled [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_cancel">Cancelar revisão</string>
   <!-- The button in review mode indicating that the taken photo/video is OK to be attached/uploaded [CHAR LIMIT = NONE] -->
-  <string name="accessibility_review_ok">Revisão terminada</string>
+  <string name="accessibility_review_ok">Revisão concluída</string>
   <!-- button in review mode indicate the user want to retake another photo/video for attachment [
 CHAR LIMIT = NONE] -->
-  <string name="accessibility_review_retake">Retomar revisão</string>
+  <string name="accessibility_review_retake">Rever capturar novamente</string>
   <!-- The button to play the video. [CHAR LIMIT = NONE] -->
   <string name="accessibility_play_video">Reproduzir vídeo</string>
   <!-- The button to pause the video. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_pause_video">Pausar vídeo</string>
+  <string name="accessibility_pause_video">Colocar vídeo em pausa</string>
   <!-- The button to reload the video. [CHAR LIMIT = NONE] -->
   <string name="accessibility_reload_video">Recarregar vídeo</string>
   <!-- The time bar of the media player. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_time_bar">Barra de tempo do player de vídeo</string>
+  <string name="accessibility_time_bar">Barra de tempo do reprodutor de vídeo</string>
   <!-- TODO: remove the string as it is a work-around solution to bypass the default speak of the element type. -->
   <!-- Default text for a button that can be toggled on and off. -->
   <string name="capital_on">ATIVADO</string>
@@ -854,7 +854,7 @@ CHAR LIMIT = NONE] -->
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Definir intervalo de tempo</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
-  <string name="set_time_interval_help">O recurso de passagem de tempo está desativado. Ative-o para definir o intervalo de tempo.</string>
+  <string name="set_time_interval_help">A funcionalidade de intervalo de tempo está desativada. Ative-a para definir o intervalo de tempo.</string>
   <!-- Help text that is shown when the countdown timer is turned off. [CHAR LIMIT = 180]-->
   <string name="set_timer_help">O temporizador está desativado. Ative-o para efetuar a contagem antes de tirar uma foto.</string>
   <!-- Title in timer setting for setting the duration for the countdown timer. [CHAR LIMIT = 50]-->
@@ -862,19 +862,19 @@ CHAR LIMIT = NONE] -->
   <!-- On-screen hint during timer countdown for taking a photo. [CHAR LIMIT = 60]-->
   <string name="count_down_title_text">Contagem regressiva para tirar foto</string>
   <!-- Title for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 50] -->
-  <string name="remember_location_title">Lembrar localização das fotos?</string>
+  <string name="remember_location_title">Memorizar localizações das fotos?</string>
   <!-- Message for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = None] -->
-  <string name="remember_location_prompt">Marque seus vídeos e fotos com os locais onde foram gerados.\n\nOutros aplicativos podem acessar essas informações juntamente com suas imagens salvas.</string>
+  <string name="remember_location_prompt">Etiquete as suas fotografias e vídeos com as localizações onde foram capturados.\n\nOutras aplicações poderão aceder a essa informação, contida nas suas imagens guardadas.</string>
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">Não obrigado</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_yes">Sim</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
-  <string name="map_activity_not_found_err">Não há nenhum aplicativo de mapa para mostrar a localização.</string>
+  <string name="map_activity_not_found_err">Não há nenhum aplicação de mapa para mostrar a localização.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">Câmara</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
-  <string name="menu_search">Pesquisar</string>
+  <string name="menu_search">Procurar</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Fotos</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
@@ -883,7 +883,7 @@ CHAR LIMIT = NONE] -->
   <!-- more options label [CHAR LIMIT=50] -->
   <string name="camera_menu_more_label">MAIS OPÇÕES</string>
   <!-- settings label [CHAR LIMIT=50] -->
-  <string name="camera_menu_settings_label">CONFIGURAÇÕES</string>
+  <string name="camera_menu_settings_label">DEFINIÇÕES</string>
   <!-- String indicating how many photos are in an album [CHAR LIMIT=15] -->
   <plurals name="number_of_photos">
     <item quantity="one">%1$d foto</item>
@@ -896,9 +896,9 @@ CHAR LIMIT = NONE] -->
   <!-- The label for the audio effects menu. -->
   <string name="audio_effects">Efeitos áudio</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
-  <string name="headset_plug">Conecte fones de ouvido para ativar estes efeitos.</string>
+  <string name="headset_plug">Ligue os auscultadores para estes efeitos.</string>
   <!-- The title of the audio effects dialog. -->
-  <string name="audio_effects_dialog_title">Snapdragon Audio +</string>
+  <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
-  <string name="fail_trim">Desculpe, este vídeo não pode ser cortado</string>
+  <string name="fail_trim">Desculpe, este vídeo não pode ser recortado</string>
 </resources>

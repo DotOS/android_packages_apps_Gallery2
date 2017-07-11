@@ -16,7 +16,7 @@
 -->
 <resources>
   <!--  Title for the image editor activity [CHAR LIMIT=NONE]-->
-  <string name="title_activity_filter_show">Editor di foto</string>
+  <string name="title_activity_filter_show">Modifica delle foto</string>
   <!--  String shown when we cannot load the image when starting the activity [CHAR LIMIT=NONE] -->
   <string name="cannot_load_image">Impossibile caricare l\'immagine.</string>
   <!--  String shown when cannot load the original image. We will edit selected image [CHAR LIMIT=NONE] -->

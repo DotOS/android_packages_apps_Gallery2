@@ -59,6 +59,7 @@
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
+  <string name="menu_settings">Cài đặt</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="unsaved">Có các thay đổi chưa được lưu đối với hình ảnh này.</string>
@@ -256,6 +257,7 @@
   <!-- Label for preset name [CHAR LIMIT=30] -->
   <string name="filtershow_preset_name">Tên đặt sẵn</string>
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
+  <string name="filtershow_show_info_panel">Thông tin</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <string name="filtershow_show_info_panel_name">Tên hình ảnh</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->

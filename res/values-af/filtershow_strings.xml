@@ -99,6 +99,7 @@
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->
   <string name="aspect9to16_effect">16:9</string>
   <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
+  <string name="aspectNone_effect">Geen</string>
   <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
   <string name="aspectOriginal_effect">Oorspronklike</string>
   <!-- Label for when the aspect ratio is fixed to a value [CHAR LIMIT=15] -->
@@ -154,6 +155,7 @@
   <!-- Name for the photo effect that inverts photo to negative images. [CHAR LIMIT=10] -->
   <string name="negative">Negatief</string>
   <!--  Label for having no filters applied to the image [CHAR LIMIT=10] -->
+  <string name="none" msgid="3601545724573307541">Geen</string>
   <!--  Label for the image edges effect (highlights edges in image) [CHAR LIMIT=10] -->
   <string name="edge">Kante</string>
   <!--  Label for an image effect that replicates the "pop art" style of segmenting
@@ -228,6 +230,7 @@
   <!--  The title for draw size [CHAR LIMIT=50] -->
   <string name="draw_size_title">Kies grootte</string>
   <!--  The accept the draw size [CHAR LIMIT=20] -->
+  <string name="draw_size_accept">OK</string>
   <!--  Name used to indicate the original image in the state panel [CHAR LIMIT=20] -->
   <string name="state_panel_original">Oorspronklike</string>
   <!--  Name used to indicate the final image in the state panel [CHAR LIMIT=20] -->
@@ -260,6 +263,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">Oorspronklike</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">Huidige</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">Model</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

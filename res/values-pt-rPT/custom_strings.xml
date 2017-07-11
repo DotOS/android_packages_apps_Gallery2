@@ -24,9 +24,9 @@
   <string name="unit_sec">seg</string>
   <string name="slideshow_duration_title">Tempo de atraso</string>
   <string name="video_settings">Vídeo</string>
-  <string name="video_one_title">Video1</string>
-  <string name="video_two_title">Video2</string>
-  <string name="group_by_type">Pelo tipo</string>
+  <string name="video_one_title">Vídeo1</string>
+  <string name="video_two_title">Video1</string>
+  <string name="group_by_type">Por tipo</string>
   <string name="types">Tipos</string>
   <string name="type">Tipo</string>
   <string name="type_videos">Vídeos</string>

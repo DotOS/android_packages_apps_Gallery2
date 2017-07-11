@@ -393,7 +393,7 @@
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
   <string name="folder_download">Descargar</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
-  <string name="folder_edited_online_photos">Fotos online editadas</string>
+  <string name="folder_edited_online_photos">Fotos Editadas Online</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Importadas</string>

@@ -24,14 +24,14 @@
   <!--  String displayed when showing the original image [CHAR LIMIT=NONE] -->
   <string name="original_picture_text">Original</string>
   <!--  String displayed when setting the homepage wallpaper in the background [CHAR LIMIT=NONE] -->
-  <string name="setting_wallpaper">Definindo plano de fundo</string>
+  <string name="setting_wallpaper">A definir imagem de fundo</string>
   <!--  generic strings -->
   <!--  Text for to display on a download failure [CHAR LIMIT=NONE] -->
-  <string name="download_failure">Não foi possível fazer o download da foto. Rede indisponível.</string>
+  <string name="download_failure">Não foi possível transferir a fotografia. Rede não disponível.</string>
   <!--  Text to label an image as "original" [CHAR LIMIT=20] -->
   <string name="original">Original</string>
   <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
-  <string name="borders" msgid="4461692156695893616">Bordas</string>
+  <string name="borders" msgid="4461692156695893616">Moldura</string>
   <!-- Text for the custom border filter [CHAR LIMIT=20] -->
   <string name="custom_border">Personalizado</string>
   <!--  actionbar menu -->
@@ -40,16 +40,16 @@
   <!--  Text for redo menu item [CHAR LIMIT=20] -->
   <string name="filtershow_redo">Refazer</string>
   <!--  Text for the image menu item showing the filters that have been applied [CHAR LIMIT=30] -->
-  <string name="show_imagestate_panel">Mostrar efeitos aplicados</string>
+  <string name="show_imagestate_panel">Mostrar Efeitos Aplicados</string>
   <!--  Text for the image state panel menu item [CHAR LIMIT=30] -->
-  <string name="hide_imagestate_panel">Ocultar efeitos aplicados</string>
+  <string name="hide_imagestate_panel">Ocultar Efeitos Aplicados</string>
   <!--  Text for the menu item to export a flattened photo[CHAR LIMIT=30] -->
   <string name="export_image">Exportar</string>
   <!-- Text for the print menu item [CHAR LIMIT=20] -->
   <string name="print_image">Imprimir</string>
   <!-- Export Dialog-->
   <!--  Text for the dialog title to export a flattened photo[CHAR LIMIT=25] -->
-  <string name="export_flattened">Exportar imagem achatada</string>
+  <string name="export_flattened">Exportar imagem plana</string>
   <!--  Text for selecting export image quality [CHAR LIMIT=100] -->
   <string name="select_output_settings">A imagem exportada será uma cópia, sem o histórico.</string>
   <!--  Text for quality value tag [CHAR LIMIT=30] -->
@@ -62,20 +62,20 @@
   <string name="menu_settings">Definições</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
-  <string name="unsaved">Existem alterações não salvas nesta imagem.</string>
+  <string name="unsaved">Existem alterações por gravadar nesta imagem.</string>
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
-  <string name="save_before_exit">Deseja salvar antes de sair?</string>
+  <string name="save_before_exit">Deseja guardar antes de sair?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_exit">Guardar</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
-  <string name="save_and_processing">Processando imagem em resolução máxima…</string>
+  <string name="save_and_processing">A processar imagem de resolução total...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
   <string name="exit">Sair</string>
   <!--  History Panel -->
   <!--  Text for the history panel title [CHAR LIMIT=50] -->
   <string name="history">Histórico</string>
   <!--  Text for the history panel reset button [CHAR LIMIT=20]-->
-  <string name="reset">Restaurar</string>
+  <string name="reset">Repor</string>
   <!--  Text for the original image[CHAR LIMIT=20]-->
   <string name="history_original">Original</string>
   <!--  Image state panel -->
@@ -87,7 +87,7 @@
   <!--  Label for the apply effect button [CHAR LIMIT=15] -->
   <string name="apply_effect">Aplicar</string>
   <!--  Label for the reset effect button [CHAR LIMIT=15] -->
-  <string name="reset_effect">Restaurar</string>
+  <string name="reset_effect">Repor</string>
   <!--  Label for aspect [CHAR LIMIT=15] -->
   <string name="aspect">Proporção</string>
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->
@@ -111,7 +111,7 @@
   <!-- Label for when the aspect ratio is fixed to a value [CHAR LIMIT=15] -->
   <string name="Fixed">Fixo</string>
   <!--  Label for the tuny planet effect [CHAR LIMIT=10] -->
-  <string name="tinyplanet">Planetinha</string>
+  <string name="tinyplanet">Planeta Minúsculo</string>
   <!--  Filters buttons -->
   <!--  Label for the image exposure (brightness) filter button [CHAR LIMIT=10] -->
   <string name="exposure" msgid="1229093066434614811">Exposição</string>
@@ -126,7 +126,7 @@
   <!--  Label for the image BW filter (makes black & white) button [CHAR LIMIT=10] -->
   <string name="bwfilter">Filtro P&amp;B</string>
   <!--  Label for the image Autocolor filter (makes off-white colors whiter) button [CHAR LIMIT=10] -->
-  <string name="wbalance">Cor auto.</string>
+  <string name="wbalance">Cor automática</string>
   <!--  Label for the image Hue filter (color, shade, tinge, tone) button [CHAR LIMIT=10] -->
   <string name="hue">Matiz</string>
   <!--  Label for the image shadow recovery (lightens/darkens shadows) filter button [CHAR LIMIT=10] -->
@@ -146,7 +146,7 @@
   <!--  Label for the image vignette contrast fparameter ui [CHAR LIMIT=15] -->
   <string name="vignette_contrast">Contraste</string>
   <!--  Label for the rate of change in brightness as it goes to the edge [CHAR LIMIT=15] -->
-  <string name="vignette_falloff">Queda</string>
+  <string name="vignette_falloff">Atenuação</string>
   <!--  Label for the image effect that removes redeye. [CHAR LIMIT=10] -->
   <string name="redeye">Olhos vermelhos</string>
   <!--  Label for the that allows drawing on Image [CHAR LIMIT=10] -->
@@ -292,5 +292,5 @@
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_exposure_time">Tempo de exposição</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
-  <string name="filtershow_exif_copyright">Direitos autorais</string>
+  <string name="filtershow_exif_copyright">Direitos de Autor</string>
 </resources>

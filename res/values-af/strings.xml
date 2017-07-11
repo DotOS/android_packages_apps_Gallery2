@@ -52,8 +52,10 @@
   <string name="resume_playing_restart">Begin van voor af</string>
   <!-- Title of a menu item to indicate performing the image crop operation
          [CHAR LIMIT=20] -->
+  <string name="crop_save_text">OK</string>
   <!-- Title of a menu item to indicate performing the image crop operation
          [CHAR LIMIT=20] -->
+  <string name="ok">OK</string>
   <!-- Button indicating that the cropped image should be reverted back to the original -->
   <!-- Hint that appears when cropping an image with more than one face -->
   <string name="multiface_crop_help">Raak aan \'n gesig om te begin.</string>
@@ -96,6 +98,7 @@
   <string name="share_panorama">Deel panorama</string>
   <string name="share_as_photo">Deel as foto</string>
   <!-- The label shown after an image is deleted [CHAR LIMIT=16] -->
+  <string name="deleted">Uitgevee</string>
   <!-- The label on the button which when clicked will undo a deletion of image [CHAR LIMIT=16]-->
   <string name="undo">ONTDOEN</string>
   <!-- String indicating more actions are available -->
@@ -132,6 +135,7 @@
   <string name="no_such_item">Kon nie die item vind nie.</string>
   <!-- String used as a menu label. The user can choose to edit the image
          [CHAR_LIMIT=20]-->
+  <string name="edit">Redigeer</string>
   <!-- String used as a menu label. The user can choose to edit the image
          [CHAR_LIMIT=20]-->
   <string name="simple_edit">Eenvoudige redigeer</string>
@@ -379,6 +383,7 @@
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">Ingevoer</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">Skermfoto</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">Geen berging nie</string>
@@ -606,6 +611,7 @@
   <!-- switch camera label front [CHAR LIMIT=60] -->
   <string name="pref_camera_id_label_front">AGTERSTE KAMERA</string>
   <!-- Dialog "OK" button. Dismisses dialog. -->
+  <string name="dialog_ok">OK</string>
   <!-- Low-memory dialog message [CHAR LIMT=NONE] -->
   <string name="spaceIsLow_content" product="nosdcard">Jou USB-berging se stoorspasie raak min. Verander die gehalte-instelling of vee \'n paar prente of ander lêers uit.</string>
   <!-- Low-memory dialog message [CHAR LIMIT=NONE] -->
@@ -637,6 +643,7 @@
   <!-- Title of video effect setting popup window -->
   <string name="pref_video_effect_title">Effekte</string>
   <!-- Effect setting item that clear the effect. [CHAR LIMIT=14] -->
+  <string name="effect_none">Geen</string>
   <!-- Effect setting item that squeezes the face. [CHAR LIMIT=14] -->
   <string name="effect_goofy_face_squeeze">Druk</string>
   <!-- Effect setting item that makes eyes big. [CHAR LIMIT=14] -->
@@ -811,6 +818,7 @@ CHAR LIMIT = NONE] -->
   <string name="map_activity_not_found_err">There is no map app for show location.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">Soek</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">Foto\'s</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
