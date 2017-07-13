@@ -431,6 +431,7 @@
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Renderuję panoramę</string>
   <!-- The label on the button that will save an edited image -->
+  <string name="save" msgid="8140440041190264400">Zapisz</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->

@@ -95,6 +95,7 @@
     <item quantity="other">चयनित आइटम हटाएं?</item>
   </plurals>
   <string name="confirm">पुष्टि करें</string>
+  <string name="cancel">रद्द करें</string>
   <string name="share">साझा करें</string>
   <string name="share_panorama">पैनोरामा को साझा करें</string>
   <string name="share_as_photo">फ़ोटो के रूप में साझा करें</string>

@@ -49,9 +49,9 @@
   <string name="print_image">打印</string>
   <!-- Export Dialog-->
   <!--  Text for the dialog title to export a flattened photo[CHAR LIMIT=25] -->
-  <string name="export_flattened">导出平面图片</string>
+  <string name="export_flattened">导出图片</string>
   <!--  Text for selecting export image quality [CHAR LIMIT=100] -->
-  <string name="select_output_settings">导出的图片将是副本，且不含任何编辑记录。</string>
+  <string name="select_output_settings">导出的图片将作为副本，且不含任何编辑记录。</string>
   <!--  Text for quality value tag [CHAR LIMIT=30] -->
   <string name="quality">品质</string>
   <!--  Text for size value tag [CHAR LIMIT=30] -->
@@ -62,13 +62,13 @@
   <string name="menu_settings">设置</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
-  <string name="unsaved">此图片的更改尚未保存。</string>
+  <string name="unsaved">尚未保存此图片所做的更改。</string>
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
-  <string name="save_before_exit">要在退出之前保存更改吗？</string>
+  <string name="save_before_exit">要在退出之前保存吗？</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_exit">保存</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
-  <string name="save_and_processing">正在处理完整分辨率图片…</string>
+  <string name="save_and_processing">正在处理原图…</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
   <string name="exit">退出</string>
   <!--  History Panel -->

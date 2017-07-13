@@ -66,6 +66,7 @@
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">Czy chcesz zapisać przed zamknięciem?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
+  <string name="save_and_exit">Zapisz</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">Przetwarzam obraz w pełnej rozdzielczości...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->

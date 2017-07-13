@@ -35,6 +35,7 @@
   <string name="wallpaper_type_both">Ekran główny i ekran blokady</string>
   <string name="wallpaper_type_system">Ekran główny</string>
   <string name="wallpaper_type_lock">Ekran blokady</string>
+  <string name="scrolling_wall_dialog_text">Czy chcesz przyciąć tapetę do wielkości wyświetlacza\u003f</string>
   <string name="scrolling_wall_dialog_title">Przytnij tapetę</string>
   <string name="scrolling_wall_yes">Nie</string>
   <string name="scrolling_wall_no">Tak</string>
