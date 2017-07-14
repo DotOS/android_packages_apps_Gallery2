@@ -156,7 +156,7 @@
   <!--  Label for the image crop effect [CHAR LIMIT=15] -->
   <string name="crop" msgid="5584000454518174632">Кадрировать</string>
   <!--  Label for the image rotate effect [CHAR LIMIT=15] -->
-  <string name="rotate" msgid="460017689320955494">Поворот</string>
+  <string name="rotate" msgid="460017689320955494">Вращение</string>
   <!--  Label for the image flip effect [CHAR LIMIT=15] -->
   <string name="mirror">Отразить</string>
   <!-- Name for the photo effect that inverts photo to negative images. [CHAR LIMIT=10] -->

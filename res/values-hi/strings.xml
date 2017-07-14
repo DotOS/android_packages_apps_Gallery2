@@ -89,6 +89,7 @@
   <string name="wallpaper">वॉलपेपर सेट कर रहा है...</string>
   <string name="camera_setas_wallpaper">वॉलपेपर</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
+  <string name="delete">मिटाए</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="one">चयनित आइटम हटाएं?</item>
@@ -222,6 +223,7 @@
   <string name="sync_picasa_albums">रीफ्रेश करें</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">पूर्ण</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%2$d में से %1$d आइटम:</string>
@@ -373,10 +375,12 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">इसके द्वारा समूहीकृत</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">व्यवस्था</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">खाता जोड़ें</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
+  <string name="folder_download">डाउनलोड करें</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">ऑनलाइन संपादित फ़ोटो</string>
   <!-- The label for the folder contains pictures that was imported from an
@@ -385,6 +389,7 @@
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
   <string name="folder_screenshot">स्क्रीनशॉट</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
+  <string name="help">मदद</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">कोई संग्रहण नहीं</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -461,6 +466,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">कैमरा चुनें</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
+  <string name="pref_camera_id_entry_back">वापस जाएं</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">सामने</string>
   <!-- Settings screen, setting title text -->
@@ -797,6 +803,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">घंटे</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">पूर्ण</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">समय अंतराल सेट करें</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->

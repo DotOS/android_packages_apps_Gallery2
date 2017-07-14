@@ -233,6 +233,7 @@
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">স্ক্রীনসর্ট</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -471,6 +472,7 @@ CHAR LIMIT = NONE] -->
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">অনুসন্ধান</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
   <!-- Camera menu labels -->

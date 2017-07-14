@@ -260,6 +260,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">প্রকৃত</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">বর্তমান</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">মডেল</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

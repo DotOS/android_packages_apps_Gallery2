@@ -525,7 +525,7 @@
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
   <string name="pref_video_quality_entry_high">Сильный</string>
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
-  <string name="pref_video_quality_entry_low">Медленно</string>
+  <string name="pref_video_quality_entry_low">Медленная</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
     time lapse recording. Appears at top of the dialog. [CHAR LIMIT=30] -->
   <string name="pref_video_time_lapse_frame_interval_title">Замедленная съемка</string>
