@@ -281,6 +281,7 @@
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">Без блица</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">Непознато</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Оригинална</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->

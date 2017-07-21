@@ -40,6 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">המשך את ההפעלה</string>
   <!-- Displayed in the title of those albums that are being loaded -->
+  <string name="loading">טוען\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">לא ניתן להעלות</string>
@@ -206,6 +207,7 @@
   <string name="sync_picasa_albums">רענן</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">בוצע</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">‏%1$d מתוך %2$d פריטים:</string>
@@ -216,6 +218,7 @@
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">שעה</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
+  <string name="location">מיקום</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">נתיב</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -256,6 +259,7 @@
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <string name="flash_off">ללא פלאש</string>
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">לא ידוע</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">מקור</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -354,16 +358,19 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">קבץ לפי</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">הגדרות</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">הוסף חשבון</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
+  <string name="folder_download">הורד</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">תמונות מקוונות ערוכות</string>
   <!-- The label for the folder contains pictures that was imported from an
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">מיובאות</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">צילום מסך</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">אין אחסון</string>
@@ -388,6 +395,7 @@
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">יוצר פנורמה</string>
   <!-- The label on the button that will save an edited image -->
+  <string name="save" msgid="8140440041190264400">שמור</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
@@ -461,6 +469,7 @@
   <!-- Video quality setting entry. Videos will be recorded in 480p quality. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the highest quality available on the device. [CHAR LIMIT=24] -->
   <!-- Video quality setting entry. Videos will be recorded in the lowest quality available on the device. [CHAR LIMIT=24] -->
+  <string name="pref_video_quality_entry_low">מעט</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
     time lapse recording. Appears at top of the dialog. [CHAR LIMIT=30] -->
   <string name="pref_video_time_lapse_frame_interval_title">הילוך מהיר</string>
@@ -708,27 +717,34 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_2500">2.5 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_3000">3 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_5000">5 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_10000">10 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_12000">12 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_15000">15 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_24000">24 שניות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_30000">0.5 דקה</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_60000">דקה אחת</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_90000">1.5 דקות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_120000">2 דקות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_150000">2.5 דקות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_240000">4 דקות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_300000">5 דקות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_360000">6 דקות</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -770,6 +786,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">שעות</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">בוצע</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">הגדר מרווח זמן</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -791,6 +808,7 @@ CHAR LIMIT = NONE] -->
   <string name="map_activity_not_found_err">There is no map app for show location.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">חיפוש</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">תמונות</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

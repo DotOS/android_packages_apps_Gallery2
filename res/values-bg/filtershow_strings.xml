@@ -57,6 +57,7 @@
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
+  <string name="menu_settings">Настройки</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="unsaved">В това изображение има незапазени промени.</string>
@@ -245,6 +246,7 @@
   <!-- Label for preset name [CHAR LIMIT=30] -->
   <string name="filtershow_preset_name">Предварително зададено име</string>
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
+  <string name="filtershow_show_info_panel">Информация</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <string name="filtershow_show_info_panel_name">Име на изображението</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->

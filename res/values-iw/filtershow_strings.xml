@@ -57,12 +57,14 @@
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
+  <string name="menu_settings">הגדרות</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="unsaved">יש בתמונה הזו שינויים שלא נשמרו.</string>
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">האם אתה רוצה לשמור לפני היציאה?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
+  <string name="save_and_exit">שמור</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">מעבד תמונה ברזולוציה מלאה...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
@@ -71,6 +73,7 @@
   <!--  Text for the history panel title [CHAR LIMIT=50] -->
   <string name="history">היסטוריה</string>
   <!--  Text for the history panel reset button [CHAR LIMIT=20]-->
+  <string name="reset">אפס</string>
   <!--  Text for the original image[CHAR LIMIT=20]-->
   <string name="history_original">מקור</string>
   <!--  Image state panel -->
@@ -82,6 +85,7 @@
   <!--  Label for the apply effect button [CHAR LIMIT=15] -->
   <string name="apply_effect">החל</string>
   <!--  Label for the reset effect button [CHAR LIMIT=15] -->
+  <string name="reset_effect">אפס</string>
   <!--  Label for aspect [CHAR LIMIT=15] -->
   <string name="aspect">יחס גובה-רוחב</string>
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->
@@ -150,6 +154,7 @@
   <!--  Label for the image crop effect [CHAR LIMIT=15] -->
   <string name="crop" msgid="5584000454518174632">חתוך</string>
   <!--  Label for the image rotate effect [CHAR LIMIT=15] -->
+  <string name="rotate" msgid="460017689320955494">סיבוב</string>
   <!--  Label for the image flip effect [CHAR LIMIT=15] -->
   <string name="mirror">מראה</string>
   <!-- Name for the photo effect that inverts photo to negative images. [CHAR LIMIT=10] -->
@@ -250,6 +255,7 @@
   <!-- Label for preset name [CHAR LIMIT=30] -->
   <string name="filtershow_preset_name">שם מוגדר מראש</string>
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
+  <string name="filtershow_show_info_panel">מידע</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <string name="filtershow_show_info_panel_name">שם תמונה</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
@@ -265,6 +271,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">מקור</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">נוכחי</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">דגם</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

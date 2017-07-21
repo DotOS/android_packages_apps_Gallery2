@@ -260,6 +260,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">அசல்</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">நடப்பு</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">மாடல்</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

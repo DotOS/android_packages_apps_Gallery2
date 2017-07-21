@@ -64,6 +64,7 @@
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">Queres gardar antes de saír?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
+  <string name="save_and_exit">Gardar</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">Procesando a imaxe coa resolución completa...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
@@ -72,6 +73,7 @@
   <!--  Text for the history panel title [CHAR LIMIT=50] -->
   <string name="history">Historial</string>
   <!--  Text for the history panel reset button [CHAR LIMIT=20]-->
+  <string name="reset">Restablecer</string>
   <!--  Text for the original image[CHAR LIMIT=20]-->
   <string name="history_original">Orixinal</string>
   <!--  Image state panel -->
@@ -83,6 +85,7 @@
   <!--  Label for the apply effect button [CHAR LIMIT=15] -->
   <string name="apply_effect">Aplicar</string>
   <!--  Label for the reset effect button [CHAR LIMIT=15] -->
+  <string name="reset_effect">Restablecer</string>
   <!--  Label for aspect [CHAR LIMIT=15] -->
   <string name="aspect">Aspecto</string>
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->

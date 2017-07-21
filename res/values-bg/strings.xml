@@ -86,12 +86,14 @@
   <string name="wallpaper">Тапетът се задава...</string>
   <string name="camera_setas_wallpaper">Тапет</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
+  <string name="delete">Изтриване</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="one">Да се изтрие ли избраното?</item>
     <item quantity="other">Да се изтрият ли избраните?</item>
   </plurals>
   <string name="confirm">Потвърждаване</string>
+  <string name="cancel">Отказ</string>
   <string name="share">Споделяне</string>
   <string name="share_panorama">Споделяне на панорамата</string>
   <string name="share_as_photo">Споделяне като снимка</string>
@@ -216,6 +218,7 @@
   <string name="sync_picasa_albums">Опресняване</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">Готово</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d от %2$d елемента:</string>
@@ -367,10 +370,12 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">Групиране по</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">Настройки</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">Добавяне на профил</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
   <!-- The label for the folder contains downloaded pictures. [CHAR LIMIT=20]-->
+  <string name="folder_download">Изтегляне</string>
   <!-- The label for the folder contains edited online pictures. [CHAR LIMIT=40]-->
   <string name="folder_edited_online_photos">Редактирани снимки онлайн</string>
   <!-- The label for the folder contains pictures that was imported from an
@@ -378,6 +383,7 @@
   <string name="folder_imported">Импортирани</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
+  <string name="help">Помощ</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">Няма хранилище</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -454,6 +460,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">Избор на камера</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
+  <string name="pref_camera_id_entry_back">Назад</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">Предна</string>
   <!-- Settings screen, setting title text -->
@@ -783,6 +790,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">часа</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">Готово</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Задаване на интервал от време</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->

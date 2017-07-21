@@ -140,9 +140,11 @@
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <!-- Text indicating the title of a media item in details window [CHAR LIMIT=14] -->
+  <string name="title">Título</string>
   <!-- Text indicating the description of a media item in details window [CHAR LIMIT=14] -->
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
+  <string name="location">Ubicación</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
   <!-- Text indicating the height of a media item in details window [CHAR LIMIT=14] -->
@@ -169,6 +171,7 @@
   <!-- String indicating camera flash is fired. [CHAR LIMIT=14] -->
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
+  <string name="unknown">Descoñecido</string>
   <!-- String for the empty not filtered image [CHAR LIMIT=10] -->
   <string name="ffx_original">Orixinal</string>
   <!-- String for brown-colored old-fashion looking filter (filtershow_fx_0000_vintage) [CHAR LIMIT=10] -->
@@ -259,6 +262,7 @@
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
   <!-- Text to show with progress bar while stitching in Gallery -->
   <!-- The label on the button that will save an edited image -->
+  <string name="save" msgid="8140440041190264400">Gardar</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
@@ -383,6 +387,7 @@
   <!-- The text shown on the bottom-left corner of the screen to indicate that the saving is in process [CHAR LIMIT=13] -->
   <!-- The text shown on the screen to indicate that the panorama is rendering [CHAR LIMIT=27] -->
   <!-- Toast telling users tapping on the viewfinder will trigger autofocus [CHAR LIMIT=28] -->
+  <string name="tap_to_focus">Toque para enfocar.</string>
   <!-- Default effect setting that clears the effect. -->
   <!-- Title of video effect setting popup window -->
   <!-- Effect setting item that clear the effect. [CHAR LIMIT=14] -->
@@ -438,6 +443,28 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_3000">3 segundos</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_5000">5 segundos</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_10000">10 segundos</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_15000">15 segundos</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_60000">1 minuto</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_120000">2 minutos</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_300000">5 Minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
@@ -445,30 +472,20 @@ CHAR LIMIT = NONE] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_3600000">1 hora</string>
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_7200000">2 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_14400000">4 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_21600000">6 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
-  <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_43200000">12 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Seconds: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
@@ -496,9 +513,14 @@ CHAR LIMIT = NONE] -->
   <!-- settings label [CHAR LIMIT=50] -->
   <!-- String indicating how many photos are in an album [CHAR LIMIT=15] -->
   <!-- The label for the bass boost knob of the audio effects dialog. -->
+  <string name="bass_boost_strength">Aumento dos graves</string>
   <!-- The label for the 3d effect knob of the audio effects dialog. -->
+  <string name="virtualizer_strength">Efecto 3D</string>
   <!-- The label for the audio effects menu. -->
+  <string name="audio_effects">Efectos de son</string>
   <!-- Toast if user attempts to control audio effects without headphones plugged in. -->
+  <string name="headset_plug">Conectar os auriculares para estes efectos.</string>
   <!-- The title of the audio effects dialog. -->
+  <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
 </resources>
