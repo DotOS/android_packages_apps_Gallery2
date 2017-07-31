@@ -372,6 +372,7 @@
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">นำเข้าแล้ว</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">ภาพหน้าจอ</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">ไม่มีที่เก็บข้อมูล</string>
@@ -797,6 +798,7 @@ CHAR LIMIT = NONE] -->
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">ค้นหา</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">รูปภาพ</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

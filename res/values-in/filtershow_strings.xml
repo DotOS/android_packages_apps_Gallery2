@@ -31,7 +31,7 @@
   <!--  Text to label an image as "original" [CHAR LIMIT=20] -->
   <string name="original">Asli</string>
   <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
-  <string name="borders" msgid="4461692156695893616">Bingkai</string>
+  <string name="borders" msgid="4461692156695893616">Batas</string>
   <!-- Text for the custom border filter [CHAR LIMIT=20] -->
   <string name="custom_border">Kustom</string>
   <!--  actionbar menu -->
@@ -59,10 +59,10 @@
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
-  <string name="menu_settings">Pengaturan</string>
+  <string name="menu_settings">Setelan</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
-  <string name="unsaved">Ada perubahan yang belum disimpan pada gambar ini.</string>
+  <string name="unsaved">Ada perubahan yang belum tersimpan pada gambar ini.</string>
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">Ingin menyimpan sebelum keluar?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
@@ -128,7 +128,7 @@
   <!--  Label for the image Autocolor filter (makes off-white colors whiter) button [CHAR LIMIT=10] -->
   <string name="wbalance">Warna Otomatis</string>
   <!--  Label for the image Hue filter (color, shade, tinge, tone) button [CHAR LIMIT=10] -->
-  <string name="hue">Rona</string>
+  <string name="hue">Corak</string>
   <!--  Label for the image shadow recovery (lightens/darkens shadows) filter button [CHAR LIMIT=10] -->
   <string name="shadow_recovery">Bayangan</string>
   <!--  Label for the image highlights recovery (lightens/darkens bright regions) filter button [CHAR LIMIT=15] -->
@@ -156,7 +156,7 @@
   <!--  Label for the image crop effect [CHAR LIMIT=15] -->
   <string name="crop" msgid="5584000454518174632">Pangkas</string>
   <!--  Label for the image rotate effect [CHAR LIMIT=15] -->
-  <string name="rotate" msgid="460017689320955494">Putar posisi</string>
+  <string name="rotate" msgid="460017689320955494">Berputar</string>
   <!--  Label for the image flip effect [CHAR LIMIT=15] -->
   <string name="mirror">Cermin</string>
   <!-- Name for the photo effect that inverts photo to negative images. [CHAR LIMIT=10] -->
@@ -210,7 +210,7 @@
   <!--  Label for the size to draw in in [CHAR LIMIT=14] -->
   <string name="draw_size">Ukuran</string>
   <!--  Label for the Hue to draw in [CHAR LIMIT=14] -->
-  <string name="draw_hue">Rona</string>
+  <string name="draw_hue">Corak</string>
   <!--  Label for the color to draw in [CHAR LIMIT=14] -->
   <string name="draw_saturation">Saturasi</string>
   <!--  Label for the Brightness to draw in [CHAR LIMIT=14] -->
@@ -274,7 +274,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">Asli</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
-  <string name="filtershow_version_current">Sekarang</string>
+  <string name="filtershow_version_current">Saat ini</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">Model</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

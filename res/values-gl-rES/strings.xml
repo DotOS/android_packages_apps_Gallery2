@@ -168,6 +168,7 @@
   <!-- String indicating the length units in milli-meters. [CHAR LIMIT=8] -->
   <!-- String indicating how camera shooting feature is used. [CHAR LIMIT=8] -->
   <!-- String indicating how camera shooting feature is used. [CHAR LIMIT=8] -->
+  <string name="auto">Automático</string>
   <!-- String indicating camera flash is fired. [CHAR LIMIT=14] -->
   <!-- String indicating camera flash is not used. [CHAR LIMIT=14] -->
   <!-- String indicating image width or height is unknown. [CHAR LIMIT=14] -->
@@ -330,22 +331,26 @@
   <!-- Settings screen, dialog choice for QVGA picture size [CHAR LIMIT=15] -->
   <!-- Settings screen, Focus mode title -->
   <!-- Settings screen, Focus mode dialog radio button choices -->
+  <string name="pref_camera_focusmode_entry_auto">Automático</string>
   <!-- Menu, focus mode labels [CHAR LIMIT=50] -->
   <!-- Default flash mode setting.-->
   <!-- Value for flash off setting-->
   <!-- Settings screen, Flash mode title -->
   <!-- flash label [CHAR LIMIT=50] -->
   <!-- Settings screen, Flash mode dialog radio button choices -->
+  <string name="pref_camera_flashmode_entry_auto">Automático</string>
   <!-- Menu, flash mode labels [CHAR LIMIT=50] -->
   <!-- Default videocamera flash mode setting.-->
   <!-- Default white balance setting. -->
   <!-- Settings screen, white balance title -->
   <!-- Menu, white balance label -->
   <!-- Settings screen, White balance dialog radio button choices -->
+  <string name="pref_camera_whitebalance_entry_auto">Automático</string>
   <!-- Menu, White balance labels [CHAR LIMIT=50] -->
   <!-- Default scene mode setting. -->
   <!-- Settings screen, Select Scene mode -->
   <!-- Settings menu, scene mode choices [CHAR LIMIT=16] -->
+  <string name="pref_camera_scenemode_entry_auto">Automático</string>
   <!-- Scene mode that uses HDR (high dynamic range) [CHAR LIMIT=16] -->
   <!-- Scene mode that takes an image quickly with little motion blur. [CHAR LIMIT=16] -->
   <!-- Scene mode that takes long exposures to capture night scenes without flash. [CHAR LIMIT=16] -->
@@ -411,6 +416,7 @@
   <!-- Title of category for background replacement effects. [CHAR LIMIT=26] -->
   <!-- The shutter button. [CHAR LIMIT = NONE] -->
   <!-- The menu button. [CHAR LIMIT = NONE] -->
+  <string name="accessibility_menu_button">Botón de menú</string>
   <!-- The button to review the thumbnail. [CHAR LIMIT = NONE] -->
   <!-- The front/back camera switch. [CHAR LIMIT = NONE] -->
   <!-- The mode picker to switch between camera, video and panorama. [CHAR LIMIT = NONE] -->
@@ -438,63 +444,95 @@ CHAR LIMIT = NONE] -->
   <!-- Default text for a button that can be toggled on and off. -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_500">0.5 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_1000">1 segundo</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_1500">1.5 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_2000">2 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_2500">2.5 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_3000">3 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_4000">4 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_5000">5 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_6000">6 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_10000">10 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_12000">12 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_15000">15 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_24000">24 segundos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_30000">0.5 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_60000">1 minuto</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_90000">1.5 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_120000">2 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_150000">2.5 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_180000">3 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_240000">4 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_300000">5 Minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_360000">6 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_600000">10 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_720000">12 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_900000">15 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_1440000">24 minutos</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_1800000">0.5 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_3600000">1 hora</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_5400000">1.5 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_7200000">2 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_9000000">2.5 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_10800000">3 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_14400000">4 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_18000000">5 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_21600000">6 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_36000000">10 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
   <string name="pref_video_time_lapse_frame_interval_43200000">12 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_54000000">15 horas</string>
   <!-- Text to indicate time lapse recording frame interval [CHAR LIMIT = 30] -->
+  <string name="pref_video_time_lapse_frame_interval_86400000">24 horas</string>
   <!-- Seconds: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_seconds">segundos</string>
   <!-- Minutes: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_minutes">minutos</string>
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_hours">horas</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
   <string name="time_lapse_interval_set">Feito</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
+  <string name="set_time_interval">Establece o intervalo de tempo</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
+  <string name="set_time_interval_help">A característica intervalo de tempo esta apagada. Active esta función para definir un intervalo de tempo.</string>
   <!-- Help text that is shown when the countdown timer is turned off. [CHAR LIMIT = 180]-->
   <!-- Title in timer setting for setting the duration for the countdown timer. [CHAR LIMIT = 50]-->
   <!-- On-screen hint during timer countdown for taking a photo. [CHAR LIMIT = 60]-->

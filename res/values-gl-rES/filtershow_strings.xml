@@ -33,6 +33,7 @@
   <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
   <string name="borders" msgid="4461692156695893616">Bordos</string>
   <!-- Text for the custom border filter [CHAR LIMIT=20] -->
+  <string name="custom_border">Personalizado</string>
   <!--  actionbar menu -->
   <!--  Text for the undo menu item [CHAR LIMIT=20] -->
   <string name="filtershow_undo">Desfacer</string>

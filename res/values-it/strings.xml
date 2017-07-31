@@ -492,9 +492,9 @@
   <!-- Settings screen, setting title text -->
   <string name="pref_camera_recordlocation_title">Registra località</string>
   <!--  Label for record location preference [CHAR LIMIT=50] -->
-  <string name="pref_camera_location_label">LOCALITÀ</string>
+  <string name="pref_camera_location_label">POSIZIONE</string>
   <!-- Title for countdown timer on camera settings screen [CHAR LIMIT=30]-->
-  <string name="pref_camera_timer_title">Timer conto alla rovescia</string>
+  <string name="pref_camera_timer_title">Conto alla rovescia</string>
   <!-- Entry for countdown timer setting. e.g. 1 second, 10 seconds, etc. [CHAR LIMIT=30]-->
   <plurals name="pref_camera_timer_entry">
     <item quantity="one">1 secondo</item>
@@ -520,7 +520,7 @@
   <string name="pref_video_quality_entry_low">Bassa</string>
   <!-- Describes the preference dialog for choosing interval between frame capture for
     time lapse recording. Appears at top of the dialog. [CHAR LIMIT=30] -->
-  <string name="pref_video_time_lapse_frame_interval_title">Time-lapse</string>
+  <string name="pref_video_time_lapse_frame_interval_title">Lasso di tempo</string>
   <!-- Settings screen, Camera setting category title -->
   <string name="pref_camera_settings_category">Impostazioni fotocamera</string>
   <!-- Settings screen, Camcorder setting category title -->
@@ -530,21 +530,21 @@
   <!-- Settings screen, dialog choice for 13 megapixels picture size [CHAR LIMIT=15] -->
   <string name="pref_camera_picturesize_entry_13mp">13M pixel</string>
   <!-- Settings screen, dialog choice for 8 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_8mp">8 MP</string>
+  <string name="pref_camera_picturesize_entry_8mp">8M pixel</string>
   <!-- Settings screen, dialog choice for 5 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_5mp">5 MP</string>
+  <string name="pref_camera_picturesize_entry_5mp">5M pixel</string>
   <!-- Settings screen, dialog choice for 4 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_4mp">4 Mpixel</string>
+  <string name="pref_camera_picturesize_entry_4mp">4M pixel</string>
   <!-- Settings screen, dialog choice for 3 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_3mp">3 MP</string>
+  <string name="pref_camera_picturesize_entry_3mp">3M pixel</string>
   <!-- Settings screen, dialog choice for 2 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_2mp">2 MP</string>
+  <string name="pref_camera_picturesize_entry_2mp">2M pixel</string>
   <!-- Settings screen, dialog choice for 2 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_2mp_wide">2 Mpixel (16:9)</string>
+  <string name="pref_camera_picturesize_entry_2mp_wide">2M pixel (16:9)</string>
   <!-- Settings screen, dialog choice for 1.3 megapixels picture size [CHAR LIMIT=15] -->
   <string name="pref_camera_picturesize_entry_1_3mp">1,3 MP</string>
   <!-- Settings screen, dialog choice for 1 megapixels picture size [CHAR LIMIT=15] -->
-  <string name="pref_camera_picturesize_entry_1mp">1 MP</string>
+  <string name="pref_camera_picturesize_entry_1mp">1M pixel</string>
   <!-- Settings screen, dialog choice for VGA picture size [CHAR LIMIT=15] -->
   <string name="pref_camera_picturesize_entry_vga">VGA</string>
   <!-- Settings screen, dialog choice for QVGA picture size [CHAR LIMIT=15] -->
