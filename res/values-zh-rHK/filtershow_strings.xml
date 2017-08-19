@@ -66,7 +66,7 @@
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">您要在結束前儲存變更嗎？</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
-  <string name="save_and_exit">保存</string>
+  <string name="save_and_exit">儲存</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">正在處理全解像度相片…</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->

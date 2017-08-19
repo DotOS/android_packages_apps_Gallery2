@@ -40,7 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">繼續播放</string>
   <!-- Displayed in the title of those albums that are being loaded -->
-  <string name="loading">讀取\u2026</string>
+  <string name="loading">載入中\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">無法載入</string>
@@ -218,7 +218,7 @@
          some albums to be viewable offline [CHAR LIMIT=30] -->
   <string name="make_available_offline">可在離線時瀏覽</string>
   <!-- A label describing to link website [CHAR LIMIT=30] -->
-  <string name="more_image">More Images</string>
+  <string name="more_image">更多圖片</string>
   <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
   <string name="sync_picasa_albums">重新整理</string>
   <!-- A label on a button. The user clicks this button after he has
@@ -395,7 +395,7 @@
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
   <string name="folder_screenshot">螢幕截圖</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
-  <string name="help">幫助</string>
+  <string name="help">說明</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">沒有儲存裝置</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -417,11 +417,11 @@
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
   <string name="trim_too_short">無法剪輯：目標影片長度過短</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
-  <string name="mute_nosupport">Can not mute : not supported video</string>
+  <string name="mute_nosupport">無法靜音：不支援的影片</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">正在組合全景</string>
   <!-- The label on the button that will save an edited image -->
-  <string name="save" msgid="8140440041190264400">保存</string>
+  <string name="save" msgid="8140440041190264400">儲存</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
@@ -432,7 +432,7 @@
   </plurals>
   <!-- String indicating how many media items from the camera have been selected -->
   <plurals name="ingest_number_of_items_selected">
-    <item quantity="other">%1$d items selected</item>
+    <item quantity="other">已選擇 %1$d 個項目</item>
   </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
   <string name="ingest_sorting" msgid="624687230903648118">正在排序...</string>
@@ -889,5 +889,5 @@ CHAR LIMIT = NONE] -->
   <!-- The title of the audio effects dialog. -->
   <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
-  <string name="fail_trim">Sorry, this video file can not be trimmed</string>
+  <string name="fail_trim">抱歉，此影片檔案無法被修剪</string>
 </resources>

@@ -35,7 +35,7 @@
   <string name="wallpaper_type_both">Pantalla de inicio y de bloqueo</string>
   <string name="wallpaper_type_system">Pantalla de inicio</string>
   <string name="wallpaper_type_lock">Pantalla de bloqueo</string>
-  <string name="scrolling_wall_dialog_text">Quieres recortar el fondo de pantalla al tamaño de pantalla size\u003f</string>
+  <string name="scrolling_wall_dialog_text">Quieres recortar el fondo de pantalla al tamaño de la pantalla\u003f</string>
   <string name="scrolling_wall_dialog_title">Recortar fondo de pantalla</string>
   <string name="scrolling_wall_yes">No</string>
   <string name="scrolling_wall_no">Si</string>

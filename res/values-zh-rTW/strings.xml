@@ -28,11 +28,11 @@
   <!-- Activity label. This might show up in the activity-picker -->
   <string name="movie_view_label">影片播放器</string>
   <!-- shown in the video player view while the video is being loaded, before it starts playing -->
-  <string name="loading_video">正在載入影片…</string>
-  <string name="loading_image">正在載入圖片…</string>
+  <string name="loading_video">正在載入影片\u2026</string>
+  <string name="loading_image">正在載入圖片\u2026</string>
   <!-- Message shown on the progress dialog to indicate we're loading the
             account info [CHAR LIMIT=30] -->
-  <string name="loading_account">正在載入帳戶…</string>
+  <string name="loading_account">正在載入帳戶\u2026</string>
   <!-- Movie View Resume Playing dialog title -->
   <string name="resume_playing_title">繼續播放影片</string>
   <!-- Movie View Start Playing dialog title -->
@@ -40,7 +40,7 @@
   <!-- Movie View Start Playing button "Resume from bookmark" -->
   <string name="resume_playing_resume">繼續播放</string>
   <!-- Displayed in the title of those albums that are being loaded -->
-  <string name="loading">讀取\u2026</string>
+  <string name="loading">載入中\u2026</string>
   <!-- Displayed in the title of those pictures that fails to be loaded
          [CHAR LIMIT=50]-->
   <string name="fail_to_load">無法載入</string>
@@ -62,7 +62,7 @@
   <!-- Hint that appears when cropping an image with more than one face -->
   <string name="multiface_crop_help">輕觸臉孔即可開始。</string>
   <!-- Toast/alert that the image is being saved to the SD card -->
-  <string name="saving_image">正在儲存相片…</string>
+  <string name="saving_image">正在儲存相片\u2026</string>
   <!-- Toast/alert that the image is being saved after editing in filtershow [CHAR LIMIT=40]-->
   <string name="filtershow_saving_image">正在將圖片儲存至「<xliff:g id="ALBUM_NAME">%1$s</xliff:g>」…</string>
   <!-- Eorror toast message that the image cannot be saved [CHAR LIMIT=40]-->
@@ -73,22 +73,22 @@
   <string name="trim_label">修剪影片</string>
   <!-- Toast/alert that the face detection is being run -->
   <!-- Title prompted for user to choose a photo item [CHAR LIMIT=20] -->
-  <string name="select_image">選取相片</string>
+  <string name="select_image">選擇相片</string>
   <!-- Title prompted for user to choose a video item [CHAR LIMIT=20] -->
-  <string name="select_video">選取影片</string>
+  <string name="select_video">選擇影片</string>
   <!-- Title prompted for user to choose a media object [CHAR LIMIT=20] -->
-  <string name="select_item">選取項目</string>
+  <string name="select_item">選擇項目</string>
   <!-- Title prompted for user to choose an album [CHAR LIMIT=20] -->
-  <string name="select_album">選取相簿</string>
+  <string name="select_album">選擇相簿</string>
   <!-- Title prompted for user to choose a group [CHAR LIMIT=20] -->
-  <string name="select_group">選取群組</string>
+  <string name="select_group">選擇群組</string>
   <!-- Displayed in the title of the dialog for things to do with a picture
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">將相片設為</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
   <string name="set_wallpaper">設定桌布</string>
   <!-- Toast/alert after saving wallpaper -->
-  <string name="wallpaper">正在設定桌布…</string>
+  <string name="wallpaper">正在設定桌布\u2026</string>
   <string name="camera_setas_wallpaper">桌布</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
   <string name="delete">刪除</string>
@@ -150,7 +150,7 @@
          It means the pictures of the Picasa album is currently being
          transferred to local storage, so the pictures can later be viewed
          offline. [CHAR LIMIT=15] -->
-  <string name="caching_label">快取中…</string>
+  <string name="caching_label">快取中\u2026</string>
   <!-- The title of the menu item to let user crop the image. [CHAR LIMIT=15] -->
   <string name="crop_action">裁剪</string>
   <!-- The title of the menu item to let user trim the video. [CHAR LIMIT=15] -->
@@ -177,9 +177,9 @@
   <!-- Title of a menu item to group photo by faces [CHAR LIMIT=30]-->
   <string name="group_by_faces">依人物分組</string>
   <!-- Title of a menu item to group photo by albums [CHAR LIMIT=30]-->
-  <string name="group_by_album">依專輯</string>
+  <string name="group_by_album">依相簿</string>
   <!-- Title of a menu item to group photo by size [CHAR LIMIT=30]-->
-  <string name="group_by_size">依大小分類</string>
+  <string name="group_by_size">依大小</string>
   <!-- When grouping photos by tags, the label used for photos without tags
          [CHAR LIMIT=20]-->
   <string name="untagged">無標記</string>
@@ -218,7 +218,7 @@
          some albums to be viewable offline [CHAR LIMIT=30] -->
   <string name="make_available_offline">可在離線時使用</string>
   <!-- A label describing to link website [CHAR LIMIT=30] -->
-  <string name="more_image">More Images</string>
+  <string name="more_image">更多圖片</string>
   <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
   <string name="sync_picasa_albums">重新整理</string>
   <!-- A label on a button. The user clicks this button after he has
@@ -395,7 +395,7 @@
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
   <string name="folder_screenshot">螢幕截圖</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
-  <string name="help">幫助</string>
+  <string name="help">說明</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">沒有儲存裝置</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
@@ -417,29 +417,29 @@
   <!-- Toast if the trimmed video is too short to trim. [CHAR LIMIT=80] -->
   <string name="trim_too_short">無法修剪：目標影片長度過短</string>
   <!-- Toast if the muted video is not supported. [CHAR LIMIT=80] -->
-  <string name="mute_nosupport">Can not mute : not supported video</string>
+  <string name="mute_nosupport">無法靜音：不支援的影片</string>
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">正在進行全景成像作業</string>
   <!-- The label on the button that will save an edited image -->
-  <string name="save" msgid="8140440041190264400">保存</string>
+  <string name="save" msgid="8140440041190264400">儲存</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->
-  <string name="ingest_scanning" msgid="2048262851775139720">Scanning content\u2026</string>
+  <string name="ingest_scanning" msgid="2048262851775139720">正在掃描內容\u2026</string>
   <!-- String indicating how many media items from the camera have been scanned -->
   <plurals name="ingest_number_of_items_scanned">
     <item quantity="other">已掃描 %1$d 個項目</item>
   </plurals>
   <!-- String indicating how many media items from the camera have been selected -->
   <plurals name="ingest_number_of_items_selected">
-    <item quantity="other">%1$d items selected</item>
+    <item quantity="other">已選擇 %1$d 個項目</item>
   </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
-  <string name="ingest_sorting" msgid="624687230903648118">Sorting\u2026</string>
+  <string name="ingest_sorting" msgid="624687230903648118">排序中\u2026</string>
   <!--  Status message shown when scanning the content from the camera has completed -->
   <string name="ingest_scanning_done">掃描完成</string>
   <!--  Status message shown when content from an external camera is being imported -->
-  <string name="ingest_importing">Importing\u2026</string>
+  <string name="ingest_importing">匯入中\u2026</string>
   <!--  Status message shown when there is no content available to be imported -->
   <string name="ingest_empty_device">沒有任何內容可供這個裝置匯入。</string>
   <!--  Status message shown when there is no MTP device connected  -->
@@ -457,15 +457,15 @@
   <!-- label for the icon meaning 'show me all the images that were taken with the camera' -->
   <string name="camera_label">相機</string>
   <!-- alert to the user to wait for some operation to complete -->
-  <string name="wait">請稍候…</string>
+  <string name="wait">請稍候\u2026</string>
   <!-- alert to the user that USB storage must be available before using the camera [CHAR LIMIT=NONE] -->
   <string name="no_storage" product="nosdcard">使用相機前，請先插入 USB 儲存裝置。</string>
   <!-- alert to the user that an SD card must be installed before using the camera -->
   <string name="no_storage" product="default">使用相機前，請先插入 SD 卡。</string>
   <!-- alert to the user that the USB storage is being disk-checked [CHAR LIMIT=30] -->
-  <string name="preparing_sd" product="nosdcard">正在準備 USB 儲存裝置…</string>
+  <string name="preparing_sd" product="nosdcard">正在準備 USB 儲存裝置\u2026</string>
   <!-- alert to the user that the SD card is being disk-checked -->
-  <string name="preparing_sd" product="default">正在準備 SD 卡…</string>
+  <string name="preparing_sd" product="default">正在準備 SD 卡\u2026</string>
   <!-- alert to the user that the camera fails to read or write the USB storage. [CHAR LIMIT=NONE] -->
   <string name="access_sd_fail" product="nosdcard">無法存取 USB 儲存裝置。</string>
   <!-- alert to the user that the camera fails to read or write the SD card. -->
@@ -597,7 +597,7 @@
   <!-- Scene mode optimized for taking images in the sunset. [CHAR LIMIT=16] -->
   <string name="pref_camera_scenemode_entry_sunset">黃昏</string>
   <!-- Scene mode optimized for taking indoor low-lights pictures. [CHAR LIMIT=16] -->
-  <string name="pref_camera_scenemode_entry_party">派對模式</string>
+  <string name="pref_camera_scenemode_entry_party">派對</string>
   <!-- Settings menu, scene mode labels [CHAR LIMIT=50] -->
   <string name="pref_camera_scenemode_label_auto">無</string>
   <!-- Scene mode that takes an image quickly with little motion blur. [CHAR LIMIT=50] -->
@@ -657,7 +657,7 @@
   <!-- The text shown in the progress dialog when waiting for previous panorama finishing [CHAR LIMIT=40] -->
   <string name="pano_dialog_waiting_previous">正在等待先前的全景處理完成</string>
   <!-- The text shown on the bottom-left corner of the screen to indicate that the saving is in process [CHAR LIMIT=13] -->
-  <string name="pano_review_saving_indication_str">儲存中…</string>
+  <string name="pano_review_saving_indication_str">儲存中\u2026</string>
   <!-- The text shown on the screen to indicate that the panorama is rendering [CHAR LIMIT=27] -->
   <string name="pano_review_rendering">正在進行全景成像作業</string>
   <!-- Toast telling users tapping on the viewfinder will trigger autofocus [CHAR LIMIT=28] -->
@@ -690,9 +690,9 @@
   <!-- Toast telling users tapping on the viewfinder will take a picture [CHAR LIMIT=54] -->
   <string name="video_snapshot_hint">輕觸即可在錄製期間拍照。</string>
   <!-- Announcement telling users video recording has just started [CHAR LIMIT=NONE] -->
-  <string name="video_recording_started">錄影程序已啟動。</string>
+  <string name="video_recording_started">影片錄製已開始。</string>
   <!-- Announcement telling users video recording has just stopped [CHAR LIMIT=NONE] -->
-  <string name="video_recording_stopped">錄影程序已暫停。</string>
+  <string name="video_recording_stopped">影片錄製已停止。</string>
   <!-- Toast telling users video snapshot is disabled when the effects are on and a user tries to tap on the viewfinder [CHAR LIMIT=65] -->
   <string name="disable_video_snapshot_hint">特殊效果啟用時無法使用影片快照。</string>
   <!-- A button in effect setting popup to clear the effect. [CHAR LIMIT=26] -->
@@ -702,13 +702,13 @@
   <!-- Title of category for background replacement effects. [CHAR LIMIT=26] -->
   <string name="effect_background">背景</string>
   <!-- The shutter button. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_shutter_button">[快門] 按鈕</string>
+  <string name="accessibility_shutter_button">快門鍵</string>
   <!-- The menu button. [CHAR LIMIT = NONE] -->
   <string name="accessibility_menu_button">功能表按鈕</string>
   <!-- The button to review the thumbnail. [CHAR LIMIT = NONE] -->
   <string name="accessibility_review_thumbnail">最近的相片</string>
   <!-- The front/back camera switch. [CHAR LIMIT = NONE] -->
-  <string name="accessibility_camera_picker">前置和後置鏡頭開關</string>
+  <string name="accessibility_camera_picker">前置和後置鏡頭切換</string>
   <!-- The mode picker to switch between camera, video and panorama. [CHAR LIMIT = NONE] -->
   <string name="accessibility_mode_picker">相機、影片或全景選取工具</string>
   <!-- The button to switch to the second-level indicators of the camera settings. [CHAR LIMIT = NONE] -->
@@ -889,5 +889,5 @@ CHAR LIMIT = NONE] -->
   <!-- The title of the audio effects dialog. -->
   <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
-  <string name="fail_trim">Sorry, this video file can not be trimmed</string>
+  <string name="fail_trim">抱歉，此影片檔案無法被修剪</string>
 </resources>

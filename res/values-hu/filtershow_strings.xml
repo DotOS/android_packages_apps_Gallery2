@@ -66,6 +66,7 @@
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">Szeretne menteni a kilépés előtt?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
+  <string name="save_and_exit">Mentés</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">Teljes felbontású kép feldolgozása...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->

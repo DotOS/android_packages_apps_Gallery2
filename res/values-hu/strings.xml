@@ -406,7 +406,9 @@
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">Nincs elérhető külső tárhely</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">Filmszalag nézet</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">Rácsnézet</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">Teljes képernyő</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -424,6 +426,7 @@
   <!-- Text to show with progress bar while stitching in Gallery -->
   <string name="pano_progress_text">Panorámakép megjelenítése</string>
   <!-- The label on the button that will save an edited image -->
+  <string name="save" msgid="8140440041190264400">Mentés</string>
   <!-- A label representing the action of importing media item(s) [CHAR LIMIT=20] -->
   <!-- A label that indicates the media import operation completed [CHAR LIMIT=20] -->
   <!--  Text of notification message which is shown when user attaches camera -->

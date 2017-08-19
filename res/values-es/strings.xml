@@ -227,7 +227,7 @@
   <string name="sync_picasa_albums">Actualizar</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
-  <string name="done">Realizado</string>
+  <string name="done">Hecho</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">Elemento: %1$d de %2$d</string>
@@ -238,7 +238,7 @@
   <!-- Text indicating the creation time of a media item in details window [CHAR LIMIT=14] -->
   <string name="time">Hora</string>
   <!-- Text indicating the location of a media item in details window [CHAR LIMIT=14] -->
-  <string name="location">Ubicación</string>
+  <string name="location">Ubinación</string>
   <!-- Text indicating the path of a media item in details window [CHAR LIMIT=14] -->
   <string name="path">Ruta</string>
   <!-- Text indicating the width of a media item in details window [CHAR LIMIT=14] -->
@@ -442,7 +442,7 @@
     <item quantity="other">%1$d elementos seleccionados</item>
   </plurals>
   <!--  Status message shown when content from the camera is being sorted -->
-  <string name="ingest_sorting" msgid="624687230903648118">Sorteando\u2026</string>
+  <string name="ingest_sorting" msgid="624687230903648118">Ordenando\u2026</string>
   <!--  Status message shown when scanning the content from the camera has completed -->
   <string name="ingest_scanning_done">Análisis completo</string>
   <!--  Status message shown when content from an external camera is being imported -->
@@ -848,7 +848,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">horas</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
-  <string name="time_lapse_interval_set">Realizado</string>
+  <string name="time_lapse_interval_set">Hecho</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">Establece el intervalo de tiempo</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -898,5 +898,5 @@ CHAR LIMIT = NONE] -->
   <!-- The title of the audio effects dialog. -->
   <string name="audio_effects_dialog_title">Snapdragon Audio+</string>
   <!-- The tips of trimming video -->
-  <string name="fail_trim">Lo sentimos, este video no puede ser reortado</string>
+  <string name="fail_trim">Lo sentimos, este video no puede ser recortado</string>
 </resources>

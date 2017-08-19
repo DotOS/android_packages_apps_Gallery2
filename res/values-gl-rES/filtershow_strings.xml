@@ -20,7 +20,7 @@
   <!--  String shown when we cannot load the image when starting the activity [CHAR LIMIT=NONE] -->
   <string name="cannot_load_image">Non se pode cargar a imaxe</string>
   <!--  String shown when cannot load the original image. We will edit selected image [CHAR LIMIT=NONE] -->
-  <string name="cannot_edit_original">Non se pode editar a orixinal</string>
+  <string name="cannot_edit_original">Non se pode editar a imaxe orixinal</string>
   <!--  String displayed when showing the original image [CHAR LIMIT=NONE] -->
   <string name="original_picture_text">Orixinal</string>
   <!--  String displayed when setting the homepage wallpaper in the background [CHAR LIMIT=NONE] -->
@@ -40,7 +40,7 @@
   <!--  Text for redo menu item [CHAR LIMIT=20] -->
   <string name="filtershow_redo">Refacer</string>
   <!--  Text for the image menu item showing the filters that have been applied [CHAR LIMIT=30] -->
-  <string name="show_imagestate_panel">Mostrar efectos aplicados</string>
+  <string name="show_imagestate_panel">Amosar efectos aplicados</string>
   <!--  Text for the image state panel menu item [CHAR LIMIT=30] -->
   <string name="hide_imagestate_panel">Agochar os efectos aplicados</string>
   <!--  Text for the menu item to export a flattened photo[CHAR LIMIT=30] -->
@@ -51,10 +51,11 @@
   <!--  Text for the dialog title to export a flattened photo[CHAR LIMIT=25] -->
   <string name="export_flattened">Exportar a imaxe aplanada</string>
   <!--  Text for selecting export image quality [CHAR LIMIT=100] -->
-  <string name="select_output_settings">A imaxe exportada será unha copia sen historial.</string>
+  <string name="select_output_settings">A imaxe exportada será unha copia, sen historial.</string>
   <!--  Text for quality value tag [CHAR LIMIT=30] -->
   <string name="quality">Calidade</string>
   <!--  Text for size value tag [CHAR LIMIT=30] -->
+  <string name="size">Tamaño</string>
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
@@ -110,7 +111,7 @@
   <!-- Label for when the aspect ratio is fixed to a value [CHAR LIMIT=15] -->
   <string name="Fixed">Fixo</string>
   <!--  Label for the tuny planet effect [CHAR LIMIT=10] -->
-  <string name="tinyplanet">Planetiña</string>
+  <string name="tinyplanet">Planeta pequeno</string>
   <!--  Filters buttons -->
   <!--  Label for the image exposure (brightness) filter button [CHAR LIMIT=10] -->
   <string name="exposure" msgid="1229093066434614811">Exposición</string>
@@ -125,7 +126,7 @@
   <!--  Label for the image BW filter (makes black & white) button [CHAR LIMIT=10] -->
   <string name="bwfilter">Filtro B/N</string>
   <!--  Label for the image Autocolor filter (makes off-white colors whiter) button [CHAR LIMIT=10] -->
-  <string name="wbalance">Autocor</string>
+  <string name="wbalance">Cor automática</string>
   <!--  Label for the image Hue filter (color, shade, tinge, tone) button [CHAR LIMIT=10] -->
   <string name="hue">Tonalidade</string>
   <!--  Label for the image shadow recovery (lightens/darkens shadows) filter button [CHAR LIMIT=10] -->
@@ -207,6 +208,7 @@
   <!--  Label for the The style to draw in [CHAR LIMIT=14] -->
   <string name="draw_style">Estilo</string>
   <!--  Label for the size to draw in in [CHAR LIMIT=14] -->
+  <string name="draw_size">Tamaño</string>
   <!--  Label for the Hue to draw in [CHAR LIMIT=14] -->
   <string name="draw_hue">Tonalidade</string>
   <!--  Label for the color to draw in [CHAR LIMIT=14] -->

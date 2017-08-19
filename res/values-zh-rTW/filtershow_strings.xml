@@ -49,9 +49,9 @@
   <string name="print_image">列印</string>
   <!-- Export Dialog-->
   <!--  Text for the dialog title to export a flattened photo[CHAR LIMIT=25] -->
-  <string name="export_flattened">匯出壓平合併的圖片</string>
+  <string name="export_flattened">匯出扁平合併的圖片</string>
   <!--  Text for selecting export image quality [CHAR LIMIT=100] -->
-  <string name="select_output_settings">匯出的項目是不含紀錄的複製圖片。</string>
+  <string name="select_output_settings">匯出的圖片將是一個沒有歷史記錄的副本。</string>
   <!--  Text for quality value tag [CHAR LIMIT=30] -->
   <string name="quality">畫質</string>
   <!--  Text for size value tag [CHAR LIMIT=30] -->
@@ -66,14 +66,14 @@
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">您要在結束前儲存變更嗎？</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
-  <string name="save_and_exit">保存</string>
+  <string name="save_and_exit">儲存</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">正在處理完整解析度圖片...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
   <string name="exit">結束</string>
   <!--  History Panel -->
   <!--  Text for the history panel title [CHAR LIMIT=50] -->
-  <string name="history">紀錄</string>
+  <string name="history">歷史記錄</string>
   <!--  Text for the history panel reset button [CHAR LIMIT=20]-->
   <string name="reset">重設</string>
   <!--  Text for the original image[CHAR LIMIT=20]-->

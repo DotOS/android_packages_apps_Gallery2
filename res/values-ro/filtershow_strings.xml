@@ -55,15 +55,18 @@
   <!--  Text for quality value tag [CHAR LIMIT=30] -->
   <string name="quality">Calitate</string>
   <!--  Text for size value tag [CHAR LIMIT=30] -->
+  <string name="size">Dimensiune</string>
   <!--  Text for size x [CHAR LIMIT=1] -->
   <string name="x">x</string>
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
+  <string name="menu_settings">Setări</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="unsaved">Ați adus modificări imaginii pe care nu le-ați salvat.</string>
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <string name="save_before_exit">Doriți să salvați înainte de a ieși?</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
+  <string name="save_and_exit">Salvaţi</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <string name="save_and_processing">Se procesează imaginea la rezoluție maximă...</string>
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
@@ -205,6 +208,7 @@
   <!--  Label for the The style to draw in [CHAR LIMIT=14] -->
   <string name="draw_style">Stil</string>
   <!--  Label for the size to draw in in [CHAR LIMIT=14] -->
+  <string name="draw_size">Dimensiune</string>
   <!--  Label for the Hue to draw in [CHAR LIMIT=14] -->
   <string name="draw_hue">Tonalitate</string>
   <!--  Label for the color to draw in [CHAR LIMIT=14] -->
@@ -254,6 +258,7 @@
   <!-- Label for preset name [CHAR LIMIT=30] -->
   <string name="filtershow_preset_name">Nume prestabilit</string>
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
+  <string name="filtershow_show_info_panel">Informații</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <string name="filtershow_show_info_panel_name">Numele imaginii</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
@@ -269,6 +274,7 @@
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <string name="filtershow_version_original">Originală</string>
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">Actual</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <string name="filtershow_exif_model">Model</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
