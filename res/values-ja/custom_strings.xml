@@ -15,4 +15,15 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="layout_grid">グリッド表示</string>
+  <string name="layout_filmstrip">フィルムストリップ表示</string>
+  <string name="slideshow_settings">スライドショー</string>
+  <string name="wallpaper_type_dialog_title">壁紙を設定</string>
+  <string name="wallpaper_type_both">ホーム画面とロック画面</string>
+  <string name="wallpaper_type_system">ホーム画面</string>
+  <string name="wallpaper_type_lock">ロック画面</string>
+  <string name="scrolling_wall_dialog_title">壁紙のトリミング</string>
+  <string name="scrolling_wall_yes">いいえ</string>
+  <string name="scrolling_wall_no">はい</string>
+</resources>

@@ -25,6 +25,7 @@
   <!--  Text to label an image as "original" [CHAR LIMIT=20] -->
   <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
   <!-- Text for the custom border filter [CHAR LIMIT=20] -->
+  <string name="custom_border">Наладзіць</string>
   <!--  actionbar menu -->
   <!--  Text for the undo menu item [CHAR LIMIT=20] -->
   <!--  Text for redo menu item [CHAR LIMIT=20] -->
@@ -39,15 +40,18 @@
   <!--  Text for size value tag [CHAR LIMIT=30] -->
   <!--  Text for size x [CHAR LIMIT=1] -->
   <!--  Name for the overflow menu item for settings [CHAR LIMIT=20] -->
+  <string name="menu_settings">Налады</string>
   <!--  Exit Dialog -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
+  <string name="save_and_exit">Захаваць</string>
   <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
   <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->
   <!--  History Panel -->
   <!--  Text for the history panel title [CHAR LIMIT=50] -->
   <!--  Text for the history panel reset button [CHAR LIMIT=20]-->
+  <string name="reset">Скінуць</string>
   <!--  Text for the original image[CHAR LIMIT=20]-->
   <!--  Image state panel -->
   <!--  Text for the image state panel title [CHAR LIMIT=50] -->
@@ -55,6 +59,7 @@
   <!--  Label for the compare original image filter button [CHAR LIMIT=15] -->
   <!--  Label for the apply effect button [CHAR LIMIT=15] -->
   <!--  Label for the reset effect button [CHAR LIMIT=15] -->
+  <string name="reset_effect">Скінуць</string>
   <!--  Label for aspect [CHAR LIMIT=15] -->
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->
   <!--  Label for the aspect 4:3 effect [CHAR LIMIT=15] -->
@@ -64,6 +69,7 @@
   <!--  Label for the aspect 7:5 effect [CHAR LIMIT=15] -->
   <!--  Label for the aspect 1:1 effect [CHAR LIMIT=15] -->
   <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
+  <string name="aspectNone_effect">Няма</string>
   <!--  Label for the aspect None effect [CHAR LIMIT=15] -->
   <!-- Label for when the aspect ratio is fixed to a value [CHAR LIMIT=15] -->
   <!--  Label for the tuny planet effect [CHAR LIMIT=10] -->
@@ -90,9 +96,11 @@
   <!--  Label for the image straighten effect [CHAR LIMIT=15] -->
   <!--  Label for the image crop effect [CHAR LIMIT=15] -->
   <!--  Label for the image rotate effect [CHAR LIMIT=15] -->
+  <string name="rotate" msgid="460017689320955494">Кручэнне</string>
   <!--  Label for the image flip effect [CHAR LIMIT=15] -->
   <!-- Name for the photo effect that inverts photo to negative images. [CHAR LIMIT=10] -->
   <!--  Label for having no filters applied to the image [CHAR LIMIT=10] -->
+  <string name="none" msgid="3601545724573307541">Няма</string>
   <!--  Label for the image edges effect (highlights edges in image) [CHAR LIMIT=10] -->
   <!--  Label for an image effect that replicates the "pop art" style of segmenting
           images into solid colors, as popularized by Andy Warhol [CHAR LIMIT=15] -->
@@ -121,6 +129,7 @@
   <!--  Label for the color to draw in [CHAR LIMIT=14] -->
   <!--  Label for the Brightness to draw in [CHAR LIMIT=14] -->
   <!--  Label for the color to draw in [CHAR LIMIT=14] -->
+  <string name="draw_color">Колер</string>
   <!--  Label for the line style of drawing in [CHAR LIMIT=14] -->
   <!--  Label for the Marker brush style of drawing in [CHAR LIMIT=14] -->
   <!--  Label for the Spatter brush style of drawing in [CHAR LIMIT=14] -->
@@ -128,11 +137,13 @@
   <!--  Label for the with of the border[CHAR LIMIT=14] -->
   <!--  Label for the border corner size (or rounding) [CHAR LIMIT=14] -->
   <!--  Label for selecting the border color [CHAR LIMIT=14] -->
+  <string name="color_border_color">Колер</string>
   <!--  Label for the removing borders [CHAR LIMIT=14] -->
   <!--  Label for the select the color [CHAR LIMIT=35] -->
   <!--  The title for the color pick dialog [CHAR LIMIT=20] -->
   <!--  The title for draw size [CHAR LIMIT=50] -->
   <!--  The accept the draw size [CHAR LIMIT=20] -->
+  <string name="draw_size_accept">ОК</string>
   <!--  Name used to indicate the original image in the state panel [CHAR LIMIT=20] -->
   <!--  Name used to indicate the final image in the state panel [CHAR LIMIT=20] -->
   <!-- Label for the notification [CHAR LIMIT=50] -->
@@ -142,6 +153,7 @@
   <!-- Label for newly created user preset [CHAR LIMIT=30] -->
   <!-- Label for preset name [CHAR LIMIT=30] -->
   <!-- Label for showing the image information panel [CHAR LIMIT=50] -->
+  <string name="filtershow_show_info_panel">Інфармацыя</string>
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <!-- Label for the information panel [CHAR LIMIT=30] -->
   <!-- Label for the information panel [CHAR LIMIT=30] -->
@@ -150,6 +162,7 @@
   <!-- Label for the add button in the versions panel [CHAR LIMIT=30] -->
   <!-- Label for the Original version in the versions panel [CHAR LIMIT=30] -->
   <!-- Label for the Current version in the versions panel [CHAR LIMIT=30] -->
+  <string name="filtershow_version_current">Бягучы</string>
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->
   <!-- Label for exif tags in the information panel [CHAR LIMIT=50] -->

@@ -30,4 +30,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Strings for step option settins -->
+  <string name="setp_option_three_second">3 секунды</string>
+  <string name="setting">Налады</string>
+  <string name="bookmark_location">"Месцазнаходжанне"</string>
 </resources>

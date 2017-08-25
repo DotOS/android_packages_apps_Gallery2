@@ -85,15 +85,18 @@
              that is to be "set as" (e.g. set as contact photo or set as wallpaper) -->
   <string name="set_image">登録</string>
   <!-- Activity title for cropping picture and setting it as wallpaper [CHAR LIMIT=20] -->
+  <string name="set_wallpaper">壁紙を設定</string>
   <!-- Toast/alert after saving wallpaper -->
   <string name="wallpaper">壁紙を設定しています...</string>
   <string name="camera_setas_wallpaper">壁紙</string>
   <!-- Details dialog "OK" button. Dismisses dialog. -->
+  <string name="delete">削除</string>
   <!-- String Delete the selected media item(s) [CHAR LIMIT=50] -->
   <plurals name="delete_selection">
     <item quantity="other">アイテムを削除しますか？</item>
   </plurals>
   <string name="confirm">確認</string>
+  <string name="cancel">キャンセル</string>
   <string name="share">共有</string>
   <string name="share_panorama">パノラマ写真を共有</string>
   <string name="share_as_photo">写真として共有</string>
@@ -104,6 +107,7 @@
   <!-- String indicating more actions are available -->
   <string name="select_all">すべて選択</string>
   <string name="deselect_all">選択をすべて解除</string>
+  <string name="slideshow">スライドショー</string>
   <string name="details">詳細情報</string>
   <string name="details_title">%1$d/%2$d件のアイテム:</string>
   <string name="close">閉じる</string>
@@ -218,6 +222,7 @@
   <string name="sync_picasa_albums">更新</string>
   <!-- A label on a button. The user clicks this button after he has
          finished selection. [CHAR LIMIT=15] -->
+  <string name="done">完了</string>
   <!-- String indicating the sequence of currently selected item in the
             media set eg. 3 of 5 items [CHAR LIMIT=30] -->
   <string name="sequence_in_set">%1$d/%2$d件のアイテム:</string>
@@ -358,6 +363,7 @@
   <!-- The title of the dialog for choosing the type of widget. [CHAR LIMIT=20] -->
   <string name="widget_type">画像の選択</string>
   <!-- Title of the Android Dreams slideshow screensaver. [CHAR LIMIT=20] -->
+  <string name="slideshow_dream_name">スライドショー</string>
   <!-- Group by Albums tab on Action Bar. [CHAR LIMIT=12] -->
   <string name="albums">アルバム</string>
   <!-- Group by Times tab on Action Bar. [CHAR LIMIT=12] -->
@@ -371,6 +377,7 @@
   <!-- Group by menu item. [CHAR LIMIT=20] -->
   <string name="group_by">グループ化</string>
   <!-- The title of the menu item which enable the settings [CHAR LIMIT=20] -->
+  <string name="settings">設定</string>
   <!-- The title of menu item where user can add a new account -->
   <string name="add_account">アカウントを追加</string>
   <!-- The label for the folder contains pictures taken by the camera. [CHAR LIMIT=20]-->
@@ -382,13 +389,17 @@
          external camera. [CHAR LIMIT=20]-->
   <string name="folder_imported">インポート済み</string>
   <!-- The label for the folder contains screenshot images. [CHAR LIMIT=20]-->
+  <string name="folder_screenshot">スクリーンショット</string>
   <!-- The title of the menu item which display online help in browser. [CHAR LIMIT=20]-->
+  <string name="help">ヘルプ</string>
   <!-- The tilte of a dialog showing there is no external storage. [CHAR LIMIT=20] -->
   <string name="no_external_storage_title">ストレージがありません</string>
   <!-- The message of a dialog showing there is no external storage. [CHAR LIMIT=none] -->
   <string name="no_external_storage">利用できる外部ストレージがありません</string>
   <!-- Label for album filmstrip button -->
+  <string name="switch_photo_filmstrip">フィルムストリップ表示</string>
   <!-- Label for album grid button -->
+  <string name="switch_photo_grid">グリッド表示</string>
   <!-- Label for fullscreen button. [CHAR LIMIT=20] -->
   <string name="switch_photo_fullscreen">全画面表示</string>
   <!-- The tilte of a dialog showing trimming in progress. [CHAR LIMIT=20] -->
@@ -463,6 +474,7 @@
   <!-- Settings screen, camera selection dialog title. Users can select a camera from the phone (front-facing or back-facing). [CHAR LIMIT=20] -->
   <string name="pref_camera_id_title">カメラを選択</string>
   <!-- In select camera setting, back facing camera. [CHAR LIMIT=14] -->
+  <string name="pref_camera_id_entry_back">戻る</string>
   <!-- In select camera setting, front-facing camera. [CHAR LIMIT=14] -->
   <string name="pref_camera_id_entry_front">前面</string>
   <!-- Settings screen, setting title text -->
@@ -817,6 +829,7 @@ CHAR LIMIT = NONE] -->
   <!-- Hours: a unit of time for time lapse intervals. [CHAR LIMIT = 20] -->
   <string name="time_lapse_hours">時間</string>
   <!-- The button to confirm time-lapse setting changes. [CHAR LIMIT = 20] -->
+  <string name="time_lapse_interval_set">完了</string>
   <!-- Title in time interval picker for setting time interval. [CHAR LIMIT = 30]-->
   <string name="set_time_interval">間隔を設定</string>
   <!-- Help text that is shown when the time lapse feature is turned off. [CHAR LIMIT = 180]-->
@@ -834,11 +847,13 @@ CHAR LIMIT = NONE] -->
   <!-- Negative answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
   <string name="remember_location_no">いいえ</string>
   <!-- Positive answer for first run dialog asking if the user wants to remember photo locations [CHAR LIMIT = 20] -->
+  <string name="remember_location_yes">はい</string>
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <string name="map_activity_not_found_err">There is no map app for show location.</string>
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <string name="menu_camera">カメラ</string>
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
+  <string name="menu_search">検索</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <string name="tab_photos">写真</string>
   <!-- Title for the albums tab [CHAR LIMIT=25] -->

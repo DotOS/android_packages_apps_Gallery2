@@ -145,7 +145,7 @@
   <string name="no_such_item">Elementul nu a putut fi găsit.</string>
   <!-- String used as a menu label. The user can choose to edit the image
          [CHAR_LIMIT=20]-->
-  <string name="edit">Editează</string>
+  <string name="edit">Editaţi</string>
   <!-- String used as a menu label. The user can choose to edit the image
          [CHAR_LIMIT=20]-->
   <string name="simple_edit">Editare simplă</string>

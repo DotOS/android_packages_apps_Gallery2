@@ -471,7 +471,7 @@ CHAR LIMIT = NONE] -->
   <!-- The message is shown in toast when click showOnMap Menu and there is no map app -->
   <!-- Menu item to launch the camera app [CHAR LIMIT=25] -->
   <!-- Menu item to search for photos [CHAR LIMIT=25] -->
-  <string name="menu_search">അന്വേഷിക്കുക</string>
+  <string name="menu_search">തിരയുക</string>
   <!-- Title for the all photos tab [CHAR LIMIT=25] -->
   <!-- Title for the albums tab [CHAR LIMIT=25] -->
   <!-- Camera menu labels -->
