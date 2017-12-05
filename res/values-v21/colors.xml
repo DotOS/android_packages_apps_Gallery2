@@ -49,9 +49,9 @@
     <color name="floating_action_button_touch_tint">#F44336</color>
     <color name="floating_action_button_icon_color">#ffffff</color>
 
-    <color name="primary">#03a9f4</color>
-    <color name="primary_dark">#038ecf</color>
-    <color name="accent">#ffc107</color>
+    <color name="primary">#3d5afe</color>
+    <color name="primary_dark">#334ec1</color>
+    <color name="accent">#fdd835</color>
     <color name="textColor">#ffffff</color>
     <color name="photo_overlay">#66000000</color>
     <color name="details_background">@color/photo_overlay</color>
