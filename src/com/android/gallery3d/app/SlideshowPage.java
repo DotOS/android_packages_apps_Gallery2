@@ -27,6 +27,7 @@ import android.view.MotionEvent;
 import com.android.gallery3d.R;
 import com.android.gallery3d.common.Utils;
 import com.android.gallery3d.data.ContentListener;
+import com.android.gallery3d.data.DataManager;
 import com.android.gallery3d.data.MediaItem;
 import com.android.gallery3d.data.MediaObject;
 import com.android.gallery3d.data.MediaSet;
@@ -37,6 +38,7 @@ import com.android.gallery3d.ui.SlideshowView;
 import com.android.gallery3d.ui.SynchronizedHandler;
 import com.android.gallery3d.util.Future;
 import com.android.gallery3d.util.FutureListener;
+import com.android.gallery3d.util.GalleryUtils;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -49,9 +51,8 @@ public class SlideshowPage extends ActivityState {
     public static final String KEY_PHOTO_INDEX = "photo-index";
     public static final String KEY_RANDOM_ORDER = "random-order";
     public static final String KEY_REPEAT = "repeat";
-    public static final String KEY_DREAM = "dream";
 
-    private static final long SLIDESHOW_DELAY = 3000; // 3 seconds
+    private static final int SLIDESHOW_DELAY = 3000; // 3 seconds
 
     private static final int MSG_LOAD_NEXT_BITMAP = 1;
     private static final int MSG_SHOW_PENDING_BITMAP = 2;
@@ -83,6 +84,7 @@ public class SlideshowPage extends ActivityState {
     private Slide mPendingSlide = null;
     private boolean mIsActive = false;
     private final Intent mResultIntent = new Intent();
+    private int mDuration = SLIDESHOW_DELAY;
 
     @Override
     protected int getBackgroundColorId() {
@@ -112,14 +114,8 @@ public class SlideshowPage extends ActivityState {
     @Override
     public void onCreate(Bundle data, Bundle restoreState) {
         super.onCreate(data, restoreState);
-        mFlags |= (FLAG_HIDE_ACTION_BAR | FLAG_HIDE_STATUS_BAR);
-        if (data.getBoolean(KEY_DREAM)) {
-            // Dream screensaver only keeps screen on for plugged devices.
-            mFlags |= FLAG_SCREEN_ON_WHEN_PLUGGED | FLAG_SHOW_WHEN_LOCKED;
-        } else {
-            // User-initiated slideshow would always keep screen on.
-            mFlags |= FLAG_SCREEN_ON_ALWAYS;
-        }
+        // User-initiated slideshow would always keep screen on.
+        mActivity.setKeepScreenOn(true);
 
         mHandler = new SynchronizedHandler(mActivity.getGLRoot()) {
             @Override
@@ -135,6 +131,7 @@ public class SlideshowPage extends ActivityState {
                 }
             }
         };
+        mDuration = GalleryUtils.getSlideshowDuration(mActivity);
         initializeViews();
         initializeData(data);
     }
@@ -166,12 +163,13 @@ public class SlideshowPage extends ActivityState {
         setStateResult(Activity.RESULT_OK, mResultIntent
                 .putExtra(KEY_ITEM_PATH, slide.item.getPath().toString())
                 .putExtra(KEY_PHOTO_INDEX, slide.index));
-        mHandler.sendEmptyMessageDelayed(MSG_LOAD_NEXT_BITMAP, SLIDESHOW_DELAY);
+        mHandler.sendEmptyMessageDelayed(MSG_LOAD_NEXT_BITMAP, mDuration);
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        mActivity.showSystemBars();
         mIsActive = false;
         mModel.pause();
         mSlideshowView.release();
@@ -183,6 +181,7 @@ public class SlideshowPage extends ActivityState {
     @Override
     public void onResume() {
         super.onResume();
+        mActivity.hideSystemBars();
         mIsActive = true;
         mModel.resume();
 
@@ -196,11 +195,9 @@ public class SlideshowPage extends ActivityState {
     private void initializeData(Bundle data) {
         boolean random = data.getBoolean(KEY_RANDOM_ORDER, false);
 
-        // We only want to show slideshow for images only, not videos.
         String mediaPath = data.getString(KEY_SET_PATH);
         mediaPath = FilterUtils.newFilterPath(mediaPath, FilterUtils.FILTER_IMAGE_ONLY);
         MediaSet mediaSet = mActivity.getDataManager().getMediaSet(mediaPath);
-
         if (random) {
             boolean repeat = data.getBoolean(KEY_REPEAT);
             mModel = new SlideshowDataAdapter(mActivity,
@@ -211,14 +208,14 @@ public class SlideshowPage extends ActivityState {
             String itemPath = data.getString(KEY_ITEM_PATH);
             Path path = itemPath != null ? Path.fromString(itemPath) : null;
             boolean repeat = data.getBoolean(KEY_REPEAT);
-            mModel = new SlideshowDataAdapter(mActivity, new SequentialSource(mediaSet, repeat),
+            mModel = new SlideshowDataAdapter(mActivity, new SequentialSourceRecursive(mediaSet, repeat),
                     index, path);
             setStateResult(Activity.RESULT_OK, mResultIntent.putExtra(KEY_PHOTO_INDEX, index));
         }
     }
 
     private void initializeViews() {
-        mSlideshowView = new SlideshowView();
+        mSlideshowView = new SlideshowView(mDuration);
         mRootPane.addComponent(mSlideshowView);
         setContentPane(mRootPane);
     }
@@ -349,6 +346,59 @@ public class SlideshowPage extends ActivityState {
             if (version != mDataVersion) {
                 mDataVersion = version;
                 mData.clear();
+            }
+            return mDataVersion;
+        }
+
+        @Override
+        public void addContentListener(ContentListener listener) {
+            mMediaSet.addContentListener(listener);
+        }
+
+        @Override
+        public void removeContentListener(ContentListener listener) {
+            mMediaSet.removeContentListener(listener);
+        }
+    }
+
+    private static class SequentialSourceRecursive implements SlideshowDataAdapter.SlideshowSource {
+        private static final int RETRY_COUNT = 5;
+        private long mDataVersion = MediaObject.INVALID_DATA_VERSION;
+        private final MediaSet mMediaSet;
+        private final boolean mRepeat;
+        private int mTotal;
+
+        public SequentialSourceRecursive(MediaSet mediaSet, boolean repeat) {
+            mMediaSet = mediaSet;
+            mRepeat = repeat;
+        }
+
+        @Override
+        public int findItemIndex(Path path, int hint) {
+            return hint;
+        }
+
+        @Override
+        public MediaItem getMediaItem(int index) {
+            if (!mRepeat && index >= mTotal) return null;
+            if (mTotal == 0) return null;
+            if (mRepeat) {
+                index = index % mTotal;
+            }
+            MediaItem item = findMediaItem(mMediaSet, index);
+            for (int i = 0; i < RETRY_COUNT && item == null; ++i) {
+                Log.w(TAG, "fail to find image: " + index);
+                item = findMediaItem(mMediaSet, index);
+            }
+            return item;
+        }
+
+        @Override
+        public long reload() {
+            long version = mMediaSet.reload();
+            if (version != mDataVersion) {
+                mDataVersion = version;
+                mTotal = mMediaSet.getTotalMediaItemCount();
             }
             return mDataVersion;
         }

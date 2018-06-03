@@ -17,11 +17,13 @@
 package com.android.gallery3d.ui;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Rect;
 
 import com.android.gallery3d.R;
 import com.android.gallery3d.glrenderer.FadeOutTexture;
 import com.android.gallery3d.glrenderer.GLCanvas;
+import com.android.gallery3d.glrenderer.GLPaint;
 import com.android.gallery3d.glrenderer.NinePatchTexture;
 import com.android.gallery3d.glrenderer.ResourceTexture;
 import com.android.gallery3d.glrenderer.Texture;
@@ -31,16 +33,16 @@ public abstract class AbstractSlotRenderer implements SlotView.SlotRenderer {
     private final ResourceTexture mVideoOverlay;
     private final ResourceTexture mVideoPlayIcon;
     private final ResourceTexture mPanoramaIcon;
-    private final NinePatchTexture mFramePressed;
-    private final NinePatchTexture mFrameSelected;
+    private final ResourceTexture mFramePressed;
+    private final ResourceTexture mSelectedOverlay;
     private FadeOutTexture mFramePressedUp;
 
     protected AbstractSlotRenderer(Context context) {
         mVideoOverlay = new ResourceTexture(context, R.drawable.ic_video_thumb);
         mVideoPlayIcon = new ResourceTexture(context, R.drawable.ic_gallery_play);
         mPanoramaIcon = new ResourceTexture(context, R.drawable.ic_360pano_holo_light);
-        mFramePressed = new NinePatchTexture(context, R.drawable.grid_pressed);
-        mFrameSelected = new NinePatchTexture(context, R.drawable.grid_selected);
+        mFramePressed = new ResourceTexture(context, R.drawable.grid_pressed_overlay);
+        mSelectedOverlay  = new ResourceTexture(context, R.drawable.grid_selected_overlay);
     }
 
     protected void drawContent(GLCanvas canvas,
@@ -100,15 +102,15 @@ public abstract class AbstractSlotRenderer implements SlotView.SlotRenderer {
         if (mFramePressedUp == null) {
             mFramePressedUp = new FadeOutTexture(mFramePressed);
         }
-        drawFrame(canvas, mFramePressed.getPaddings(), mFramePressedUp, 0, 0, width, height);
+        drawFrame(canvas, new Rect(0, 0, 0, 0), mFramePressedUp, 0, 0, width, height);
     }
 
     protected void drawPressedFrame(GLCanvas canvas, int width, int height) {
-        drawFrame(canvas, mFramePressed.getPaddings(), mFramePressed, 0, 0, width, height);
+        mFramePressed.draw(canvas, 0, 0, width, height);
     }
 
-    protected void drawSelectedFrame(GLCanvas canvas, int width, int height) {
-        drawFrame(canvas, mFrameSelected.getPaddings(), mFrameSelected, 0, 0, width, height);
+    protected void drawSelectedOverlay(GLCanvas canvas, int width, int height) {
+        mSelectedOverlay.draw(canvas, 0, 0, width, height);
     }
 
     protected static void drawFrame(GLCanvas canvas, Rect padding, Texture frame,

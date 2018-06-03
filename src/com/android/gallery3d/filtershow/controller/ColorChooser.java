@@ -1,14 +1,22 @@
 package com.android.gallery3d.filtershow.controller;
 
-import android.app.ActionBar.LayoutParams;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PaintFlagsDrawFilter;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 
 import com.android.gallery3d.R;
@@ -37,10 +45,11 @@ public class ColorChooser implements Control {
             R.id.draw_color_button03,
             R.id.draw_color_button04,
             R.id.draw_color_button05,
+            R.id.draw_color_button06,
     };
-    private Button[] mButton = new Button[mButtonsID.length];
+    private ImageButton[] mButton = new ImageButton[mButtonsID.length];
 
-    int mSelectedButton = 0;
+    private int mSelectedButton = 0;
 
     @Override
     public void setUp(ViewGroup container, Parameter parameter, Editor editor) {
@@ -59,17 +68,21 @@ public class ColorChooser implements Control {
         mTopView.setVisibility(View.VISIBLE);
 
         mIconButton.clear();
-        LayoutParams lp = new LayoutParams(iconDim, iconDim);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(iconDim, iconDim);
+        lp.gravity= Gravity.CENTER;
         int [] palette = mParameter.getColorPalette();
         for (int i = 0; i < mButtonsID.length; i++) {
-            final Button button = (Button) mTopView.findViewById(mButtonsID[i]);
+            final ImageButton button = (ImageButton) mTopView.findViewById(mButtonsID[i]);
+            button.setLayoutParams(lp);
+            button.setScaleType(ScaleType.CENTER_INSIDE);
+            button.setImageDrawable(createColorImage(palette[i]));
             mButton[i] = button;
             float[] hsvo = new float[4];
             Color.colorToHSV(palette[i], hsvo);
             hsvo[OPACITY_OFFSET] = (0xFF & (palette[i] >> 24)) / (float) 255;
             button.setTag(hsvo);
             GradientDrawable sd = ((GradientDrawable) button.getBackground());
-            sd.setColor(palette[i]);
+            sd.setColor(mTransparent);
             sd.setStroke(3, (mSelectedButton == i) ? mSelected : mTransparent);
 
             final int buttonNo = i;
@@ -80,7 +93,14 @@ public class ColorChooser implements Control {
                 }
             });
         }
-        Button button = (Button) mTopView.findViewById(R.id.draw_color_popupbutton);
+
+        if (mParameter != null) {
+            int value = mParameter.getValue();
+            if (value == 0) {
+                selectColor(mButton[0], 0);
+            }
+        }
+        ImageView button = (ImageView) mTopView.findViewById(R.id.draw_color_popupbutton);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,8 +119,7 @@ public class ColorChooser implements Control {
             Color.colorToHSV(palette[i], hsvo);
             hsvo[OPACITY_OFFSET] = (0xFF & (palette[i] >> 24)) / (float) 255;
             mButton[i].setTag(hsvo);
-            GradientDrawable sd = ((GradientDrawable) mButton[i].getBackground());
-            sd.setColor(palette[i]);
+            mButton[i].setImageDrawable(createColorImage(palette[i]));
         }
 
     }
@@ -112,9 +131,8 @@ public class ColorChooser implements Control {
     private void resetBorders() {
         int []palette = mParameter.getColorPalette();
         for (int i = 0; i < mButtonsID.length; i++) {
-            final Button button = mButton[i];
+            final ImageButton button = mButton[i];
             GradientDrawable sd = ((GradientDrawable) button.getBackground());
-            sd.setColor(palette[i]);
             sd.setStroke(3, (mSelectedButton == i) ? mSelected : mTransparent);
         }
     }
@@ -143,14 +161,26 @@ public class ColorChooser implements Control {
         if (mParameter == null) {
             return;
         }
+
+        int value = mParameter.getValue();
+        for (int i = 0; i < mButtonsID.length; i++) {
+            final ImageButton button = mButton[i];
+            float[] hsvo = (float[]) button.getTag();
+            int buttonValue = Color.HSVToColor((int) (hsvo[OPACITY_OFFSET] * 255), hsvo);
+            if (buttonValue == value) {
+                mSelectedButton = i;
+                break;
+            }
+        }
+
+        resetBorders();
     }
 
     public void changeSelectedColor(float[] hsvo) {
         int []palette = mParameter.getColorPalette();
         int c = Color.HSVToColor((int) (hsvo[3] * 255), hsvo);
-        final Button button = mButton[mSelectedButton];
-        GradientDrawable sd = ((GradientDrawable) button.getBackground());
-        sd.setColor(c);
+        final ImageButton button = mButton[mSelectedButton];
+        button.setImageDrawable(createColorImage(c));
         palette[mSelectedButton] = c;
         mParameter.setValue(Color.HSVToColor((int) (hsvo[OPACITY_OFFSET] * 255), hsvo));
         button.setTag(hsvo);
@@ -173,5 +203,18 @@ public class ColorChooser implements Control {
         cpd.setColor(Arrays.copyOf(c, 4));
         cpd.setOrigColor(Arrays.copyOf(c, 4));
         cpd.show();
+    }
+
+    private BitmapDrawable createColorImage(int color){
+        final int width = mContext.getResources().getDimensionPixelSize(R.dimen.color_rect_width);
+        final Canvas canvas = new Canvas();
+        canvas.setDrawFilter(new PaintFlagsDrawFilter(Paint.ANTI_ALIAS_FLAG,Paint.FILTER_BITMAP_FLAG));
+        final Bitmap bmp = Bitmap.createBitmap(width, width, Bitmap.Config.ARGB_8888);
+        canvas.setBitmap(bmp);
+        final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(color);
+        canvas.drawRect(0, 0, width, width, paint);
+        return new BitmapDrawable(mContext.getResources(), bmp);
     }
 }

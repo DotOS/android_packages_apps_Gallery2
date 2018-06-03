@@ -87,6 +87,11 @@ public abstract class MediaSet extends MediaObject {
         return 0;
     }
 
+    public int getCurrectSize() {
+        // Dummy method, need to be override in implementation classes
+        return 0;
+    }
+
     public MediaSet getSubMediaSet(int index) {
         throw new IndexOutOfBoundsException();
     }
@@ -290,7 +295,7 @@ public abstract class MediaSet extends MediaObject {
             synchronized (this) {
                 for (int i = 0, n = sets.length; i < n; ++i) {
                     mFutures[i] = sets[i].requestSync(this);
-                    Log.d(TAG, "  request sync: " + Utils.maskDebugInfo(sets[i].getName()));
+                    Log.v(TAG, "  request sync: " + Utils.maskDebugInfo(sets[i].getName()));
                 }
             }
         }

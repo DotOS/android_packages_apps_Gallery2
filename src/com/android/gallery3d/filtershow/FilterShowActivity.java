@@ -61,8 +61,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.FrameLayout;
 import android.widget.PopupMenu;
-import android.widget.ShareActionProvider;
-import android.widget.ShareActionProvider.OnShareTargetSelectedListener;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -129,7 +127,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class FilterShowActivity extends FragmentActivity implements OnItemClickListener,
-        OnShareTargetSelectedListener, DialogInterface.OnShowListener,
+        DialogInterface.OnShowListener,
         DialogInterface.OnDismissListener, PopupMenu.OnDismissListener{
 
     private String mAction = "";
@@ -156,7 +154,6 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
 
     private final Vector<ImageShow> mImageViews = new Vector<ImageShow>();
 
-    private ShareActionProvider mShareActionProvider;
     private File mSharedOutputFile = null;
 
     private boolean mSharingImage = false;
@@ -195,6 +192,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
     private DialogInterface mCurrentDialog = null;
     private PopupMenu mCurrentMenu = null;
     private boolean mLoadingVisible = true;
+    private boolean mLoadingComplete = false;
 
     public ProcessingService getProcessingService() {
         return mBoundService;
@@ -283,6 +281,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         doBindService();
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.GRAY));
         setContentView(R.layout.filtershow_splashscreen);
+        mLoadingComplete = false;
     }
 
     public boolean isShowingImageStatePanel() {
@@ -351,8 +350,6 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setCustomView(R.layout.filtershow_actionbar);
-        actionBar.setBackgroundDrawable(new ColorDrawable(
-                getResources().getColor(R.color.background_screen)));
 
         mSaveButton = actionBar.getCustomView();
         mSaveButton.setOnClickListener(new OnClickListener() {
@@ -558,24 +555,15 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
     private void fillBorders() {
         FiltersManager filtersManager = FiltersManager.getManager();
         ArrayList<FilterRepresentation> borders = filtersManager.getBorders();
+        mCategoryBordersAdapter = new CategoryAdapter(this);
 
         for (int i = 0; i < borders.size(); i++) {
             FilterRepresentation filter = borders.get(i);
-            filter.setName(getString(R.string.borders));
+            filter.setName(getString(R.string.borders) + "" + i);
             if (i == 0) {
                 filter.setName(getString(R.string.none));
             }
-        }
-
-        if (mCategoryBordersAdapter != null) {
-            mCategoryBordersAdapter.clear();
-        }
-        mCategoryBordersAdapter = new CategoryAdapter(this);
-        for (FilterRepresentation representation : borders) {
-            if (representation.getTextId() != 0) {
-                representation.setName(getString(representation.getTextId()));
-            }
-            mCategoryBordersAdapter.add(new Action(this, representation, Action.FULL_VIEW));
+            mCategoryBordersAdapter.add(new Action(this, filter, Action.FULL_VIEW));
         }
     }
 
@@ -861,6 +849,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
 
             MasterImage.getImage().warnListeners();
             loadActions();
+            mLoadingComplete = false;
 
             if (mOriginalPreset != null) {
                 MasterImage.getImage().setLoadedPreset(mOriginalPreset);
@@ -955,8 +944,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         finish();
     }
 
-    @Override
-    public boolean onShareTargetSelected(ShareActionProvider arg0, Intent arg1) {
+    private boolean onShareTargetSelected() {
         // First, let's tell the SharedImageProvider that it will need to wait
         // for the image
         Uri uri = Uri.withAppendedPath(SharedImageProvider.CONTENT_URI,
@@ -993,10 +981,20 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         } else {
             showState.setTitle(R.string.show_imagestate_panel);
         }
-        mShareActionProvider = (ShareActionProvider) menu.findItem(R.id.menu_share)
-                .getActionProvider();
-        mShareActionProvider.setShareIntent(getDefaultShareIntent());
-        mShareActionProvider.setOnShareTargetSelectedListener(this);
+        MenuItem item = menu.findItem(R.id.menu_share);
+        if (item != null) {
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    final Intent shareIntent = getDefaultShareIntent();
+                    onShareTargetSelected();
+                    Intent intent = Intent.createChooser(shareIntent, null);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    FilterShowActivity.this.startActivity(intent);
+                    return true;
+                }
+            });
+        }
         mMenu = menu;
         setupMenu();
         return true;
@@ -1013,23 +1011,19 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         if (!PrintHelper.systemSupportsPrint()) {
             printItem.setVisible(false);
         }
+        MenuItem shareItem = mMenu.findItem(R.id.menu_share);
+        //shareItem.setVisible(true);
         mMasterImage.getHistory().setMenuItems(undoItem, redoItem, resetItem);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (mShareActionProvider != null) {
-            mShareActionProvider.setOnShareTargetSelectedListener(null);
-        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (mShareActionProvider != null) {
-            mShareActionProvider.setOnShareTargetSelectedListener(this);
-        }
     }
 
     @Override
@@ -1162,6 +1156,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
     }
 
     public void enableSave(boolean enable) {
+        mLoadingComplete = true;
         if (mSaveButton != null) {
             mSaveButton.setEnabled(enable);
         }
@@ -1329,6 +1324,10 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         Fragment currentPanel = getSupportFragmentManager().findFragmentByTag(MainPanel.FRAGMENT_TAG);
         if (currentPanel instanceof MainPanel) {
             if (!mImageShow.hasModifications()) {
+                if (!mLoadingComplete) {
+                    Log.v(LOGTAG,"Background processing is ON, rejecting back key event");
+                    return;
+                }
                 done();
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -1343,6 +1342,11 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         done();
+                    }
+                });
+                builder.setNeutralButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
                     }
                 });
                 builder.show();

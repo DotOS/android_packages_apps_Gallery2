@@ -26,13 +26,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ShareActionProvider;
 import android.widget.TextView;
 import android.widget.TwoLineListItem;
 
@@ -47,6 +47,7 @@ public class GalleryActionBar implements OnNavigationListener {
 
     private ClusterRunner mClusterRunner;
     private CharSequence[] mTitles;
+    private CharSequence mTitle;
     private ArrayList<Integer> mActions;
     private Context mContext;
     private LayoutInflater mInflater;
@@ -101,10 +102,12 @@ public class GalleryActionBar implements OnNavigationListener {
                 R.string.locations, R.string.location, R.string.group_by_location),
         new ActionItem(FilterUtils.CLUSTER_BY_TIME, true, false, R.string.times,
                 R.string.time, R.string.group_by_time),
-        new ActionItem(FilterUtils.CLUSTER_BY_FACE, true, false, R.string.people,
-                R.string.group_by_faces),
-        new ActionItem(FilterUtils.CLUSTER_BY_TAG, true, false, R.string.tags,
-                R.string.group_by_tags)
+        //new ActionItem(FilterUtils.CLUSTER_BY_FACE, true, false, R.string.people,
+        //        R.string.group_by_faces),
+        //new ActionItem(FilterUtils.CLUSTER_BY_TAG, true, false, R.string.tags,
+        //        R.string.group_by_tags)
+        new ActionItem(FilterUtils.CLUSTER_BY_TYPE, true, false, R.string.type,
+                R.string.types, R.string.group_by_type),
     };
 
     private class ClusterAdapter extends BaseAdapter {
@@ -159,7 +162,8 @@ public class GalleryActionBar implements OnNavigationListener {
                         parent, false);
             }
             TwoLineListItem view = (TwoLineListItem) convertView;
-            view.getText1().setText(mActionBar.getTitle());
+            CharSequence title = mActionBar.getTitle();
+            view.getText1().setText(title == null ? mTitle : title);
             view.getText2().setText((CharSequence) getItem(position));
             return convertView;
         }
@@ -187,6 +191,7 @@ public class GalleryActionBar implements OnNavigationListener {
 
     public GalleryActionBar(AbstractGalleryActivity activity) {
         mActionBar = activity.getActionBar();
+        mActionBar.setElevation(0);
         mContext = activity.getAndroidContext();
         mActivity = activity;
         mInflater = ((Activity) mActivity).getLayoutInflater();
@@ -228,9 +233,9 @@ public class GalleryActionBar implements OnNavigationListener {
         }
     }
 
-    public int getClusterTypeAction() {
+    /*public int getClusterTypeAction() {
         return sClusterItems[mCurrentIndex].action;
-    }
+    }*/
 
     public void enableClusterMenu(int action, ClusterRunner runner) {
         if (mActionBar != null) {
@@ -257,8 +262,8 @@ public class GalleryActionBar implements OnNavigationListener {
 
     public void onConfigurationChanged() {
         if (mActionBar != null && mAlbumModeListener != null) {
-            OnAlbumModeSelectedListener listener = mAlbumModeListener;
-            enableAlbumModeMenu(mLastAlbumModeSelected, listener);
+            //OnAlbumModeSelectedListener listener = mAlbumModeListener;
+            //enableAlbumModeMenu(mLastAlbumModeSelected, listener);
         }
     }
 
@@ -326,12 +331,14 @@ public class GalleryActionBar implements OnNavigationListener {
     }
 
     public void setTitle(String title) {
+        mTitle = title;
         if (mActionBar != null) mActionBar.setTitle(title);
     }
 
     public void setTitle(int titleId) {
         if (mActionBar != null) {
-            mActionBar.setTitle(mContext.getString(titleId));
+            mTitle = mContext.getString(titleId);
+            mActionBar.setTitle(mTitle);
         }
     }
 
@@ -390,8 +397,6 @@ public class GalleryActionBar implements OnNavigationListener {
     }
 
     private Menu mActionBarMenu;
-    private ShareActionProvider mSharePanoramaActionProvider;
-    private ShareActionProvider mShareActionProvider;
     private Intent mSharePanoramaIntent;
     private Intent mShareIntent;
 
@@ -401,20 +406,32 @@ public class GalleryActionBar implements OnNavigationListener {
 
         MenuItem item = menu.findItem(R.id.action_share_panorama);
         if (item != null) {
-            mSharePanoramaActionProvider = (ShareActionProvider)
-                item.getActionProvider();
-            mSharePanoramaActionProvider
-                .setShareHistoryFileName("panorama_share_history.xml");
-            mSharePanoramaActionProvider.setShareIntent(mSharePanoramaIntent);
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    if (mSharePanoramaIntent != null) {
+                        Intent intent = Intent.createChooser(mSharePanoramaIntent, null);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        mContext.startActivity(intent);
+                    }
+                    return true;
+                }
+            });
         }
 
         item = menu.findItem(R.id.action_share);
         if (item != null) {
-            mShareActionProvider = (ShareActionProvider)
-                item.getActionProvider();
-            mShareActionProvider
-                .setShareHistoryFileName("share_history.xml");
-            mShareActionProvider.setShareIntent(mShareIntent);
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    if (mShareIntent != null) {
+                        Intent intent = Intent.createChooser(mShareIntent, null);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        mContext.startActivity(intent);
+                    }
+                    return true;
+                }
+            });
         }
     }
 
@@ -422,17 +439,17 @@ public class GalleryActionBar implements OnNavigationListener {
         return mActionBarMenu;
     }
 
-    public void setShareIntents(Intent sharePanoramaIntent, Intent shareIntent,
-        ShareActionProvider.OnShareTargetSelectedListener onShareListener) {
+    public void setShareIntents(Intent sharePanoramaIntent, Intent shareIntent) {
         mSharePanoramaIntent = sharePanoramaIntent;
-        if (mSharePanoramaActionProvider != null) {
-            mSharePanoramaActionProvider.setShareIntent(sharePanoramaIntent);
-        }
         mShareIntent = shareIntent;
-        if (mShareActionProvider != null) {
-            mShareActionProvider.setShareIntent(shareIntent);
-            mShareActionProvider.setOnShareTargetSelectedListener(
-                onShareListener);
+    }
+
+    public void setTransparentMode(boolean value) {
+        if (value) {
+            mActionBar.setBackgroundDrawable(mActivity.getResources().getDrawable(R.drawable.root_top_bg));
+        } else {
+            mActionBar.setBackgroundDrawable(
+                    new ColorDrawable(mActivity.getResources().getColor(R.color.primary)));
         }
     }
 }

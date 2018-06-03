@@ -83,7 +83,7 @@ public class CropActivity extends Activity {
      * sure the intent stays below 1MB.We should consider just returning a byte
      * array instead of a Bitmap instance to avoid overhead.
      */
-    public static final int MAX_BMAP_IN_INTENT = 750000;
+    public static final int MAX_BMAP_IN_INTENT = 520000;
 
     // Flags
     private static final int DO_SET_WALLPAPER = 1;
@@ -98,9 +98,6 @@ public class CropActivity extends Activity {
         Intent intent = getIntent();
         setResult(RESULT_CANCELED, new Intent());
         mCropExtras = getExtrasFromIntent(intent);
-        if (mCropExtras != null && mCropExtras.getShowWhenLocked()) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
-        }
 
         setContentView(R.layout.crop_activity);
         mCropView = (CropView) findViewById(R.id.cropView);
@@ -584,8 +581,9 @@ public class CropActivity extends Activity {
                                 failure = true;
                             } else {
                                 try {
+                                    int wallpaperType = mCropExtras.getWallpaperType();
                                     mWPManager.setStream(new ByteArrayInputStream(tmpOut
-                                            .toByteArray()));
+                                                .toByteArray()), null, true, wallpaperType);
                                 } catch (IOException e) {
                                     Log.w(LOGTAG, "cannot write stream to wallpaper", e);
                                     failure = true;
@@ -664,9 +662,9 @@ public class CropActivity extends Activity {
                     extras.getBoolean(CropExtras.KEY_RETURN_DATA, false),
                     (Uri) extras.getParcelable(MediaStore.EXTRA_OUTPUT),
                     extras.getString(CropExtras.KEY_OUTPUT_FORMAT),
-                    extras.getBoolean(CropExtras.KEY_SHOW_WHEN_LOCKED, false),
                     extras.getFloat(CropExtras.KEY_SPOTLIGHT_X),
-                    extras.getFloat(CropExtras.KEY_SPOTLIGHT_Y));
+                    extras.getFloat(CropExtras.KEY_SPOTLIGHT_Y),
+                    extras.getInt(CropExtras.KEY_WALLPAPER_TYPE, CropExtras.DEFAULT_WALLPAPER_TYPE));
         }
         return null;
     }

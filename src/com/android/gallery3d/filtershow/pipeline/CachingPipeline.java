@@ -24,6 +24,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+
 import android.renderscript.Allocation;
 import android.renderscript.RenderScript;
 import android.util.Log;
@@ -175,6 +176,9 @@ public class CachingPipeline implements PipelineInterface {
     }
 
     public void setOriginal(Bitmap bitmap) {
+        if (mOriginalBitmap != null) {
+            mOriginalBitmap.recycle();
+        }
         mOriginalBitmap = bitmap;
         Log.v(LOGTAG,"setOriginal, size " + bitmap.getWidth() + " x " + bitmap.getHeight());
         ImagePreset preset = MasterImage.getImage().getPreset();

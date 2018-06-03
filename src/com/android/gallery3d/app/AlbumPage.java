@@ -25,10 +25,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.HapticFeedbackConstants;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.gallery3d.R;
@@ -46,8 +48,6 @@ import com.android.gallery3d.glrenderer.GLCanvas;
 import com.android.gallery3d.ui.ActionModeHandler;
 import com.android.gallery3d.ui.ActionModeHandler.ActionModeListener;
 import com.android.gallery3d.ui.AlbumSlotRenderer;
-import com.android.gallery3d.ui.DetailsHelper;
-import com.android.gallery3d.ui.DetailsHelper.CloseListener;
 import com.android.gallery3d.ui.GLRoot;
 import com.android.gallery3d.ui.GLView;
 import com.android.gallery3d.ui.PhotoFallbackEffect;
@@ -59,6 +59,7 @@ import com.android.gallery3d.util.Future;
 import com.android.gallery3d.util.GalleryUtils;
 import com.android.gallery3d.util.MediaSetUtils;
 
+import java.util.Locale;
 
 public class AlbumPage extends ActivityState implements GalleryActionBar.ClusterRunner,
         SelectionManager.SelectionListener, MediaSet.SyncListener, GalleryActionBar.OnAlbumModeSelectedListener {
@@ -82,11 +83,16 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
 
     private static final float USER_DISTANCE_METER = 0.3f;
 
+    // Data cache size, equal to AlbumDataLoader.DATA_CACHE_SIZE
+    private static final int DATA_CACHE_SIZE = 256;
+
     private boolean mIsActive = false;
     private AlbumSlotRenderer mAlbumView;
     private Path mMediaSetPath;
     private String mParentMediaSetString;
     private SlotView mSlotView;
+    private Config.AlbumPage mConfig;
+    private GalleryActionBar mActionBar;
 
     private AlbumDataLoader mAlbumDataAdapter;
 
@@ -97,10 +103,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
 
     private ActionModeHandler mActionModeHandler;
     private int mFocusIndex = 0;
-    private DetailsHelper mDetailsHelper;
-    private MyDetailsSource mDetailsSource;
     private MediaSet mMediaSet;
-    private boolean mShowDetails;
     private float mUserDistance; // in pixel
     private Future<Integer> mSyncTask = null;
     private boolean mLaunchedFromPhotoPage;
@@ -152,19 +155,15 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
         protected void onLayout(
                 boolean changed, int left, int top, int right, int bottom) {
 
-            int slotViewTop = mActivity.getGalleryActionBar().getHeight();
-            int slotViewBottom = bottom - top;
-            int slotViewRight = right - left;
+            int slotViewTop = mTopMargin + mConfig.paddingTop;
+            int slotViewBottom = bottom - top - mBottomMargin - mConfig.paddingBottom;
+            int slotViewRight = right - left - mConfig.paddingRight;
 
-            if (mShowDetails) {
-                mDetailsHelper.layout(left, slotViewTop, right, bottom);
-            } else {
-                mAlbumView.setHighlightItemPath(null);
-            }
+            mAlbumView.setHighlightItemPath(null);
 
             // Set the mSlotView as a reference point to the open animation
-            mOpenCenter.setReferencePosition(0, slotViewTop);
-            mSlotView.layout(0, slotViewTop, slotViewRight, slotViewBottom);
+            mOpenCenter.setReferencePosition(mConfig.paddingLeft, slotViewTop);
+            mSlotView.layout(mConfig.paddingLeft, slotViewTop, slotViewRight, slotViewBottom);
             GalleryUtils.setViewPointMatrix(mMatrix,
                     (right - left) / 2, (bottom - top) / 2, -mUserDistance);
         }
@@ -202,9 +201,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     //
     @Override
     protected void onBackPressed() {
-        if (mShowDetails) {
-            hideDetails();
-        } else if (mSelectionManager.inSelectionMode()) {
+        if (mSelectionManager.inSelectionMode()) {
             mSelectionManager.leaveSelectionMode();
         } else {
             if(mLaunchedFromPhotoPage) {
@@ -266,22 +263,43 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     }
 
     private void pickPhoto(int slotIndex) {
+        if ((View.LAYOUT_DIRECTION_RTL == TextUtils
+                .getLayoutDirectionFromLocale(Locale.getDefault()))
+                && !mGetContent) {
+            // Fetch corresponding slotIndex from another side, (RTL)
+            if (slotIndex > DATA_CACHE_SIZE / 2
+                    && slotIndex < mAlbumDataAdapter.size() - DATA_CACHE_SIZE / 2) {
+                slotIndex = mAlbumDataAdapter.size() - slotIndex - 2;
+            } else {
+                slotIndex = mAlbumDataAdapter.size() - slotIndex - 1;
+            }
+        }
         pickPhoto(slotIndex, false);
     }
 
     private void pickPhoto(int slotIndex, boolean startInFilmstrip) {
         if (!mIsActive) return;
 
-        if (!startInFilmstrip) {
-            // Launch photos in lights out mode
-            mActivity.getGLRoot().setLightsOutMode(true);
+        MediaItem item = mAlbumDataAdapter.get(slotIndex);
+
+        // Checking it is RTL or not
+        boolean isLayoutRtl = (View.LAYOUT_DIRECTION_RTL == TextUtils
+                .getLayoutDirectionFromLocale(Locale.getDefault())) ? true : false;
+
+        // When not RTL, return directly to ignore the click
+        if (!isLayoutRtl && item == null) {
+            return;
         }
 
-        MediaItem item = mAlbumDataAdapter.get(slotIndex);
-        if (item == null) return; // Item not ready yet, ignore the click
         if (mGetContent) {
+            if (isLayoutRtl && item == null) {
+                return; // Item not ready yet, ignore the click
+            }
             onGetContent(item);
         } else if (mLaunchedFromPhotoPage) {
+            if (isLayoutRtl && item == null) {
+                return; // Item not ready yet, ignore the click
+            }
             TransitionStore transitions = mActivity.getTransitionStore();
             transitions.put(
                     PhotoPage.KEY_ALBUMPAGE_TRANSITION,
@@ -297,8 +315,12 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
                     mSlotView.getSlotRect(slotIndex, mRootPane));
             data.putString(PhotoPage.KEY_MEDIA_SET_PATH,
                     mMediaSetPath.toString());
-            data.putString(PhotoPage.KEY_MEDIA_ITEM_PATH,
-                    item.getPath().toString());
+
+            // Item not ready yet, don't pass the photo path to bundle
+            if (!isLayoutRtl && item != null) {
+                data.putString(PhotoPage.KEY_MEDIA_ITEM_PATH,
+                        item.getPath().toString());
+            }
             data.putInt(PhotoPage.KEY_ALBUMPAGE_TRANSITION,
                     PhotoPage.MSG_ALBUMPAGE_STARTED);
             data.putBoolean(PhotoPage.KEY_START_IN_FILMSTRIP,
@@ -344,7 +366,26 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     }
 
     @Override
-    public void doCluster(int clusterType) {
+    public void doCluster(final int clusterType) {
+        // if type is location - check for perms
+        if (clusterType == FilterUtils.CLUSTER_BY_LOCATION) {
+            mActivity.doRunWithLocationPermission(new Runnable() {
+                @Override
+                public void run() {
+                    doRunClusterAction(clusterType);
+                }
+            }, new Runnable() {
+                @Override
+                public void run() {
+                    doRunClusterAction(FilterUtils.CLUSTER_BY_ALBUM);
+                }
+            });
+        } else {
+            doRunClusterAction(clusterType);
+        }
+    }
+
+    private void doRunClusterAction(int clusterType) {
         String basePath = mMediaSet.getPath().toString();
         String newPath = FilterUtils.newClusterPath(basePath, clusterType);
         Bundle data = new Bundle(getData());
@@ -369,7 +410,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
         initializeData(data);
         mGetContent = data.getBoolean(GalleryActivity.KEY_GET_CONTENT, false);
         mShowClusterMenu = data.getBoolean(KEY_SHOW_CLUSTER_MENU, false);
-        mDetailsSource = new MyDetailsSource();
+        mActionBar = mActivity.getGalleryActionBar();
         Context context = mActivity.getAndroidContext();
 
         if (data.getBoolean(KEY_AUTO_SELECT_ALL)) {
@@ -399,6 +440,9 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     protected void onResume() {
         super.onResume();
         mIsActive = true;
+        mActionBar.setTransparentMode(false);
+        mActivity.setSystemBarsTranlucent(false);
+        mActivity.showSystemBars();
 
         mResumeEffect = mActivity.getTransitionStore().get(KEY_RESUME_ANIMATION);
         if (mResumeEffect != null) {
@@ -408,13 +452,13 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
         }
 
         setContentPane(mRootPane);
+        mActivity.getGLRootView().applySystemInsets();
 
         boolean enableHomeButton = (mActivity.getStateManager().getStateCount() > 1) |
                 mParentMediaSetString != null;
-        GalleryActionBar actionBar = mActivity.getGalleryActionBar();
-        actionBar.setDisplayOptions(enableHomeButton, false);
+        mActionBar.setDisplayOptions(enableHomeButton, true);
         if (!mGetContent) {
-            actionBar.enableAlbumModeMenu(GalleryActionBar.ALBUM_GRID_MODE_SELECTED, this);
+            mActionBar.setTitle(mMediaSet.getName());
         }
 
         // Set the reload bit here to prevent it exit this page in clearLoadingBit().
@@ -444,7 +488,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
         mActionModeHandler.pause();
         mAlbumDataAdapter.pause();
         mAlbumView.pause();
-        DetailsHelper.pause();
         if (!mGetContent) {
             mActivity.getGalleryActionBar().disableAlbumModeMenu(true);
         }
@@ -454,6 +497,7 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             mSyncTask = null;
             clearLoadingBit(BIT_LOADING_SYNC);
         }
+        GalleryUtils.setAlbumZoomLevel(mActivity, mSlotView.getZoomLevel());
     }
 
     @Override
@@ -468,10 +512,10 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     private void initializeViews() {
         mSelectionManager = new SelectionManager(mActivity, false);
         mSelectionManager.setSelectionListener(this);
-        Config.AlbumPage config = Config.AlbumPage.get(mActivity);
-        mSlotView = new SlotView(mActivity, config.slotViewSpec);
+        mConfig = Config.AlbumPage.get(mActivity);
+        mSlotView = new SlotView(mActivity, mConfig.slotViewSpec);
         mAlbumView = new AlbumSlotRenderer(mActivity, mSlotView,
-                mSelectionManager, config.placeholderColor);
+                mSelectionManager, mConfig.placeholderColor);
         mSlotView.setSlotRenderer(mAlbumView);
         mRootPane.addComponent(mSlotView);
         mSlotView.setListener(new SlotView.SimpleListener() {
@@ -517,27 +561,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
         mAlbumView.setModel(mAlbumDataAdapter);
     }
 
-    private void showDetails() {
-        mShowDetails = true;
-        if (mDetailsHelper == null) {
-            mDetailsHelper = new DetailsHelper(mActivity, mRootPane, mDetailsSource);
-            mDetailsHelper.setCloseListener(new CloseListener() {
-                @Override
-                public void onClose() {
-                    hideDetails();
-                }
-            });
-        }
-        mDetailsHelper.show();
-    }
-
-    private void hideDetails() {
-        mShowDetails = false;
-        mDetailsHelper.hide();
-        mAlbumView.setHighlightItemPath(null);
-        mSlotView.invalidate();
-    }
-
     @Override
     protected boolean onCreateActionBar(Menu menu) {
         GalleryActionBar actionBar = mActivity.getGalleryActionBar();
@@ -549,15 +572,8 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             actionBar.setTitle(GalleryUtils.getSelectionModePrompt(typeBits));
         } else {
             inflator.inflate(R.menu.album, menu);
-            actionBar.setTitle(mMediaSet.getName());
-
             FilterUtils.setupMenuItems(actionBar, mMediaSetPath, true);
-
             menu.findItem(R.id.action_group_by).setVisible(mShowClusterMenu);
-            menu.findItem(R.id.action_camera).setVisible(
-                    MediaSetUtils.isCameraSource(mMediaSetPath)
-                    && GalleryUtils.isCameraAvailable(mActivity));
-
         }
         actionBar.setSubtitle(null);
         return true;
@@ -574,14 +590,24 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
     }
 
     private void switchToFilmstrip() {
-        if (mAlbumDataAdapter.size() < 1) return;
+        // Invalid album, return back directly.
+        if (mAlbumDataAdapter.size() < 1) {
+            return;
+        }
+
         int targetPhoto = mSlotView.getVisibleStart();
+        if (View.LAYOUT_DIRECTION_RTL == TextUtils
+                .getLayoutDirectionFromLocale(Locale.getDefault())) {
+            // Fetch corresponding index from another side, only in RTL
+            targetPhoto = mAlbumDataAdapter.size() - targetPhoto - 1;
+        }
         prepareAnimationBackToFilmstrip(targetPhoto);
         if(mLaunchedFromPhotoPage) {
             onBackPressed();
         } else {
             pickPhoto(targetPhoto, true);
         }
+        GalleryUtils.setAlbumMode(mActivity, 1);
     }
 
     @Override
@@ -603,25 +629,25 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
                 return true;
             }
             case R.id.action_slideshow: {
+                if (mAlbumDataAdapter.size() == 0) {
+                    return true;
+                }
                 mInCameraAndWantQuitOnPause = false;
                 Bundle data = new Bundle();
                 data.putString(SlideshowPage.KEY_SET_PATH,
                         mMediaSetPath.toString());
-                data.putBoolean(SlideshowPage.KEY_REPEAT, true);
+                data.putBoolean(SlideshowPage.KEY_REPEAT, GalleryUtils.isRepeatSlideshow(mActivity));
+                data.putBoolean(SlideshowPage.KEY_RANDOM_ORDER, GalleryUtils.isRandomSlideshow(mActivity));
                 mActivity.getStateManager().startStateForResult(
                         SlideshowPage.class, REQUEST_SLIDESHOW, data);
                 return true;
             }
-            case R.id.action_details: {
-                if (mShowDetails) {
-                    hideDetails();
-                } else {
-                    showDetails();
-                }
+            case R.id.action_layout: {
+                switchToFilmstrip();
                 return true;
             }
-            case R.id.action_camera: {
-                GalleryUtils.startCameraActivity(mActivity);
+            case R.id.action_settings: {
+                mActivity.startActivity(new Intent(mActivity, GallerySettings.class));
                 return true;
             }
             default:
@@ -642,7 +668,22 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             case REQUEST_PHOTO: {
                 if (data == null) return;
                 mFocusIndex = data.getIntExtra(PhotoPage.KEY_RETURN_INDEX_HINT, 0);
+                if (View.LAYOUT_DIRECTION_RTL == TextUtils
+                        .getLayoutDirectionFromLocale(Locale.getDefault())) {
+                    // Fetch corresponding index from another side, only in RTL
+                    mFocusIndex = mAlbumDataAdapter.size() - mFocusIndex - 1;
+                    // Prepare to jump to mFocusIndex position, only enabled in RTL
+                    mSlotView.setIsFromPhotoPage(true);
+                }
+
+                // Let picture of mFocusIndex visible
                 mSlotView.makeSlotVisible(mFocusIndex);
+
+                if (View.LAYOUT_DIRECTION_RTL == TextUtils
+                        .getLayoutDirectionFromLocale(Locale.getDefault())) {
+                    // Reset variable
+                    mSlotView.setIsFromPhotoPage(false);
+                }
                 break;
             }
             case REQUEST_DO_ANIMATION: {
@@ -726,10 +767,9 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
         mLoadingBits &= ~loadTaskBit;
         if (mLoadingBits == 0 && mIsActive) {
             if (mAlbumDataAdapter.size() == 0) {
-                Intent result = new Intent();
-                result.putExtra(KEY_EMPTY_ALBUM, true);
-                setStateResult(Activity.RESULT_OK, result);
-                mActivity.getStateManager().finishState(this);
+                mSlotView.invalidate();
+                Toast.makeText(mActivity, R.string.empty_album,
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -746,34 +786,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             clearLoadingBit(BIT_LOADING_RELOAD);
             mLoadingFailed = loadingFailed;
             showSyncErrorIfNecessary(loadingFailed);
-        }
-    }
-
-    private class MyDetailsSource implements DetailsHelper.DetailsSource {
-        private int mIndex;
-
-        @Override
-        public int size() {
-            return mAlbumDataAdapter.size();
-        }
-
-        @Override
-        public int setIndex() {
-            Path id = mSelectionManager.getSelected(false).get(0);
-            mIndex = mAlbumDataAdapter.findItem(id);
-            return mIndex;
-        }
-
-        @Override
-        public MediaDetails getDetails() {
-            // this relies on setIndex() being called beforehand
-            MediaObject item = mAlbumDataAdapter.get(mIndex);
-            if (item != null) {
-                mAlbumView.setHighlightItemPath(item.getPath());
-                return item.getDetails();
-            } else {
-                return null;
-            }
         }
     }
 

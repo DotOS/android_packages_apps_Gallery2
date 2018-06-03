@@ -16,6 +16,7 @@
 
 package com.android.gallery3d.app;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -28,15 +29,22 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.support.v4.print.PrintHelper;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 
 import com.android.gallery3d.R;
 import com.android.gallery3d.common.ApiHelper;
@@ -45,22 +53,24 @@ import com.android.gallery3d.data.MediaItem;
 import com.android.gallery3d.filtershow.cache.ImageLoader;
 import com.android.gallery3d.ui.GLRoot;
 import com.android.gallery3d.ui.GLRootView;
+import com.android.gallery3d.util.MediaSetUtils;
 import com.android.gallery3d.util.PanoramaViewHelper;
 import com.android.gallery3d.util.ThreadPool;
 import com.android.photos.data.GalleryBitmapPool;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class AbstractGalleryActivity extends Activity implements GalleryContext {
     private static final String TAG = "AbstractGalleryActivity";
+    private static final int PERMISSION_REQUEST_LOCATION = 2;
+
     private GLRootView mGLRootView;
     private StateManager mStateManager;
     private GalleryActionBar mActionBar;
-    private OrientationManager mOrientationManager;
     private TransitionStore mTransitionStore = new TransitionStore();
-    private boolean mDisableToggleStatusBar;
     private PanoramaViewHelper mPanoramaViewHelper;
-
+    private ProgressBar mProgress;
     private AlertDialog mAlertDialog = null;
     private BroadcastReceiver mMountReceiver = new BroadcastReceiver() {
         @Override
@@ -69,16 +79,25 @@ public class AbstractGalleryActivity extends Activity implements GalleryContext 
         }
     };
     private IntentFilter mMountFilter = new IntentFilter(Intent.ACTION_MEDIA_MOUNTED);
+    private Runnable mRunWithPermission;
+    private Runnable mRunWithoutPermission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mOrientationManager = new OrientationManager(this);
-        toggleStatusBarByOrientation();
+        setStoragePath();
         getWindow().setBackgroundDrawable(null);
         mPanoramaViewHelper = new PanoramaViewHelper(this);
         mPanoramaViewHelper.onCreate();
         doBindBatchService();
+    }
+
+    private void setStoragePath() {
+        SharedPreferences prefs = PreferenceManager
+                .getDefaultSharedPreferences(this);
+        String storagePath = prefs.getString(StorageChangeReceiver.KEY_STORAGE,
+                Environment.getExternalStorageDirectory().toString());
+        MediaSetUtils.setRoot(storagePath);
     }
 
     @Override
@@ -98,7 +117,6 @@ public class AbstractGalleryActivity extends Activity implements GalleryContext 
         mStateManager.onConfigurationChange(config);
         getGalleryActionBar().onConfigurationChanged();
         invalidateOptionsMenu();
-        toggleStatusBarByOrientation();
     }
 
     @Override
@@ -133,14 +151,15 @@ public class AbstractGalleryActivity extends Activity implements GalleryContext 
         return mGLRootView;
     }
 
-    public OrientationManager getOrientationManager() {
-        return mOrientationManager;
+    public GLRootView getGLRootView() {
+        return mGLRootView;
     }
 
     @Override
     public void setContentView(int resId) {
         super.setContentView(resId);
         mGLRootView = (GLRootView) findViewById(R.id.gl_root_view);
+        mProgress = (ProgressBar) findViewById(R.id.gallery_root_progress);
     }
 
     protected void onStorageReady() {
@@ -211,13 +230,11 @@ public class AbstractGalleryActivity extends Activity implements GalleryContext 
             mGLRootView.unlockRenderThread();
         }
         mGLRootView.onResume();
-        mOrientationManager.resume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mOrientationManager.pause();
         mGLRootView.onPause();
         mGLRootView.lockRenderThread();
         try {
@@ -280,22 +297,6 @@ public class AbstractGalleryActivity extends Activity implements GalleryContext 
             return getStateManager().itemSelected(item);
         } finally {
             root.unlockRenderThread();
-        }
-    }
-
-    protected void disableToggleStatusBar() {
-        mDisableToggleStatusBar = true;
-    }
-
-    // Shows status bar in portrait view, hide in landscape view
-    private void toggleStatusBarByOrientation() {
-        if (mDisableToggleStatusBar) return;
-
-        Window win = getWindow();
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            win.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        } else {
-            win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
     }
 
@@ -364,5 +365,115 @@ public class AbstractGalleryActivity extends Activity implements GalleryContext 
         } catch (FileNotFoundException fnfe) {
             Log.e(TAG, "Error printing an image", fnfe);
         }
+    }
+
+    public void hideSystemBars() {
+        getWindow().getDecorView().setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_IMMERSIVE);
+    }
+
+    public void showSystemBars() {
+        showSystemUI();
+    }
+
+    public void showSystemUI() {
+        getWindow().getDecorView().setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
+
+    public void setSystemBarsTranlucent(boolean withTranlucent) {
+        if (withTranlucent) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+                | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+                | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
+    }
+
+    public void setKeepScreenOn(boolean keepScreenOn) {
+        if (keepScreenOn) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+    }
+
+    public void setDismissKeyguard(boolean dismissKeyguard) {
+        if (dismissKeyguard) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        }
+    }
+
+    protected void showProgress() {
+        mProgress.setVisibility(View.VISIBLE);
+    }
+    protected void hideProgress() {
+        mProgress.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[],
+            int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_LOCATION: {
+                if (checkPermissionGrantResults(grantResults)) {
+                    if (mRunWithPermission != null) {
+                        mRunWithPermission.run();
+                    }
+                } else {
+                    if (mRunWithoutPermission != null) {
+                        mRunWithoutPermission.run();
+                    }
+                }
+            }
+        }
+    }
+
+    public void doRunWithLocationPermission(Runnable runWithPermission, Runnable runWithoutPermission) {
+        mRunWithPermission = runWithPermission;
+        mRunWithoutPermission = runWithoutPermission;
+        String[] permissions = {
+                Manifest.permission.ACCESS_FINE_LOCATION
+        };
+
+        if (!hasLocationPermission()) {
+            requestPermissions(permissions, PERMISSION_REQUEST_LOCATION);
+        }  else {
+            runWithPermission.run();
+        }
+    }
+
+    public boolean hasLocationPermission() {
+        boolean needRequest = false;
+
+        String[] permissions = {
+                Manifest.permission.ACCESS_FINE_LOCATION
+        };
+        for (String permission : permissions) {
+            if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+                needRequest = true;
+                break;
+            }
+        }
+        return !needRequest;
+    }
+
+    private boolean checkPermissionGrantResults(int[] grantResults) {
+        for (int result : grantResults) {
+            if (result != PackageManager.PERMISSION_GRANTED) {
+                return false;
+            }
+        }
+        return true;
     }
 }

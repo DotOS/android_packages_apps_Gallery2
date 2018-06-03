@@ -191,9 +191,9 @@ public class MenuExecutor {
         setMenuItemVisible(menu, R.id.action_share, supportShare);
         setMenuItemVisible(menu, R.id.action_setas, supportSetAs);
         setMenuItemVisible(menu, R.id.action_show_on_map, supportShowOnMap);
-        setMenuItemVisible(menu, R.id.action_edit, supportEdit);
+        //setMenuItemVisible(menu, R.id.action_edit, supportEdit);
         // setMenuItemVisible(menu, R.id.action_simple_edit, supportEdit);
-        setMenuItemVisible(menu, R.id.action_details, supportInfo);
+        //setMenuItemVisible(menu, R.id.action_details, supportInfo);
         setMenuItemVisible(menu, R.id.print, supportPrint);
     }
 
@@ -244,12 +244,12 @@ public class MenuExecutor {
                 ((Activity) mActivity).startActivity(intent);
                 return;
             }
-            case R.id.action_edit: {
+            /*case R.id.action_edit: {
                 Intent intent = getIntentBySingleSelectedPath(Intent.ACTION_EDIT)
                         .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 ((Activity) mActivity).startActivity(Intent.createChooser(intent, null));
                 return;
-            }
+            }*/
             case R.id.action_setas: {
                 Intent intent = getIntentBySingleSelectedPath(Intent.ACTION_ATTACH_DATA)
                         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -311,6 +311,23 @@ public class MenuExecutor {
     public void onMenuClicked(MenuItem menuItem, String confirmMsg,
             final ProgressListener listener) {
         final int action = menuItem.getItemId();
+
+        if (confirmMsg != null) {
+            if (listener != null) listener.onConfirmDialogShown();
+            ConfirmDialogListener cdl = new ConfirmDialogListener(action, listener);
+            new AlertDialog.Builder(mActivity.getAndroidContext())
+                    .setMessage(confirmMsg)
+                    .setOnCancelListener(cdl)
+                    .setPositiveButton(R.string.ok, cdl)
+                    .setNegativeButton(R.string.cancel, cdl)
+                    .create().show();
+        } else {
+            onMenuClicked(action, listener);
+        }
+    }
+
+    public void onMenuClicked(int action, String confirmMsg,
+            final ProgressListener listener) {
 
         if (confirmMsg != null) {
             if (listener != null) listener.onConfirmDialogShown();

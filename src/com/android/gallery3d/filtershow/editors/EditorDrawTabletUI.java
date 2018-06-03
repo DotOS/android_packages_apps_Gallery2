@@ -21,12 +21,18 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PaintFlagsDrawFilter;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.GradientDrawable;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -51,13 +57,14 @@ public class EditorDrawTabletUI {
     private int mSelectedColorButton;
     private int mSelectedStyleButton;
     private FilterDrawRepresentation mRep;
-    private Button[] mColorButton;
+    private ImageButton[] mColorButton;
     private ImageButton[] mStyleButton;
     private ColorHueView mHueView;
     private ColorSVRectView mSatValView;
     private ColorOpacityView mOpacityView;
     private ColorCompareView mColorCompareView;
     private TextView mDrawSizeValue;
+    private Context mContext;
 
     private int[] mBasColors;
     private int mSelected;
@@ -69,6 +76,7 @@ public class EditorDrawTabletUI {
             R.id.draw_color_button03,
             R.id.draw_color_button04,
             R.id.draw_color_button05,
+            R.id.draw_color_button06,
     };
 
     public void setDrawRepresentation(FilterDrawRepresentation rep) {
@@ -87,11 +95,15 @@ public class EditorDrawTabletUI {
     }
 
     public EditorDrawTabletUI(EditorDraw editorDraw, Context context, LinearLayout lp) {
+        mContext = context;
         mEditorDraw = editorDraw;
         mBasColors = editorDraw.mBasColors;
         mBrushIcons = editorDraw.brushIcons;
         Resources res = context.getResources();
         sIconDim = res.getDimensionPixelSize(R.dimen.draw_style_icon_dim);
+        mTransparent = res.getColor(R.color.color_chooser_unslected_border);
+        mSelected = res.getColor(R.color.color_chooser_slected_border);
+
         LinearLayout buttonContainer = (LinearLayout) lp.findViewById(R.id.listStyles);
 
         mdrawSizeSeekBar = (SeekBar) lp.findViewById(R.id.drawSizeSeekBar);
@@ -131,13 +143,18 @@ public class EditorDrawTabletUI {
         for (int i = 0; i < mBrushIcons.length; i++) {
             final ImageButton button = new ImageButton(context);
             mStyleButton[i] = button;
-            button.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            button.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
             button.setLayoutParams(params);
             Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), mBrushIcons[i]);
             button.setImageBitmap(bitmap);
-            button.setBackgroundResource(android.R.color.transparent);
+            button.setBackgroundResource(R.drawable.filtershow_color_picker_circle);
             buttonContainer.addView(button);
             final int current = i;
+
+            GradientDrawable sd = ((GradientDrawable) button.getBackground());
+            sd.setColor(mTransparent);
+            sd.setStroke(3, (mSelectedStyleButton == i) ? mSelected : mTransparent);
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -156,7 +173,7 @@ public class EditorDrawTabletUI {
 
         final LinearLayout ctls = (LinearLayout) lp.findViewById(R.id.controls);
         final LinearLayout pick = (LinearLayout) lp.findViewById(R.id.colorPicker);
-        Button b = (Button) lp.findViewById(R.id.draw_color_popupbutton);
+        ImageView b = (ImageView) lp.findViewById(R.id.draw_color_popupbutton);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,20 +184,22 @@ public class EditorDrawTabletUI {
         }
         );
 
-        mTransparent = res.getColor(R.color.color_chooser_unslected_border);
-        mSelected = res.getColor(R.color.color_chooser_slected_border);
-
-        mColorButton = new Button[ids.length];
+        LinearLayout.LayoutParams colorParams = new LinearLayout.LayoutParams(sIconDim, sIconDim);
+        colorParams.gravity= Gravity.CENTER;
+        mColorButton = new ImageButton[ids.length];
         for (int i = 0; i < ids.length; i++) {
-            mColorButton[i] = (Button) lp.findViewById(ids[i]);
+            final ImageButton button = (ImageButton) lp.findViewById(ids[i]);
+            button.setLayoutParams(colorParams);
+            button.setScaleType(ScaleType.CENTER_INSIDE);
+            button.setImageDrawable(createColorImage(mBasColors[i]));
 
+            mColorButton[i] = button;
             float[] hsvo = new float[4];
             Color.colorToHSV(mBasColors[i], hsvo);
             hsvo[3] = (0xFF & (mBasColors[i] >> 24)) / (float) 255;
             mColorButton[i].setTag(hsvo);
             GradientDrawable sd = ((GradientDrawable) mColorButton[i].getBackground());
-
-            sd.setColor(mBasColors[i]);
+            sd.setColor(mTransparent);
             sd.setStroke(3, (0 == i) ? mSelected : mTransparent);
 
             final int buttonNo = i;
@@ -233,12 +252,11 @@ public class EditorDrawTabletUI {
             @Override
             public void setColor(float[] hsvo) {
                 int color = Color.HSVToColor((int) (hsvo[3] * 255), hsvo);
-                Button b = mColorButton[mSelectedColorButton];
+                final ImageButton b = mColorButton[mSelectedColorButton];
                 float[] f = (float[]) b.getTag();
                 System.arraycopy(hsvo, 0, f, 0, 4);
                 mBasColors[mSelectedColorButton] = color;
-                GradientDrawable sd = ((GradientDrawable) b.getBackground());
-                sd.setColor(color);
+                b.setImageDrawable(createColorImage(color));
                 resetBorders();
                 ParameterColor pram;
                 pram = (ParameterColor) mRep.getParam(FilterDrawRepresentation.PARAM_COLOR);
@@ -259,20 +277,32 @@ public class EditorDrawTabletUI {
 
     public void resetStyle() {
         for (int i = 0; i < mStyleButton.length; i++) {
-            int rid = (i == mSelectedStyleButton) ? android.R.color.holo_blue_light :
-                    android.R.color.transparent;
-            mStyleButton[i].setBackgroundResource(rid);
+            final ImageButton button = mStyleButton[i];
 
+            GradientDrawable sd = ((GradientDrawable)  button.getBackground());
+            sd.setStroke(3, (mSelectedStyleButton == i) ? mSelected : mTransparent);
         }
     }
 
     private void resetBorders() {
         for (int i = 0; i < ids.length; i++) {
-            final Button button = mColorButton[i];
+            final ImageButton button = mColorButton[i];
 
             GradientDrawable sd = ((GradientDrawable) button.getBackground());
-            sd.setColor(mBasColors[i]);
             sd.setStroke(3, (mSelectedColorButton == i) ? mSelected : mTransparent);
         }
+    }
+
+    private BitmapDrawable createColorImage(int color){
+        final int width = mContext.getResources().getDimensionPixelSize(R.dimen.color_rect_width);
+        final Canvas canvas = new Canvas();
+        canvas.setDrawFilter(new PaintFlagsDrawFilter(Paint.ANTI_ALIAS_FLAG,Paint.FILTER_BITMAP_FLAG));
+        final Bitmap bmp = Bitmap.createBitmap(width, width, Bitmap.Config.ARGB_8888);
+        canvas.setBitmap(bmp);
+        final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(color);
+        canvas.drawRect(0, 0, width, width, paint);
+        return new BitmapDrawable(mContext.getResources(), bmp);
     }
 }

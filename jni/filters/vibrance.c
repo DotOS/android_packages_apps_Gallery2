@@ -45,6 +45,7 @@ void JNIFUNCF(ImageFilterVibrance, nativeApplyFilter, jobject bitmap, jint width
         Rt = Rf * MS;
         Gt = Gf * MS;
         Bt = Bf * MS;
+        int t = (r + g) / 2;
         R = r;
         G = g;
         B = b;
