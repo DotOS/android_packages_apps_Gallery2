@@ -22,7 +22,6 @@ import android.content.res.Resources;
 import com.android.gallery3d.R;
 import com.android.gallery3d.ui.AlbumSetSlotRenderer;
 import com.android.gallery3d.ui.SlotView;
-import com.android.gallery3d.util.GalleryUtils;
 
 final class Config {
     public static class AlbumSetPage {
@@ -32,8 +31,6 @@ final class Config {
         public AlbumSetSlotRenderer.LabelSpec labelSpec;
         public int paddingTop;
         public int paddingBottom;
-        public int paddingLeft;
-        public int paddingRight;
         public int placeholderColor;
 
         public static synchronized AlbumSetPage get(Context context) {
@@ -51,22 +48,11 @@ final class Config {
             slotViewSpec = new SlotView.Spec();
             slotViewSpec.rowsLand = r.getInteger(R.integer.albumset_rows_land);
             slotViewSpec.rowsPort = r.getInteger(R.integer.albumset_rows_port);
-
-            int zoomLevel = GalleryUtils.getAlbumsetZoomLevel(context);
-            slotViewSpec.zoomLevel = zoomLevel;
-
-            slotViewSpec.colsLandMin = r.getInteger(R.integer.albumset_cols_land_min);
-            slotViewSpec.colsPortMin = r.getInteger(R.integer.albumset_cols_port_min);
-            slotViewSpec.colsLandMax = r.getInteger(R.integer.albumset_cols_land_max);
-            slotViewSpec.colsPortMax = r.getInteger(R.integer.albumset_cols_port_max);
             slotViewSpec.slotGap = r.getDimensionPixelSize(R.dimen.albumset_slot_gap);
             slotViewSpec.slotHeightAdditional = 0;
-            slotViewSpec.usePadding = r.getBoolean(R.bool.config_grid_use_padding);
 
             paddingTop = r.getDimensionPixelSize(R.dimen.albumset_padding_top);
             paddingBottom = r.getDimensionPixelSize(R.dimen.albumset_padding_bottom);
-            paddingLeft = r.getDimensionPixelSize(R.dimen.albumset_padding_left);
-            paddingRight = r.getDimensionPixelSize(R.dimen.albumset_padding_right);
 
             labelSpec = new AlbumSetSlotRenderer.LabelSpec();
             labelSpec.labelBackgroundHeight = r.getDimensionPixelSize(
@@ -83,6 +69,8 @@ final class Config {
                     R.dimen.albumset_left_margin);
             labelSpec.titleRightMargin = r.getDimensionPixelSize(
                     R.dimen.albumset_title_right_margin);
+            labelSpec.iconSize = r.getDimensionPixelSize(
+                    R.dimen.albumset_icon_size);
             labelSpec.backgroundColor = r.getColor(
                     R.color.albumset_label_background);
             labelSpec.titleColor = r.getColor(R.color.albumset_label_title);
@@ -94,10 +82,6 @@ final class Config {
         private static AlbumPage sInstance;
 
         public SlotView.Spec slotViewSpec;
-        public int paddingTop;
-        public int paddingBottom;
-        public int paddingLeft;
-        public int paddingRight;
         public int placeholderColor;
 
         public static synchronized AlbumPage get(Context context) {
@@ -115,21 +99,28 @@ final class Config {
             slotViewSpec = new SlotView.Spec();
             slotViewSpec.rowsLand = r.getInteger(R.integer.album_rows_land);
             slotViewSpec.rowsPort = r.getInteger(R.integer.album_rows_port);
-
-            int zoomLevel = GalleryUtils.getAlbumZoomLevel(context);
-            slotViewSpec.zoomLevel = zoomLevel;
-
-            slotViewSpec.colsLandMin = r.getInteger(R.integer.album_cols_land_min);
-            slotViewSpec.colsPortMin = r.getInteger(R.integer.album_cols_port_min);
-            slotViewSpec.colsLandMax = r.getInteger(R.integer.album_cols_land_max);
-            slotViewSpec.colsPortMax = r.getInteger(R.integer.album_cols_port_max);
             slotViewSpec.slotGap = r.getDimensionPixelSize(R.dimen.album_slot_gap);
-            slotViewSpec.usePadding = r.getBoolean(R.bool.config_grid_use_padding);
+        }
+    }
 
-            paddingTop = r.getDimensionPixelSize(R.dimen.album_padding_top);
-            paddingBottom = r.getDimensionPixelSize(R.dimen.album_padding_bottom);
-            paddingLeft = r.getDimensionPixelSize(R.dimen.album_padding_left);
-            paddingRight = r.getDimensionPixelSize(R.dimen.album_padding_right);
+    public static class ManageCachePage extends AlbumSetPage {
+        private static ManageCachePage sInstance;
+
+        public final int cachePinSize;
+        public final int cachePinMargin;
+
+        public static synchronized ManageCachePage get(Context context) {
+            if (sInstance == null) {
+                sInstance = new ManageCachePage(context);
+            }
+            return sInstance;
+        }
+
+        public ManageCachePage(Context context) {
+            super(context);
+            Resources r = context.getResources();
+            cachePinSize = r.getDimensionPixelSize(R.dimen.cache_pin_size);
+            cachePinMargin = r.getDimensionPixelSize(R.dimen.cache_pin_margin);
         }
     }
 }

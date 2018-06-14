@@ -158,9 +158,9 @@ public class AlbumSetSlotRenderer extends AbstractSlotRenderer {
                 drawPressedFrame(canvas, width, height);
             }
         } else if ((mHighlightItemPath != null) && (mHighlightItemPath == entry.setPath)) {
-            drawSelectedOverlay(canvas, width, height);
+            drawSelectedFrame(canvas, width, height);
         } else if (mInSelectionMode && mSelectionManager.isItemSelected(entry.setPath)) {
-            drawSelectedOverlay(canvas, width, height);
+            drawSelectedFrame(canvas, width, height);
         }
         return renderRequestFlags;
     }

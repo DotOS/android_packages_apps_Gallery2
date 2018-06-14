@@ -29,12 +29,11 @@ public class ParameterColor implements Parameter {
     int mValue;
     public final int ID;
     int[] mBasColors = {
-            Color.RED,
-            Color.GREEN,
-            Color.BLUE,
-            Color.YELLOW,
-            Color.BLACK,
-            Color.WHITE
+            Color.RED & 0x80FFFFFF,
+            Color.GREEN & 0x80FFFFFF,
+            Color.BLUE & 0x80FFFFFF,
+            Color.BLACK & 0x80FFFFFF,
+            Color.WHITE & 0x80FFFFFF
     };
 
     public ParameterColor(int id, int defaultColor) {

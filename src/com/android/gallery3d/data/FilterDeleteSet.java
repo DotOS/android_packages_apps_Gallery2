@@ -223,11 +223,6 @@ public class FilterDeleteSet extends MediaSet implements ContentListener {
         return mDataVersion;
     }
 
-    @Override
-    public int getCurrectSize() {
-        return mCurrent.size();
-    }
-
     private void sendRequest(int type, Path path, int indexHint) {
         Request r = new Request(type, path, indexHint);
         synchronized (mRequests) {

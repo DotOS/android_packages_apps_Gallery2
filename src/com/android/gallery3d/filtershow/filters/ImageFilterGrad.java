@@ -26,11 +26,9 @@ import com.android.gallery3d.filtershow.pipeline.FilterEnvironment;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Matrix;
-
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
-import android.renderscript.Script;
 import android.renderscript.Script.LaunchOptions;
 import android.renderscript.Type;
 import android.util.Log;
@@ -163,7 +161,7 @@ public class ImageFilterGrad extends ImageFilterRS {
         int width = in.getType().getX();
         int height = in.getType().getY();
 
-        Script.LaunchOptions options = new Script.LaunchOptions();
+        LaunchOptions options = new LaunchOptions();
         int ty;
         options.setX(0, width);
 
