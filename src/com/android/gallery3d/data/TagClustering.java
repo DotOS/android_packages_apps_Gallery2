@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
-// maxwen DISABLED!
 public class TagClustering extends Clustering {
     @SuppressWarnings("unused")
     private static final String TAG = "TagClustering";

@@ -3,6 +3,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS += -DEGL_EGLEXT_PROTOTYPES -Wno-unused-parameter
+LOCAL_CFLAGS += -Wall -Wextra
 
 LOCAL_SRC_FILES := jni_egl_fence.cpp
 
@@ -44,7 +45,8 @@ LOCAL_SRC_FILES := filters/gradient.c \
                    filters/tinyplanet.cc \
                    filters/kmeans.cc
 
-LOCAL_CFLAGS    += -O3 -funroll-loops -Wno-unused-parameter
+LOCAL_CFLAGS    += -ffast-math -O3 -funroll-loops -Wno-unused-parameter
+LOCAL_CFLAGS += -Wall -Wextra
 LOCAL_LDLIBS := -llog -ljnigraphics
 LOCAL_ARM_MODE := arm
 

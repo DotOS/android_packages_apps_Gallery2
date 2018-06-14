@@ -24,7 +24,6 @@ import com.android.gallery3d.R;
 import com.android.gallery3d.app.AbstractGalleryActivity;
 import com.android.gallery3d.data.MediaDetails;
 import com.android.gallery3d.ui.DetailsAddressResolver.AddressResolvingListener;
-import com.android.gallery3d.util.GalleryUtils;
 
 public class DetailsHelper {
     private static DetailsAddressResolver sAddressResolver;
@@ -79,14 +78,7 @@ public class DetailsHelper {
         } else {
             sAddressResolver.cancel();
         }
-        activity.doRunWithLocationPermission(new Runnable() {
-            @Override
-            public void run() {
-                sAddressResolver.resolveAddress(latlng, listener);
-            }
-        }, null);
-
-        return GalleryUtils.formatLatitudeLongitude("(%f,%f)", latlng[0], latlng[1]);
+        return sAddressResolver.resolveAddress(latlng, listener);
     }
 
     public static void resolveResolution(String path, ResolutionResolvingListener listener) {

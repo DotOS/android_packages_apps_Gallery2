@@ -25,15 +25,12 @@ import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.text.TextPaint;
 import android.text.TextUtils;
-import android.view.View;
 
 import com.android.gallery3d.R;
 import com.android.gallery3d.data.DataSourceType;
 import com.android.photos.data.GalleryBitmapPool;
 import com.android.gallery3d.util.ThreadPool;
 import com.android.gallery3d.util.ThreadPool.JobContext;
-
-import java.util.Locale;
 
 public class AlbumLabelMaker {
     private static final int BORDER_SIZE = 0;
@@ -47,15 +44,35 @@ public class AlbumLabelMaker {
     private int mBitmapWidth;
     private int mBitmapHeight;
 
+    private final LazyLoadedBitmap mLocalSetIcon;
+    private final LazyLoadedBitmap mPicasaIcon;
+    private final LazyLoadedBitmap mCameraIcon;
+
     public AlbumLabelMaker(Context context, AlbumSetSlotRenderer.LabelSpec spec) {
         mContext = context;
         mSpec = spec;
         mTitlePaint = getTextPaint(spec.titleFontSize, spec.titleColor, false);
         mCountPaint = getTextPaint(spec.countFontSize, spec.countColor, false);
+
+        mLocalSetIcon = new LazyLoadedBitmap(R.drawable.frame_overlay_gallery_folder);
+        mPicasaIcon = new LazyLoadedBitmap(R.drawable.frame_overlay_gallery_picasa);
+        mCameraIcon = new LazyLoadedBitmap(R.drawable.frame_overlay_gallery_camera);
     }
 
     public static int getBorderSize() {
         return BORDER_SIZE;
+    }
+
+    private Bitmap getOverlayAlbumIcon(int sourceType) {
+        switch (sourceType) {
+            case DataSourceType.TYPE_CAMERA:
+                return mCameraIcon.get();
+            case DataSourceType.TYPE_LOCAL:
+                return mLocalSetIcon.get();
+            case DataSourceType.TYPE_PICASA:
+                return mPicasaIcon.get();
+        }
+        return null;
     }
 
     private static TextPaint getTextPaint(int textSize, int color, boolean isBold) {
@@ -129,10 +146,10 @@ public class AlbumLabelMaker {
 
             String title = mTitle;
             String count = mCount;
+            Bitmap icon = getOverlayAlbumIcon(mSourceType);
 
             Bitmap bitmap;
             int labelWidth;
-            int countWidth = (int) mCountPaint.measureText(count);
 
             synchronized (this) {
                 labelWidth = mLabelWidth;
@@ -153,40 +170,30 @@ public class AlbumLabelMaker {
 
             canvas.translate(BORDER_SIZE, BORDER_SIZE);
 
-            if (View.LAYOUT_DIRECTION_RTL == TextUtils
-                    .getLayoutDirectionFromLocale(Locale.getDefault())) {// RTL
-                // draw title
-                if (jc.isCancelled()) return null;
-                int strLength = (int) mTitlePaint.measureText(title);
-                int x = labelWidth - s.leftMargin - strLength;
-                // TODO: is the offset relevant in new reskin?
-                // int y = s.titleOffset;
-                int y = (s.labelBackgroundHeight - s.titleFontSize) / 2;
-                drawText(canvas, x, y, title, labelWidth - s.leftMargin - x -
-                        s.titleRightMargin, mTitlePaint);
+            // draw title
+            if (jc.isCancelled()) return null;
+            int x = s.leftMargin + s.iconSize;
+            // TODO: is the offset relevant in new reskin?
+            // int y = s.titleOffset;
+            int y = (s.labelBackgroundHeight - s.titleFontSize) / 2;
+            drawText(canvas, x, y, title, labelWidth - s.leftMargin - x - 
+                    s.titleRightMargin, mTitlePaint);
 
-                // draw count
-                if (jc.isCancelled()) return null;
-                x = s.leftMargin + countWidth;
-                y = (s.labelBackgroundHeight - s.countFontSize) / 2;
-                drawText(canvas, x, y, count,
-                        labelWidth - x, mCountPaint);
-            } else { // LTR
-                // draw title
-                if (jc.isCancelled()) return null;
-                int x = s.leftMargin;
-                // TODO: is the offset relevant in new reskin?
-                // int y = s.titleOffset;
-                int y = (s.labelBackgroundHeight - s.titleFontSize) / 2;
-                drawText(canvas, x, y, title, labelWidth - s.leftMargin - x -
-                        s.titleRightMargin, mTitlePaint);
+            // draw count
+            if (jc.isCancelled()) return null;
+            x = labelWidth - s.titleRightMargin;
+            y = (s.labelBackgroundHeight - s.countFontSize) / 2;
+            drawText(canvas, x, y, count,
+                    labelWidth - x , mCountPaint);
 
-                // draw count
+            // draw the icon
+            if (icon != null) {
                 if (jc.isCancelled()) return null;
-                x = labelWidth - s.titleRightMargin - countWidth;
-                y = (s.labelBackgroundHeight - s.countFontSize) / 2;
-                drawText(canvas, x, y, count,
-                        labelWidth - x, mCountPaint);
+                float scale = (float) s.iconSize / icon.getWidth();
+                canvas.translate(s.leftMargin, (s.labelBackgroundHeight -
+                        Math.round(scale * icon.getHeight()))/2f);
+                canvas.scale(scale, scale);
+                canvas.drawBitmap(icon, 0, 0, null);
             }
 
             return bitmap;

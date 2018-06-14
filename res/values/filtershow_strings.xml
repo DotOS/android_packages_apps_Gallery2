@@ -35,7 +35,7 @@
     <!--  Text to label an image as "original" [CHAR LIMIT=20] -->
     <string name="original">Original</string>
     <!--  Text for filters that apply a border to a picture [CHAR LIMIT=20] -->
-    <string name="borders" msgid="4461692156695893616">Frame</string>
+    <string name="borders" msgid="4461692156695893616">Borders</string>
     <!-- Text for the custom border filter [CHAR LIMIT=20] -->
     <string name="custom_border">Custom</string>
 
@@ -77,7 +77,7 @@
     <!--  String displayed when exiting with unsaved changes [CHAR LIMIT=NONE] -->
     <string name="save_before_exit">Do you want to save before exiting?</string>
     <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
-    <string name="save_and_exit">Save</string>
+    <string name="save_and_exit">Save and Exit</string>
     <!--  String displayed when saving and exiting editor [CHAR LIMIT=NONE] -->
     <string name="save_and_processing">Processing full resolution image...</string>
     <!--  String displayed when exiting editor[CHAR LIMIT=NONE] -->

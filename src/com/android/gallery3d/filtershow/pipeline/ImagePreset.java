@@ -237,7 +237,7 @@ public class ImagePreset {
                 FilterRepresentation a = preset.mFilters.elementAt(i);
                 FilterRepresentation b = mFilters.elementAt(i);
 
-                if (!a.equals(b)) {
+                if (!a.same(b)) {
                     return false;
                 }
             }

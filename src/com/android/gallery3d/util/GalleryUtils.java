@@ -17,7 +17,6 @@
 package com.android.gallery3d.util;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
@@ -36,7 +35,6 @@ import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.android.gallery3d.R;
 import com.android.gallery3d.app.GalleryActivity;
@@ -73,12 +71,6 @@ public class GalleryUtils {
 
     private static final String KEY_CAMERA_UPDATE = "camera-update";
     private static final String KEY_HAS_CAMERA = "has-camera";
-    private static final String KEY_ALBUM_MODE = "album-mode";
-    private static final String KEY_RANDOM_SLIDESHOW = "slideshow_random";
-    private static final String KEY_REPEAT_SLIDESHOW = "slideshow_repeat";
-    private static final String KEY_DURATION_SLIDESHOW = "slideshow_duration";
-    private static final String KEY_ALBUMSET_ZOOM_LEVEL = "albumset_zoom_level";
-    private static final String KEY_ALBUM_ZOOM_LEVEL = "album_zoom_level";
 
     private static float sPixelDensity = -1f;
     private static boolean sCameraAvailableInitialized = false;
@@ -283,7 +275,7 @@ public class GalleryUtils {
         return String.format(Locale.ENGLISH, format, latitude, longitude);
     }
 
-    public static void showOnMap(final Context context, double latitude, double longitude) {
+    public static void showOnMap(Context context, double latitude, double longitude) {
         try {
             // We don't use "geo:latitude,longitude" because it only centers
             // the MapView to the specified location, but we need a marker
@@ -300,21 +292,8 @@ public class GalleryUtils {
             // Use the "geo intent" if no GMM is installed
             Log.e(TAG, "GMM activity not found!", e);
             String url = formatLatitudeLongitude("geo:%f,%f", latitude, longitude);
-            try {
-                Intent mapsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                context.startActivity(mapsIntent);
-            } catch (ActivityNotFoundException ex) {
-                Log.e(TAG, "Map view activity not found! url = " + url, ex);
-                ((Activity)context).runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(context,
-                                context.getString(R.string.map_activity_not_found_err),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-            }
+            Intent mapsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            context.startActivity(mapsIntent);
         }
     }
 
@@ -426,50 +405,5 @@ public class GalleryUtils {
         int w = item.getWidth();
         int h = item.getHeight();
         return (h > 0 && w / h >= 2);
-    }
-
-    public static int getAlbumMode(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getInt(KEY_ALBUM_MODE, 0);
-    }
-
-    public static void setAlbumMode(Context context, int value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putInt(KEY_ALBUM_MODE, value).commit();
-    }
-
-    public static boolean isRandomSlideshow(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getBoolean(KEY_RANDOM_SLIDESHOW, false);
-    }
-
-    public static boolean isRepeatSlideshow(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getBoolean(KEY_REPEAT_SLIDESHOW, true);
-    }
-
-    public static int getSlideshowDuration(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getInt(KEY_DURATION_SLIDESHOW, 3) * 1000;
-    }
-
-    public static int getAlbumsetZoomLevel(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getInt(KEY_ALBUMSET_ZOOM_LEVEL, 1);
-    }
-
-    public static int getAlbumZoomLevel(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getInt(KEY_ALBUM_ZOOM_LEVEL, 2);
-    }
-
-    public static void setAlbumsetZoomLevel(Context context, int value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putInt(KEY_ALBUMSET_ZOOM_LEVEL, value).commit();
-    }
-
-    public static void setAlbumZoomLevel(Context context, int value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putInt(KEY_ALBUM_ZOOM_LEVEL, value).commit();
     }
 }

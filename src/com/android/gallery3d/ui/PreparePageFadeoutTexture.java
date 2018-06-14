@@ -69,12 +69,12 @@ public class PreparePageFadeoutTexture implements OnGLIdleListener {
         if (task.isCancelled()) return;
         GLRoot root = activity.getGLRoot();
         RawTexture texture = null;
-        root.lockRenderThread();
+        root.unlockRenderThread();
         try {
             root.addOnGLIdleListener(task);
             texture = task.get();
         } finally {
-            root.unlockRenderThread();
+            root.lockRenderThread();
         }
 
         if (texture == null) {

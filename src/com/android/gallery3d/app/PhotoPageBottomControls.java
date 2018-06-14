@@ -17,9 +17,6 @@
 package com.android.gallery3d.app;
 
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.TransitionDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,88 +32,107 @@ import java.util.Map;
 
 public class PhotoPageBottomControls implements OnClickListener {
     public interface Delegate {
+        public boolean canDisplayBottomControls();
+        public boolean canDisplayBottomControl(int control);
         public void onBottomControlClicked(int control);
+        public void refreshBottomControlsWhenReady();
     }
 
     private Delegate mDelegate;
+    private ViewGroup mParentLayout;
     private ViewGroup mContainer;
-    private Context mContext;
+
+    private boolean mContainerVisible = false;
+    private Map<View, Boolean> mControlsVisible = new HashMap<View, Boolean>();
 
     private Animation mContainerAnimIn = new AlphaAnimation(0f, 1f);
     private Animation mContainerAnimOut = new AlphaAnimation(1f, 0f);
-    private static final int CONTAINER_ANIM_DURATION_MS = 350;
+    private static final int CONTAINER_ANIM_DURATION_MS = 200;
 
-    public PhotoPageBottomControls(Delegate delegate, Context context, ViewGroup layout) {
+    private static final int CONTROL_ANIM_DURATION_MS = 150;
+    private static Animation getControlAnimForVisibility(boolean visible) {
+        Animation anim = visible ? new AlphaAnimation(0f, 1f)
+                : new AlphaAnimation(1f, 0f);
+        anim.setDuration(CONTROL_ANIM_DURATION_MS);
+        return anim;
+    }
+
+    public PhotoPageBottomControls(Delegate delegate, Context context, RelativeLayout layout) {
         mDelegate = delegate;
-        mContext = context;
+        mParentLayout = layout;
 
-        mContainer = (ViewGroup) layout.findViewById(R.id.photopage_bottom_controls);
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mContainer = (ViewGroup) inflater
+                .inflate(R.layout.photopage_bottom_controls, mParentLayout, false);
+        mParentLayout.addView(mContainer);
+
         for (int i = mContainer.getChildCount() - 1; i >= 0; i--) {
             View child = mContainer.getChildAt(i);
             child.setOnClickListener(this);
+            mControlsVisible.put(child, false);
         }
 
         mContainerAnimIn.setDuration(CONTAINER_ANIM_DURATION_MS);
         mContainerAnimOut.setDuration(CONTAINER_ANIM_DURATION_MS);
+
+        mDelegate.refreshBottomControlsWhenReady();
     }
 
-    public void hide(boolean withAnim) {
-        if (mContainer.getVisibility() != View.GONE) {
-            mContainer.clearAnimation();
-            mContainerAnimOut.reset();
-            if (withAnim) {
-                mContainer.startAnimation(mContainerAnimOut);
-            }
-            mContainer.setVisibility(View.GONE);
-        }
+    private void hide() {
+        mContainer.clearAnimation();
+        mContainerAnimOut.reset();
+        mContainer.startAnimation(mContainerAnimOut);
+        mContainer.setVisibility(View.INVISIBLE);
     }
 
-    public void show(boolean withAnim) {
-        if (mContainer.getVisibility() != View.VISIBLE) {
-            mContainer.clearAnimation();
-            mContainerAnimIn.reset();
-            if (withAnim) {
-                mContainer.startAnimation(mContainerAnimIn);
+    private void show() {
+        mContainer.clearAnimation();
+        mContainerAnimIn.reset();
+        mContainer.startAnimation(mContainerAnimIn);
+        mContainer.setVisibility(View.VISIBLE);
+    }
+
+    public void refresh() {
+        boolean visible = mDelegate.canDisplayBottomControls();
+        boolean containerVisibilityChanged = (visible != mContainerVisible);
+        if (containerVisibilityChanged) {
+            if (visible) {
+                show();
+            } else {
+                hide();
             }
-            mContainer.setVisibility(View.VISIBLE);
+            mContainerVisible = visible;
         }
+        if (!mContainerVisible) {
+            return;
+        }
+        for (View control : mControlsVisible.keySet()) {
+            Boolean prevVisibility = mControlsVisible.get(control);
+            boolean curVisibility = mDelegate.canDisplayBottomControl(control.getId());
+            if (prevVisibility.booleanValue() != curVisibility) {
+                if (!containerVisibilityChanged) {
+                    control.clearAnimation();
+                    control.startAnimation(getControlAnimForVisibility(curVisibility));
+                }
+                control.setVisibility(curVisibility ? View.VISIBLE : View.INVISIBLE);
+                mControlsVisible.put(control, curVisibility);
+            }
+        }
+        // Force a layout change
+        mContainer.requestLayout(); // Kick framework to draw the control.
+    }
+
+    public void cleanup() {
+        mParentLayout.removeView(mContainer);
+        mControlsVisible.clear();
     }
 
     @Override
     public void onClick(View view) {
-        mDelegate.onBottomControlClicked(view.getId());
-    }
-
-    public void enableItem(int id, boolean enabled) {
-        for (int i = mContainer.getChildCount() - 1; i >= 0; i--) {
-            View child = mContainer.getChildAt(i);
-            if (child.getId() == id) {
-                child.setEnabled(enabled);
-                child.setVisibility(enabled ? View.VISIBLE : View.GONE);
-            }
-        }
-    }
-    public void setGradientBackground(boolean gradient) {
-        if (mContainer.getBackground() != null) {
-            Drawable[] arrayDrawable = new Drawable[2];
-            if (gradient) {
-                arrayDrawable[0] = mContainer.getBackground();
-                arrayDrawable[1] = mContext.getResources().getDrawable(R.drawable.root_bottom_bg);
-            } else {
-                arrayDrawable[0] = mContainer.getBackground();
-                arrayDrawable[1] = new ColorDrawable(mContext.getResources().getColor(R.color.photo_overlay));
-            }
-            TransitionDrawable transitionDrawable = new TransitionDrawable(arrayDrawable);
-            transitionDrawable.setCrossFadeEnabled(true);
-            mContainer.setBackground(transitionDrawable);
-            transitionDrawable.startTransition(500);
-        } else {
-            if (gradient) {
-                mContainer.setBackground(mContext.getResources().getDrawable(R.drawable.root_bottom_bg));
-            } else {
-                mContainer.setBackground(
-                        new ColorDrawable(mContext.getResources().getColor(R.color.photo_overlay)));
-            }
+        Boolean controlVisible = mControlsVisible.get(view);
+        if (mContainerVisible && controlVisible != null && controlVisible.booleanValue()) {
+            mDelegate.onBottomControlClicked(view.getId());
         }
     }
 }
