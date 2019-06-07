@@ -15,4 +15,28 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="layout_grid">Chế độ xem lưới</string>
+    <string name="layout_filmstrip">Chế độ xem danh sách</string>
+    <string name="slideshow_settings">Trình chiếu</string>
+    <string name="slideshow_random_title">Hiển thị theo thứ tự ngẫu nhiên</string>
+    <string name="slideshow_repeat_title">Lặp lại</string>
+    <string name="unit_sec">giây</string>
+    <string name="slideshow_duration_title">Thời gian trì hoãn</string>
+    <string name="video_settings">Video</string>
+    <string name="video_one_title">Video1</string>
+    <string name="video_two_title">Video2</string>
+    <string name="group_by_type">Theo loại</string>
+    <string name="types">Xem Kiểu Nút</string>
+    <string name="type">Kiểu</string>
+    <string name="type_videos">Video</string>
+    <string name="type_images">Hình ảnh</string>
+    <string name="wallpaper_type_dialog_title">Đặt làm hình nền</string>
+    <string name="wallpaper_type_both">Màn hình chính và màn hình khóa</string>
+    <string name="wallpaper_type_system">Màn hình chính</string>
+    <string name="wallpaper_type_lock">Màn hình khoá</string>
+    <string name="scrolling_wall_dialog_text">Bạn có muốn cắt hình nền theo kích thước hiển thị\u003f</string>
+    <string name="scrolling_wall_dialog_title">Cắt hình nền</string>
+    <string name="scrolling_wall_yes">Không</string>
+    <string name="scrolling_wall_no">Có</string>
+</resources>
