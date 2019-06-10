@@ -16,27 +16,27 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="layout_grid">Grid view</string>
-    <string name="layout_filmstrip">Filmstrip view</string>
-    <string name="slideshow_settings">Slideshow</string>
-    <string name="slideshow_random_title">Show in random order</string>
-    <string name="slideshow_repeat_title">Repeat</string>
-    <string name="unit_sec">sec</string>
-    <string name="slideshow_duration_title">Delay time</string>
-    <string name="video_settings">Video</string>
+    <string name="layout_grid">Vista de cuadrícula</string>
+    <string name="layout_filmstrip">Vista de tira de película</string>
+    <string name="slideshow_settings">Presentación</string>
+    <string name="slideshow_random_title">Mostrar en orden aleatorio</string>
+    <string name="slideshow_repeat_title">Repetir</string>
+    <string name="unit_sec">s</string>
+    <string name="slideshow_duration_title">Tiempo de retraso</string>
+    <string name="video_settings">Vídeo</string>
     <string name="video_one_title">Video1</string>
     <string name="video_two_title">Video2</string>
-    <string name="group_by_type">By type</string>
-    <string name="types">Types</string>
-    <string name="type">Type</string>
-    <string name="type_videos">Videos</string>
-    <string name="type_images">Images</string>
-    <string name="wallpaper_type_dialog_title">Set wallpaper</string>
-    <string name="wallpaper_type_both">Home screen and lock screen</string>
-    <string name="wallpaper_type_system">Home screen</string>
-    <string name="wallpaper_type_lock">Lock screen</string>
-    <string name="scrolling_wall_dialog_text">Do you want to crop the wallpaper to the display size\u003f</string>
-    <string name="scrolling_wall_dialog_title">Crop wallpaper</string>
+    <string name="group_by_type">Por tipo</string>
+    <string name="types">Tipos</string>
+    <string name="type">Tipo</string>
+    <string name="type_videos">Vídeos</string>
+    <string name="type_images">Imágenes</string>
+    <string name="wallpaper_type_dialog_title">Establecer fondo de pantalla</string>
+    <string name="wallpaper_type_both">Pantalla de inicio y de bloqueo</string>
+    <string name="wallpaper_type_system">Pantalla de inicio</string>
+    <string name="wallpaper_type_lock">Pantalla de bloqueo</string>
+    <string name="scrolling_wall_dialog_text">¿Quieres recortar el fondo de pantalla al tamaño de la pantalla\u003f</string>
+    <string name="scrolling_wall_dialog_title">Recortar fondo de pantalla</string>
     <string name="scrolling_wall_yes">No</string>
-    <string name="scrolling_wall_no">Yes</string>
+    <string name="scrolling_wall_no">Sí</string>
 </resources>
